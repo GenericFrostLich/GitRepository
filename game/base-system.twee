@@ -130,9 +130,9 @@ If you want to avoid trouble, dress modestly and stick to safe, well-lit areas. 
 
 The new school year starts tomorrow at 9:00. The bus service is the easiest way to get around town. Don't forget your uniform!<br><br>
 
-
+/*
 <span id="next"><<click [[Next|Orphanage Intro]]>><</click>></span>
-
+*/
 
 
 
@@ -140,8 +140,8 @@ The new school year starts tomorrow at 9:00. The bus service is the easiest way 
 
 
 
-
-
+''[[Testing Wardrobe]]''<br>
+/*
 <<if $debug is 1>>
 <<click [[School Start|Oxford Street]]>><<pass360>><<pass360>><<pass360>><<pass360>><</click>>
 <br>
@@ -156,7 +156,6 @@ The new school year starts tomorrow at 9:00. The bus service is the easiest way 
 <<click [[Swimming Start|Oxford Street]]>><<pass360>><<pass360>><<pass360>><<pass360>><<pass60>><<pass60>><<pass60>><<pass60>><<pass60>><<pass60>><<pass60>><</click>>
 <br>
 
-<<click [[Testing Room]]>><<uppernaked>><<lowernaked>><<undernaked>><</click>><br>
 <<click [[Robin Low Trauma Low Love|Robin's Room Entrance]]>><<robin>><<endevent>><<set $robinlove to 0>><<set $robinintro to 1>><<set $trauma to ($traumamax / 7) * 2>><<trauma 60>><</click>><br>
 <<click [[Robin Low Trauma Medium Love|Robin's Room Entrance]]>><<robin>><<endevent>><<set $robinlove to 50>><<set $robinintro to 1>><<set $trauma to ($traumamax / 7) * 2>><<trauma 60>><</click>><br>
 <<click [[Robin Low Trauma High Love|Robin's Room Entrance]]>><<robin>><<endevent>><<set $robinlove to 90>><<set $robinintro to 1>><<set $trauma to ($traumamax / 7) * 2>><<trauma 60>><</click>><br>
@@ -167,7 +166,7 @@ The new school year starts tomorrow at 9:00. The bus service is the easiest way 
 <<click [[Robin After Paying Police With Body|Robin's Room Entrance]]>><<robin>><<endevent>><<set $robinpolicebody to 1>><<set $robinintro to 1>><<set $trauma to ($traumamax / 7) * 4>><<trauma 60>><</click>><br>
 <<click [[Robin's Debt Paid|Robin's Room Entrance]]>><<robin>><<endevent>><<set $robinpaid to 1>><<set $robinintro to 1>><<set $trauma to ($traumamax / 7) * 4>><<trauma 60>><</click>><br>
 <</if>>
-
+*/
 
 
 
@@ -4294,45 +4293,12 @@ __Colour Key__<br>
 	<</if>>
 <</if>>
 
-
-
-
-
 <<set $upperexposed to $upperexposedcarry>>
 <<set $lowerexposed to $lowerexposedcarry>>
 <<set $underexposed to $underexposedcarry>>
 
 <</nobr>><</widget>>
 
-<<widget "integritycheck">><<nobr>>
-<<if $upperclothes isnot "naked">>
-	<<if $upperintegrity lte 0>><span class="lewd">Your $upperclothes <<upperplural>> ripped into scraps, exposing your <<breastsstop>></span><br><<upperruined>><<clothesruinstat>><<set $upperoff to 0>>
-	<<endif>>
-<<endif>>
-<<if $lowerclothes isnot "naked">>
-	<<if $lowerintegrity lte 0>><span class="lewd">Your $lowerclothes <<lowerplural>> ripped into scraps, exposing your <<undiesstop>></span><br><<lowerruined>><<clothesruinstat>><<set $loweroff to 0>>
-	<<endif>>
-<<endif>>
-<<if $underclothes isnot "naked">>
-	<<if $underintegrity lte 0>><span class="lewd">Your $underclothes <<underplural>> ripped into scraps, exposing your <<genitalsstop>></span><br>
-		<<if $undertype is "chastity">>
-		<<set $undertype to "brokenchastity">>
-			<<if $vaginalchastityparasite isnot 0>>
-<span class="pink">With the chastity belt gone, the $vaginalchastityparasite fall out of your vagina.</span><br><<set $vaginalchastityparasite to 0>>
-			<</if>>
-			<<if $penilechastityparasite isnot 0>>
-			<span class="pink">With the chastity belt gone, the $penilechastityparasite fall off of your penis.</span><br><<set $penilechastityparasite to 0>>
-			<</if>>
-			<<if $analchastityparasite isnot 0>>
-			<span class="pink">With the chastity belt gone, the $analchastityparasite fall out of your anus.</span><br>				<<set $analchastityparasite to 0>>
-			<</if>>
-			<<if $analshield is 1>><<set $analshield to 0>>
-			<</if>>
-		<</if>>
-	<<underruined>><<clothesruinstat>><<set $underoff to 0>>
-	<<endif>>
-<<endif>>
-<</nobr>><</widget>>
 
 <<widget "unbind">><<nobr>>
 <<set $rightboundcarry to 0>>
@@ -5846,17 +5812,10 @@ You feel selfconscious about your <<nuditystop>><br>
 <<set $timer to $timer - 1>>
 <</if>>
 
-
 <<bindings>>
 
+<<clotheseffects>>
 
-
-
-
-
-
-
-<br>
 <<set $menu to 0>>
 <<endnobr>><<endwidget>>
 
@@ -20571,7 +20530,7 @@ Danger: <<print $danger>><br>
 <<click [[Appointment|Hospital Foyer]]>><<set $weekday to 6>><<set $time to 960>><</click>><br>
 <<click [[Deep forest|Forest]]>><<set $forest to 80>><</click>><br>
 <<click [[Penis Inspection|Penis Inspection]]>><<weekpass>><<weekpass>><<leighton>><<person1>><</click>><br>
-<<click [[Testing Room]]>><<uppernaked>><<lowernaked>><<undernaked>><</click>><br>
+''[[Testing Wardrobe]]''<br>
 
 <<if $alluretest is 1>>
 <<click "Stop Being Alluring">><<set $alluretest to 0>><<script>>state.display(state.active.title, null)<</script>><</click>><br>
@@ -23266,135 +23225,6 @@ Higher deviancy allows you to initiate lewder acts during consensual encounters 
 
 
 
-
-
-:: Widgets Clothing Caption [widget]
-<<widget "clothingcaption">><<nobr>>
-
-<<if $upperclothes is "naked">>
-	<<if $lowerclothes is "naked">>
-		<<if $underclothes is "naked">>
-		<span class="red">You are completely naked!</span>
-		<<endif>>
-		<<if $underclothes isnot "naked">>
-		<span class="pink">You are wearing nothing but a <<if $undertype isnot "chastity">>pair of <</if>><<underintegrity>> $undercolour $underclothes.</span>
-		<<endif>>
-	<<endif>>
-	<<if $lowerclothes isnot "naked">>
-		<<if $underclothes is "naked">>
-		<span class="pink">You are topless and wearing no underwear</span> but your lower half is covered by <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes.
-		<<endif>>
-		<<if $underclothes isnot "naked">>
-		<span class="pink">You are topless</span> with <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes and <<underword>> <<underintegrity>> $undercolour $underclothes.
-		<<endif>>
-	<<endif>>
-<<elseif $upperclothes isnot "naked">>
-	<<if $lowerclothes is "naked">>
-		<<if $underclothes is "naked">>
-			<<if $upperonepiece is 1 and $lowerset isnot $upperset>>
-			You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes that has been torn at the waist <span class="red"> leaving your bottom half completely exposed!</span>
-			<<else>>
-		<span class="red">Your bottom half is completely exposed!</span> You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes.
-			<</if>>
-		<<endif>>
-		<<if $underclothes isnot "naked">>
-			<<if $upperonepiece is 1 and $lowerset isnot $upperset>>
-			You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes that has been torn at the waist <span class="purple"> leaving your <<underword>> <<underintegrity>> $undercolour $underclothes exposed.</span>
-			<<else>>
-		You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes and <span class="purple">exposed <<underword>> <<underintegrity>> $undercolour $underclothes.</span>
-			<</if>>
-		<<endif>>
-	<<endif>>
-	<<if $lowerclothes isnot "naked">>
-		<<if $underclothes is "naked">>
-		You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes
-		<<if $loweronepiece isnot 1>>and <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes
-		<</if>>
-		<span class="purple"><<if $lowertype is "swim">>and<<else>>but<</if>> you are not wearing underwear.</span>
-		<<endif>>
-		<<if $underclothes isnot "naked">><<nobr>>
-		You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes 
-		<<if $loweronepiece isnot 1>>with <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes 
-		<</if>>and <<underword>> <<underintegrity>> $undercolour $underclothes.
-		<<endnobr>><<endif>>
-	<<endif>>
-<<endif>>
-
-<</nobr>><</widget>>
-
-
-
-
-
-
-
-
-<<widget "stripcaption">><<nobr>>
-
-<<if $uppertype isnot "naked" and $upperwetstage gte 3 and $lowertype isnot "naked" and $lowerwetstage gte 3 and $undertype isnot "naked" and $undertype isnot "chastity" and $underwetstage gte 3>>
-	<<if $upperset is $lowerset>>
-<br>Your $upperclothes, skirt and $underclothes are drenched, <span class="pink">revealing your <<breasts>> and <<genitalsstop>></span><br>	
-	<<else>>
-<br>Your $upperclothes, $lowerclothes and $underclothes are drenched, <span class="pink">revealing your <<breasts>> and <<genitalsstop>></span><br>
-	<</if>>
-
-<<elseif $uppertype isnot "naked" and $upperwetstage gte 3 and $lowerwetstage gte 3 and $lowertype isnot "naked">>
-	<<if $upperset is $lowerset>>
-<br>Your $upperclothes and skirt are drenched, <span class="purple">revealing your <<breasts>> and <<undiesstop>></span><br>
-	<<else>>
-<br>Your $upperclothes and $lowerclothes are drenched, <span class="purple">revealing your <<breasts>> and <<undiesstop>></span><br>	
-	<</if>>
-
-<<elseif $uppertype isnot "naked" and $upperwetstage gte 3>>
-<br>Your $upperclothes <<upperplural>> drenched, <span class="purple">revealing your <<breastsstop>></span><br>
-	
-<<elseif $lowertype isnot "naked" and $lowerwetstage gte 3 and $undertype isnot "naked" and $undertype isnot "chastity" and $underwetstage gte 3>>
-<br>Your $lowerclothes and $underclothes are drenched, <span class="pink">revealing your <<genitalsstop>></span><br>
-
-<<elseif $lowertype isnot "naked" and $lowerwetstage gte 3>>
-<br>Your $lowerclothes <<lowerplural>> drenched, <span class="purple">revealing your <<undiesstop>></span><br>
-
-<<elseif $undertype isnot "naked" and $undertype isnot "chastity" and $underwetstage gte 3>>
-<br>Your $underclothes <<underplural>> drenched, <span class="pink">revealing your <<genitalsstop>></span><br>
-
-
-
-
-
-
-
-
-
-<<elseif $uppertype isnot "naked" and $upperexposed is 2 and $lowertype isnot "naked" and $lowerexposed is 2 and $undertype isnot "naked" and $undertype isnot "chastity" and $understate isnot "waist">>
-	<<if $upperset is $lowerset>>
-<br>Your $upperclothes, skirt and $underclothes have been pulled aside, <span class="pink">revealing your <<breasts>> and <<genitalsstop>></span><br>	
-	<<else>>
-<br>Your $upperclothes, $lowerclothes and $underclothes have been pulled aside, <span class="pink">revealing your <<breasts>> and <<genitalsstop>></span><br>
-	<</if>>
-
-<<elseif $uppertype isnot "naked" and $upperexposed is 2 and $lowerexposed is 2 and $lowertype isnot "naked">>
-	<<if $upperset is $lowerset>>
-<br>Your $upperclothes and skirt have been pulled aside, <span class="purple">revealing your <<breasts>> and <<undiesstop>></span><br>
-	<<else>>
-<br>Your $upperclothes and $lowerclothes have been pulled aside, <span class="purple">revealing your <<breasts>> and <<undiesstop>></span><br>	
-	<</if>>
-
-<<elseif $uppertype isnot "naked" and $upperexposed is 2>>
-<br>Your $upperclothes <<upperhas>> been pulled aside, <span class="purple">revealing your <<breastsstop>></span><br>
-	
-<<elseif $lowertype isnot "naked" and $lowerexposed is 2 and $undertype isnot "naked" and $undertype isnot "chastity" and $understate isnot "waist">>
-<br>Your $lowerclothes <<lowerhas>> been pulled aside and your $underclothes pulled down, <span class="pink">revealing your <<genitalsstop>></span><br>
-
-<<elseif $lowertype isnot "naked" and $lowerexposed is 2>>
-<br>Your $lowerclothes <<lowerhas>> been pulled aside, <span class="purple">revealing your <<undiesstop>></span><br>
-
-<<elseif $undertype isnot "naked" and $undertype isnot "chastity" and $understate isnot "waist">>
-<br>Your $underclothes <<underhas>> been pulled down to your $understate, <span class="pink">revealing your <<genitalsstop>></span><br>
-<</if>>
-
-
-
-<</nobr>><</widget>>
 
 
 

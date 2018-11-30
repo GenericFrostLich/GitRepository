@@ -23,6 +23,26 @@ mouse.tooltip:hover span{
     background:#C4C4C4 repeat-x 0 0;
 }
 
+#table_id {
+  display: block;
+}
+
+#table_id td {
+  display: inline-block; text-align: center; vertical-align: middle; border: 1px solid #6688BB; padding:4px;
+}
+
+td a {
+    display:block;
+    width:100%;
+}
+
+#slot
+{
+    color:darkgrey;
+    font-size:10px;
+}
+
+
 #ui-bar {
 	z-index: 300;
 }
@@ -110,9 +130,6 @@ mouse.tooltip:hover span{
 	color: #E04880
 }
 
-.grey {
-	color: #B7B7B7
-}
 
 
 
@@ -583,11 +600,18 @@ mouse.tooltip:hover span{
 	z-index: 101;
 }
 
-#sexunder {
+#sexacc {
 		position: absolute;
 		left: 256px;
 		top: 0px;
 	z-index: 102;
+}
+
+#sexunder {
+		position: absolute;
+		left: 256px;
+		top: 0px;
+	z-index: 103;
 }
 
 #sexlower {
@@ -601,8 +625,9 @@ mouse.tooltip:hover span{
 		position: absolute;
 		left: 256px;
 		top: 0px;
-	z-index: 106;
+	z-index: 105;
 }
+
 
 #sexaboveclothes {
 		position: absolute;

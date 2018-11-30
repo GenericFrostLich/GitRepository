@@ -1,6 +1,8 @@
 # IDE, temp, generated, and other local-only files
 .idea/
 node_modules/
+img/
+mod/
 tweego.exe
 *.html
 
