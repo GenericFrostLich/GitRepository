@@ -1,0 +1,529 @@
+:: Testing Wardrobe [nobr testing]
+<<testingroomlist>>
+<<effects>>
+
+<<wardrobesystem "Testing Wardrobe">>
+
+
+
+
+
+
+
+:: Testing Sprite [nobr testing]
+<<testingroomlist>>
+<<effects>>
+<<if $outertop>><<set $outertop.state to "waist">><</if>>
+<<if $outerbottom>><<set $outerbottom.state to "waist">><</if>>
+<<if $outertop>><<set $outertop.state to "waist">><</if>>
+<<if $outerbottom>><<set $outerbottom.state to "waist">><</if>>
+<<if $outertop>><<set $outertop.state to "waist">><</if>>
+<<if $outerbottom>><<set $outerbottom.state to "waist">><</if>>
+<<combatimg>><br>
+
+
+
+
+
+
+
+:: Testing Shop [nobr testing]
+<<testingroomlist>>
+<<effects>>
+
+/*
+ToDo:  Add handling for theft including crime increase <br>
+ToDo:  Add handling for 'try on clothing' - probably only after apropriate scenes are made. <br>
+*/
+''Tops:''  
+<label>
+<<if $temptype is "t-shirt">><<radiobutton "$temptype" "t-shirt" checked>>
+<<else>><<radiobutton "$temptype" "t-shirt">><</if>>
+T-Shirt </label> | <label>
+<<if $temptype is "tank top">><<radiobutton "$temptype" "tank top" checked>>
+<<else>><<radiobutton "$temptype" "tank top">><</if>>
+Tank Top </label> | <label>
+<<if $temptype is "bikini top">><<radiobutton "$temptype" "bikini top" checked>>
+<<else>><<radiobutton "$temptype" "bikini top">><</if>>
+Bikini Top </label> | <label>
+<<if $temptype is "pyjama shirt">><<radiobutton "$temptype" "pyjama shirt" checked>>
+<<else>><<radiobutton "$temptype" "pyjama shirt">><</if>>
+Pyjama Shirt </label> | <label>
+<<if $temptype is "towel top">><<radiobutton "$temptype" "towel top" checked>>
+<<else>><<radiobutton "$temptype" "towel top">><</if>>
+Towel (top) </label>
+<br>
+''Bottoms:''  
+<label>
+<<if $temptype is "shorts">><<radiobutton "$temptype" "shorts" checked>>
+<<else>><<radiobutton "$temptype" "shorts">><</if>>
+Shorts </label> | <label>
+<<if $temptype is "bikini bottoms">><<radiobutton "$temptype" "bikini bottoms" checked>>
+<<else>><<radiobutton "$temptype" "bikini bottoms">><</if>>
+Bikini Bottoms </label> | <label>
+<<if $temptype is "pyjama bottoms">><<radiobutton "$temptype" "pyjama bottoms" checked>>
+<<else>><<radiobutton "$temptype" "pyjama bottoms">><</if>>
+Pyjama Bottoms </label> | <label>
+<<if $temptype is "towel bottom">><<radiobutton "$temptype" "towel bottom" checked>>
+<<else>><<radiobutton "$temptype" "towel bottom">><</if>>
+Towel (bottom) </label>
+<br>
+''School:''  
+<label>
+<<if $temptype is "school shirt">><<radiobutton "$temptype" "school shirt" checked>>
+<<else>><<radiobutton "$temptype" "school shirt">><</if>>
+School Shirt </label> | <label>
+<<if $temptype is "school shorts">><<radiobutton "$temptype" "school shorts" checked>>
+<<else>><<radiobutton "$temptype" "school shorts">><</if>>
+School Shorts </label> | <label>
+<<if $temptype is "school skirt">><<radiobutton "$temptype" "school skirt" checked>>
+<<else>><<radiobutton "$temptype" "school skirt">><</if>>
+School Skirt </label> | <label>
+<<if $temptype is "school swimsuit">><<radiobutton "$temptype" "school swimsuit" checked>>
+<<else>><<radiobutton "$temptype" "school swimsuit">><</if>>
+School Swimsuit </label> | <label>
+<<if $temptype is "school swim shorts">><<radiobutton "$temptype" "school swim shorts" checked>>
+<<else>><<radiobutton "$temptype" "school swim shorts">><</if>>
+School Swim Shorts </label>
+<br>
+''Underwear:''  
+<label>
+<<if $temptype is "Y fronts">><<radiobutton "$temptype" "Y fronts" checked>>
+<<else>><<radiobutton "$temptype" "Y fronts">><</if>>
+Y Fronts </label> | <label>
+<<if $temptype is "plain panties">><<radiobutton "$temptype" "plain panties" checked>>
+<<else>><<radiobutton "$temptype" "plain panties">><</if>>
+Plain Panties </label> | <label>
+<<if $temptype is "lace panties">><<radiobutton "$temptype" "lace panties" checked>>
+<<else>><<radiobutton "$temptype" "lace panties">><</if>>
+Lace Panties </label>
+<br>
+''Other:''  
+<label>
+<<if $temptype is "sundress">><<radiobutton "$temptype" "sundress" checked>>
+<<else>><<radiobutton "$temptype" "sundress">><</if>>
+Sundress </label> | <label>
+<<if $temptype is "evening gown">><<radiobutton "$temptype" "evening gown" checked>>
+<<else>><<radiobutton "$temptype" "evening gown">><</if>>
+Evening Gown </label> | <label>
+<<if $temptype is "waist apron">><<radiobutton "$temptype" "waist apron" checked>>
+<<else>><<radiobutton "$temptype" "waist apron">><</if>>
+Waist Apron </label>
+<br><br>
+''Color Selection:''
+<label>
+<<if $tempcolour is "white">><<radiobutton "$tempcolour" "white" checked>> 
+<<else>><<radiobutton "$tempcolour" "white">><</if>>
+White</label> | <label class="pink">
+<<if $tempcolour is "pink">><<radiobutton "$tempcolour" "pink" checked>>
+<<else>><<radiobutton "$tempcolour" "pink">><</if>>
+Pink</label> | <label class="red">
+<<if $tempcolour is "red">><<radiobutton "$tempcolour" "red" checked>>
+<<else>><<radiobutton "$tempcolour" "red">><</if>>
+Red</label> | <label class="orange">
+<<if $tempcolour is "orange">><<radiobutton "$tempcolour" "orange" checked>>
+<<else>><<radiobutton "$tempcolour" "orange">><</if>>
+Orange</label> | <label class="gold">
+<<if $tempcolour is "yellow">><<radiobutton "$tempcolour" "yellow" checked>>
+<<else>> <<radiobutton "$tempcolour" "yellow">><</if>>
+Yellow</label> | <label class="green">
+<<if $tempcolour is "green">><<radiobutton "$tempcolour" "green" checked>>
+<<else>><<radiobutton "$tempcolour" "green">><</if>>
+Green</label> | <label class="blue">
+<<if $tempcolour is "blue">><<radiobutton "$tempcolour" "blue" checked>>
+<<else>><<radiobutton "$tempcolour" "blue">><</if>>
+Blue</label> | <label class="purple">
+<<if $tempcolour is "purple">><<radiobutton "$tempcolour" "purple" checked>>
+<<else>><<radiobutton "$tempcolour" "purple">><</if>>
+Purple </label> | <label class="black">
+<<if $tempcolour is "black">><<radiobutton "$tempcolour" "black" checked>>
+<<else>><<radiobutton "$tempcolour" "black">><</if>>
+</label><br><br>
+''Action:''  
+<label>
+<<if $tempaction is "wear">><<radiobutton "$tempaction" "wear" checked>>
+<<else>><<radiobutton "$tempaction" "wear">><</if>> 
+Wear</label> | <label>
+<<if $tempaction is "store">><<radiobutton "$tempaction" "store" checked>>
+<<else>><<radiobutton "$tempaction" "store">><</if>>
+Send Home </label> 
+<br><br>
+<<button "Buy Now!" "Testing Shop">><<buyclothes $tempcolour $temptype $tempaction>><</button>>
+ - - - or - - - 
+<<button "Delete All Clothes" "Testing Shop">>
+<<set $outertop to 0>><<set $outerbottom to 0>><<set $top to 0>><<set $bottom to 0>><<set $undertop to 0>><<set $underbottom to 0>><<set $legs to 0>><<set $feet to 0>><<set $headacc to 0>><<set $faceacc to 0>><<set $neckacc to 0>><<set $underacc to 0>><<set $wardrobe to []>><</button>>
+ - - - or - - - 
+<<button "Give Money!" "Testing Shop">><<set $money += 5000>><</button>>
+
+<br><br>
+''Temp Items:''  
+<<link [[Get Plant Top|Testing Shop]]>><<giveclothes "green" "plant top" "wear">><</link>> | 
+<<link [[Get Plant Skirt|Testing Shop]]>><<giveclothes "green" "plant skirt" "wear">><</link>><br>
+''Lewd Items:'' 
+<<link [[Toggle Chastity Belt|Testing Shop]]>>
+  <<if $underacc.name is "chastity belt">><<set $underacc to 0>>
+  <<else>><<giveclothes "" "chastity belt" "wear">><</if>><</link>> | 
+<<link [[Toggle Collar|Testing Shop]]>>
+  <<if $neckacc.name is "collar">><<set $neckacc to 0>>
+  <<else>><<giveclothes "" "collar" "wear">><</if>><</link>><br>
+''Accessories:''  
+<<link [[Get Hairpin|Testing Shop]]>><<giveclothes "" "hairpin" "wear">><</link>> | 
+<<link [[Get Beanie|Testing Shop]]>><<giveclothes "" "beanie" "wear">><</link>> | 
+<<link [[Get Glasses|Testing Shop]]>><<giveclothes "" "glasses" "wear">><</link>> | 
+<<link [[Get Cool Shades|Testing Shop]]>><<giveclothes "" "shades" "wear">><</link>><br>
+''Socks:''  
+<<link [[Get Pink Gym Socks|Testing Shop]]>><<giveclothes "pink" "gym socks" "wear">><</link>> | 
+<<link [[Get Blue Gym Socks|Testing Shop]]>><<giveclothes "blue" "gym socks" "wear">><</link>><br>
+''Stockings:''
+<<link [[Get Fishnet Stockings|Testing Shop]]>><<giveclothes "fishnet" "stockings" "wear">><</link>> | 
+<<link [[Get Sheer Stockings|Testing Shop]]>><<giveclothes "sheer" "stockings" "wear">><</link>><br>
+''Tights:''
+<<link [[Get Brown Tights|Testing Shop]]>><<giveclothes "brown" "tights" "wear">><</link>> | 
+<<link [[Get Sheer Tights|Testing Shop]]>><<giveclothes "sheer" "tights" "wear">><</link>><br>
+''Feet:''
+<<link [[Get Black Shoes|Testing Shop]]>><<giveclothes "" "shoes" "wear">><</link>><br>
+<br>
+
+
+<<link "Reset Debug" "Testing Wardrobe">><<set $debugtxt to []>><</link>><br>
+Print Debug: <<print $debugtxt>><br><br>
+
+
+
+
+:: Testing Text [nobr testing]
+<<testingroomlist>>
+<<effects>>
+
+Passage: $passage <br>
+Tags: $tags <br>
+Version: $version
+Step: $step
+
+
+<br><br>
+<<link "Reset Debug" passage()>><<set $debugtxt to []>><</link>><br>
+Print Debug: <<print $debugtxt>><br><br>
+
+<<if $outertop is 0>>
+  <<if $outerbottom is 0>>
+<<else>> /*wearing outertop*/
+  <</if>><</if>>
+
+  <<if $upperclothes is "naked">>
+	<<if $lowerclothes is "naked">>
+		<<if $underclothes is "naked">>
+		<span class="red">You are completely naked!</span>
+		<</if>>
+		<<if $underclothes isnot "naked">>
+		<span class="pink">You are wearing nothing but a <<if $undertype isnot "chastity">>pair of <</if>><<underintegrity>> $undercolour $underclothes.</span>
+		<</if>>
+	<</if>>
+	<<if $lowerclothes isnot "naked">>
+		<<if $underclothes is "naked">>
+		<span class="pink">You are topless and wearing no underwear</span> but your lower half is covered by <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes.
+		<</if>>
+		<<if $underclothes isnot "naked">>
+		<span class="pink">You are topless</span> with <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes and <<underword>> <<underintegrity>> $undercolour $underclothes.
+		<</if>>
+	<</if>>
+<<elseif $upperclothes isnot "naked">>
+	<<if $lowerclothes is "naked">>
+		<<if $underclothes is "naked">>
+			<<if $upperonepiece is 1 and $lowerset isnot $upperset>>
+			You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes that has been torn at the waist <span class="red"> leaving your bottom half completely exposed!</span>
+			<<else>>
+		<span class="red">Your bottom half is completely exposed!</span> You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes.
+			<</if>>
+		<</if>>
+		<<if $underclothes isnot "naked">>
+			<<if $upperonepiece is 1 and $lowerset isnot $upperset>>
+			You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes that has been torn at the waist <span class="purple"> leaving your <<underword>> <<underintegrity>> $undercolour $underclothes exposed.</span>
+			<<else>>
+		You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes and <span class="purple">exposed <<underword>> <<underintegrity>> $undercolour $underclothes.</span>
+			<</if>>
+		<</if>>
+	<</if>>
+	<<if $lowerclothes isnot "naked">>
+		<<if $underclothes is "naked">>
+		You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes
+		<<if $loweronepiece isnot 1>>and <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes
+		<</if>>
+		<span class="purple"><<if $lowertype is "swim">>and<<else>>but<</if>> you are not wearing underwear.</span>
+		<</if>>
+		<<if $underclothes isnot "naked">><<nobr>>
+		You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes 
+		<<if $loweronepiece isnot 1>>with <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes 
+		<</if>>and <<underword>> <<underintegrity>> $undercolour $underclothes.
+		<<endnobr>><</if>>
+	<</if>>
+<</if>>
+<br><br>
+
+
+
+
+:: Testing Variables [nobr testing]
+<<testingroomlist>>
+<<effects>>
+<<variablebar "Pain" "$pain" 0 2 20 200>>
+<<variablebar "Arousal" "$arousal" 0 100 1000 10000>>
+<<variablebar "Fatigue" "$tiredness" 0 20 200 2000>>
+<<variablebar "Stress" "$stress" 0 100 1000 10010>>
+<<variablebar "Trauma" "$trauma" 0 50 500 5000>>
+<br>
+<<variablebar "Promiscuity" "$promiscuity" 0 1 10 100>>
+<<variablebar "Exhibitionism" "$exhibitionism" 0 1 10 100>>
+<br>
+
+Toggle:  
+<<link "Gender">><<if $playergender is "f">>
+<<set $vaginaexist to 0>><<set $playergender to "m">><<set $penisexist to 1>>
+<<else>><<set $penisexist to 0>><<set $playergender to "f">><<set $vaginaexist to 1>><</if>>
+<<goto "Testing Variables">><</link>>  |  
+<<link "Virginity">>
+<<if $penilevirginity is 0 or $vaginalvirginity is 0>>
+  <<set $penilevirginity to 1>><<set $vaginalvirginity to 1>><<set $oralvirginity to 1>><<set $analvirginity to 1>>
+<<else>>
+  <<set $penilevirginity to 0>><<set $vaginalvirginity to 0>><<set $oralvirginity to 0>><<set $analvirginity to 0>>
+<</if>>
+<<goto "Testing Variables">><</link>> | 
+<<link "Hirsute">>
+<<if $hirsutedisable is "f">><<set $hirsutedisable to "t">>
+<<else>><<set $hirsutedisable to "f">><</if>>
+<<goto "Testing Variables">><</link>>  |
+<<link "Bound Left Arm">>
+<<if $leftarm is "bound">><<set $leftarm to 0>><<set $leftboundcarry to 0>>
+<<else>><<set $leftarm to "bound">><</if>>
+<<goto "Testing Variables">><</link>>  |  
+<<link "Bound Right Arm">>
+<<if $rightarm is "bound">><<set $rightarm to 0>><<set $rightboundcarry to 0>>
+<<else>><<set $rightarm to "bound">><</if>>
+<<goto "Testing Variables">><</link>>  <br><br>
+
+Breast Size - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 <br>
+
+Hair Colour (<<= $haircolour>>): 
+<<link "Black">><<set $haircolour to "black">><<goto "Testing Variables">><</link>> |
+<<link "Brown">><<set $haircolour to "brown">><<goto "Testing Variables">><</link>> |
+<<link "Red">><<set $haircolour to "red">><<goto "Testing Variables">><</link>> |
+<<link "Ginger">><<set $haircolour to "ginger">><<goto "Testing Variables">><</link>> |
+<<link "Blond">><<set $haircolour to "blond">><<goto "Testing Variables">><</link>> |
+<<link "Green">><<set $haircolour to "green">><<goto "Testing Variables">><</link>> |
+<<link "Blue">><<set $haircolour to "blue">><<goto "Testing Variables">><</link>> |
+<<link "Purple">><<set $haircolour to "purple">><<goto "Testing Variables">><</link>> <br>
+<<variablebar "Hair Length" "$hairlength" 0 10 100 1000>>
+
+<br>
+
+Eye Colour (<<= $eyecolour>>): 
+<<link "Hazel">><<set $eyecolour to "hazel">><<goto "Testing Variables">><</link>> |
+<<link "Amber">><<set $eyecolour to "amber">><<goto "Testing Variables">><</link>> |
+<<link "Green">><<set $eyecolour to "green">><<goto "Testing Variables">><</link>> |
+<<link "Dark Blue">><<set $eyecolour to "dark blue">><<goto "Testing Variables">><</link>> |
+<<link "Light Blue">><<set $eyecolour to "light blue">><<goto "Testing Variables">><</link>> |
+<<link "Purple">><<set $eyecolour to "purple">><<goto "Testing Variables">><</link>> <br><br>
+
+<<link "<">><<set $wolfgirl -= 1>><<goto "Testing Variables">><</link>> 
+Wolf (<<= $wolfgirl>>)
+<<link ">">><<set $wolfgirl += 1>><<goto "Testing Variables">><</link>> |
+<<link "<">><<set $angel -= 1>><<goto "Testing Variables">><</link>> 
+Angel (<<= $angel>>)
+<<link ">">><<set $angel += 1>><<goto "Testing Variables">><</link>> |
+<<link "<">><<set $demon -= 1>><<goto "Testing Variables">><</link>> 
+Demon (<<= $demon>>)
+<<link ">">><<set $demon += 1>><<goto "Testing Variables">><</link>> |
+<<link "<">><<set $fallenangel -= 1>><<goto "Testing Variables">><</link>> 
+Fallen Angel (<<= $fallenangel>>)
+<<link ">">><<set $fallenangel += 1>><<goto "Testing Variables">><</link>> <br><br>
+
+
+Semen:  
+<<link "<">><<set $vaginasemen -= 1>><<goto "Testing Variables">><</link>> 
+Vagina (<<= $vaginasemen>>)
+<<link ">">><<set $vaginasemen += 1>><<goto "Testing Variables">><</link>> |
+<<link "<">><<set $anussemen -= 1>><<goto "Testing Variables">><</link>> 
+Anus (<<= $anussemen>>)
+<<link ">">><<set $anussemen += 1>><<goto "Testing Variables">><</link>> |
+<<link "<">><<set $mouthsemen -= 1>><<goto "Testing Variables">><</link>> 
+Mouth (<<= $mouthsemen>>)
+<<link ">">><<set $mouthsemen += 1>><<goto "Testing Variables">><</link>> <br>
+Goo:  
+<<link "<">><<set $vaginagoo -= 1>><<goto "Testing Variables">><</link>> 
+Vagina (<<= $vaginagoo>>)
+<<link ">">><<set $vaginagoo += 1>><<goto "Testing Variables">><</link>> |
+<<link "<">><<set $anusgoo -= 1>><<goto "Testing Variables">><</link>> 
+Anus (<<= $anusgoo>>)
+<<link ">">><<set $anusgoo += 1>><<goto "Testing Variables">><</link>> |
+<<link "<">><<set $mouthgoo -= 1>><<goto "Testing Variables">><</link>> 
+Mouth (<<= $mouthgoo>>)
+<<link ">">><<set $mouthgoo += 1>><<goto "Testing Variables">><</link>> <br>
+
+Parasite:  
+<<link "Chest">>
+<<if $chestparasite is 0>><<set $chestparasite to 1>>
+<<else>><<set $chestparasite to 0>><</if>>
+<<goto "Testing Variables">><</link>>  |  
+<<link "Penis">>
+<<if $penisparasite is 0>><<set $penisparasite to 1>>
+<<else>><<set $penisparasite to 0>><</if>>
+<<goto "Testing Variables">><</link>>  |  
+<<link "Clit">>
+<<if $clitparasite is 0>><<set $clitparasite to 1>>
+<<else>><<set $clitparasite to 0>><</if>>
+<<goto "Testing Variables">><</link>>  <br><br>
+
+<<if $outertop isnot 0>>
+Outerclothes Top:  <<link "<<">><<set $outertop.integrity -= 10>><<goto "Testing Variables">><</link>> 
+<<link "<">><<set $outertop.integrity -= 1>><<goto "Testing Variables">><</link>> 
+Integrity (<<= $outertop.integrity>>)
+<<link ">">><<set $outertop.integrity += 1>><<goto "Testing Variables">><</link>> 
+<<link ">>">><<set $outertop.integrity += 10>><<goto "Testing Variables">><</link>>  |  
+<<link "<">><<set $outertop.wet -= 1>><<goto "Testing Variables">><</link>> 
+Wet (<<= $outertop.wet>>)
+<<link ">">><<set $outertop.wet += 1>><<goto "Testing Variables">><</link>> <br>
+<</if>>
+<<if $outerbottom isnot 0>>
+Outerclothes Bottom:  <<link "<<">><<set $outerbottom.botintegrity -= 10>><<goto "Testing Variables">><</link>> 
+<<link "<">><<set $outerbottom.botintegrity -= 1>><<goto "Testing Variables">><</link>> 
+Integrity (<<= $outerbottom.botintegrity>>)
+<<link ">">><<set $outerbottom.botintegrity += 1>><<goto "Testing Variables">><</link>> 
+<<link ">>">><<set $outerbottom.botintegrity += 10>><<goto "Testing Variables">><</link>>  |  
+<<link "<">><<set $outerbottom.wet -= 1>><<goto "Testing Variables">><</link>> 
+Wet (<<= $outerbottom.wet>>)
+<<link ">">><<set $outerbottom.wet += 1>><<goto "Testing Variables">><</link>> <br>
+<</if>>
+<<if $top isnot 0>>
+Upper Clothes:  <<link "<<">><<set $top.integrity -= 10>><<goto "Testing Variables">><</link>> 
+<<link "<">><<set $top.integrity -= 1>><<goto "Testing Variables">><</link>> 
+Integrity (<<= $top.integrity>>)
+<<link ">">><<set $top.integrity += 1>><<goto "Testing Variables">><</link>> 
+<<link ">>">><<set $top.integrity += 10>><<goto "Testing Variables">><</link>>  |  
+<<link "<">><<set $top.wet -= 1>><<goto "Testing Variables">><</link>> 
+Wet (<<= $top.wet>>)
+<<link ">">><<set $top.wet += 1>><<goto "Testing Variables">><</link>> <br>
+<</if>>
+<<if $bottom isnot 0>>
+Lower Clothes:  <<link "<<">><<set $bottom.botintegrity -= 10>><<goto "Testing Variables">><</link>> 
+<<link "<">><<set $bottom.botintegrity -= 1>><<goto "Testing Variables">><</link>> 
+Integrity (<<= $bottom.botintegrity>>)
+<<link ">">><<set $bottom.botintegrity += 1>><<goto "Testing Variables">><</link>> 
+<<link ">>">><<set $bottom.botintegrity += 10>><<goto "Testing Variables">><</link>>  |  
+<<link "<">><<set $bottom.wet -= 1>><<goto "Testing Variables">><</link>> 
+Wet (<<= $bottom.wet>>)
+<<link ">">><<set $bottom.wet += 1>><<goto "Testing Variables">><</link>> <br>
+<</if>>
+<<if $undertop isnot 0>>
+Underclothes Top:  <<link "<<">><<set $undertop.integrity -= 10>><<goto "Testing Variables">><</link>> 
+<<link "<">><<set $undertop.integrity -= 1>><<goto "Testing Variables">><</link>> 
+Integrity (<<= $undertop.integrity>>)
+<<link ">">><<set $undertop.integrity += 1>><<goto "Testing Variables">><</link>> 
+<<link ">>">><<set $undertop.integrity += 10>><<goto "Testing Variables">><</link>>  |  
+<<link "<">><<set $undertop.wet -= 1>><<goto "Testing Variables">><</link>> 
+Wet (<<= $undertop.wet>>)
+<<link ">">><<set $undertop.wet += 1>><<goto "Testing Variables">><</link>> <br>
+<</if>>
+<<if $underbottom isnot 0>>
+Underclothes Bottom:  <<link "<<">><<set $underbottom.botintegrity -= 10>><<goto "Testing Variables">><</link>> 
+<<link "<">><<set $underbottom.botintegrity -= 1>><<goto "Testing Variables">><</link>> 
+Integrity (<<= $underbottom.botintegrity>>)
+<<link ">">><<set $underbottom.botintegrity += 1>><<goto "Testing Variables">><</link>> 
+<<link ">>">><<set $underbottom.botintegrity += 10>><<goto "Testing Variables">><</link>>  |  
+<<link "<">><<set $underbottom.wet -= 1>><<goto "Testing Variables">><</link>> 
+Wet (<<= $underbottom.wet>>)
+<<link ">">><<set $underbottom.wet += 1>><<goto "Testing Variables">><</link>> <br>
+<</if>>
+<<if $underacc isnot 0>>
+Under Accessory:  <<link "<<">><<set $underacc.botintegrity -= 1000>><<goto "Testing Variables">><</link>> 
+<<link "<">><<set $underacc.botintegrity -= 100>><<goto "Testing Variables">><</link>> 
+Integrity (<<= $underacc.botintegrity>>)
+<<link ">">><<set $underacc.botintegrity += 100>><<goto "Testing Variables">><</link>> 
+<<link ">>">><<set $underacc.botintegrity += 1000>><<goto "Testing Variables">><</link>>  |  
+<<link "<">><<set $underacc.wet -= 1>><<goto "Testing Variables">><</link>> 
+Wet (<<= $underacc.wet>>)
+<<link ">">><<set $underacc.wet += 1>><<goto "Testing Variables">><</link>> <br>
+<</if>>
+<<if $legs isnot 0>>
+Leggings and Socks:  <<link "<<">><<set $legs.integrity -= 10>><<goto "Testing Variables">><</link>> 
+<<link "<">><<set $legs.integrity -= 1>><<goto "Testing Variables">><</link>> 
+Integrity (<<= $legs.integrity>>)
+<<link ">">><<set $legs.integrity += 1>><<goto "Testing Variables">><</link>> 
+<<link ">>">><<set $legs.integrity += 10>><<goto "Testing Variables">><</link>>  |  
+<<link "<">><<set $legs.wet -= 1>><<goto "Testing Variables">><</link>> 
+Wet (<<= $legs.wet>>)
+<<link ">">><<set $legs.wet += 1>><<goto "Testing Variables">><</link>> <br>
+<</if>>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:: Widgets Testing [widget]
+<<widget "testingroomlist">><<nobr>>
+<<if $passage is "Testing Wardrobe">> ''[[Wardrobe|Testing Wardrobe]]''
+<<else>> [[Wardrobe|Testing Wardrobe]] <</if>> | 
+<<if $passage is "Testing Shop">> ''[[Shop|Testing Shop]]''
+<<else>> [[Shop|Testing Shop]] <</if>> | 
+<<if $passage is "Testing Sprite">> ''[[Sprite|Testing Sprite]]''
+<<else>> [[Sprite|Testing Sprite]] <</if>> | 
+<<if $passage is "Testing Text">> ''[[Text|Testing Text]]''
+<<else>> [[Text|Testing Text]] <</if>> |
+<<if $passage is "Testing Variables">> ''[[Variables|Testing Variables]]''
+<<else>> [[Variables|Testing Variables]] <</if>> <br><br>
+<</nobr>><</widget>>
+
+<<widget "variablebar">><<nobr>>
+<<= '[["|<"|' + $passage + '][' + $args[1] + ' to ' + $args[2] + ']]'>>
+<<= '[["<<"|' + $passage + '][' + $args[1] + ' -= ' + $args[4] + ']]'>>
+<<= '[["<"|' + $passage + '][' + $args[1] + ' -= ' + $args[3] + ']]'>>
+<<= '[[">"|' + $passage + '][' + $args[1] + ' += ' + $args[3] + ']]'>>
+<<= '[[">>"|' + $passage + '][' + $args[1] + ' += ' + $args[4] + ']]'>>
+<<= '[[">|"|' + $passage + '][' + $args[1] + ' to ' + $args[5] + ']]'>>
+$args[0] ($args[1])
+<br>
+<</nobr>><</widget>>
+

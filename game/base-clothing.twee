@@ -814,7 +814,7 @@ $underbottom.name.
   <<case "none" "" "undefined">>
   <</switch>>
 <<else>>
-  <<clothesmessage "boughtfail" {colour: _colour, name: _name}>>
+  <<set $clothesmessage.push({reason: "boughtfail", colour: _colour, name: _name })>>
 <</if>>
 <<set $createdclothes to 0>>
 <</nobr>><</widget>>
@@ -2064,7 +2064,7 @@ $underbottom.name.
     <<set _list[(_list.length - 1)] to _temp>>
   <</if>>
 <</if>>
-<<clothesmessage "deleteall" {list: _list }>>
+<<set $clothesmessage.push({reason: "deleteall", list: _list })>>
 <<set $debugtxt to _list>>
 <</nobr>><</widget>>
 

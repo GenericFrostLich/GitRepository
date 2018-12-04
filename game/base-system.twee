@@ -5814,8 +5814,9 @@ You feel selfconscious about your <<nuditystop>><br>
 
 <<bindings>>
 
-<<clotheseffects>>
-
+<<if $clothesmessage.length > 0>>
+  <<clotheseffects>> <br>
+<</if>>
 <<set $menu to 0>>
 <<endnobr>><<endwidget>>
 

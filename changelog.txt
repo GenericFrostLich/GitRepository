@@ -1,0 +1,11 @@
+base.css
+ - added table formatting necessary for wardrobe
+
+base-system.twee
+:: Widgets
+- moved integritycheck widget to base-clothing.twee
+- added reference to <<clotheseffects>> at bottom of effects widget.
+
+:: Widgets Clothing Caption [widget]
+- moved to base-clothing.twee
+
