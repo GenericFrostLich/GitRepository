@@ -1,6 +1,6 @@
 :: Wardrobe [nobr]
 <<effects>>
-You look in your war<span class="hide">[[d->$passage][$debug to 1]]</span>robe.<br>
+You look in your wardrobe.<br>
 [[Close wardrobe|Bedroom]]<br><br>
 <<wardrobesystem "Wardrobe">>
 
@@ -11,9 +11,9 @@ You look in your war<span class="hide">[[d->$passage][$debug to 1]]</span>robe.<
 <<set $outside to 0>><<set $location to "beach">><<effects>>
 You are in a small wooden changing room.<br><br>
 <<if $exposed lte 0>>
-[[Leave|Beach]]<br><br>
+  [[Leave|Beach]]<br><br>
 <<else>>
-You can't go out like this!<br><br>
+  You can't go out like this!<br><br>
 <</if>>
 <<wardrobesystem "Changing Room">>
 
@@ -25,15 +25,15 @@ You can't go out like this!<br><br>
 You look through the cupboard containing your clothes. There's an old dressing screen for privacy.<br><br>
 <<if $exhibitionism lte 54>>
 	<<if $exposed lte 0>>
-	<<link [[Done|Eden Cabin]]>><<pass1>><</link>><br><br>
+	<<link [[Done|Eden Cabin]]>><<pass 1>><</link>><br><br>
 	<<else>>
 	You can't remain undressed like this!<br><br>
 	<</if>>
 <<else>>
 	<<if $exposed lte 1>>
-	<<link [[Done|Eden Cabin]]>><</link>><br><br>
+	  [[Done|Eden Cabin]]<br><br>
 	<<else>>
-	You can't remain undressed like this!<br><br>
+	  You can't remain undressed like this!<br><br>
 	<</if>>
 <</if>>
 <<wardrobesystem "Eden Wardrobe">>
@@ -70,15 +70,15 @@ You are in the strip club's dressing room. <<if $daystate isnot "day" and $dayst
 You are in the brothel's dressing room. There are a few mirrors, currently occupied by staff fixing their hair and makeup.<br><br>
 <<if $exhibitionism lte 54>>
 	<<if $exposed lte 0>>
-	<<link [[Back to the brothel (0:01)|Brothel]]>><<pass1>><</link>><br><br>
+	<<link [[Back to the brothel (0:01)|Brothel]]>><<pass 1>><</link>><br><br>
 	<<else>>
 	You can't go out like this!<br><br>
 	<</if>>
 <<elseif $exhibitionism gte 95>>
-<<link [[Back to the brothel (0:01)|Brothel]]>><<pass1>><</link>><br><br>
+<<link [[Back to the brothel (0:01)|Brothel]]>><<pass 1>><</link>><br><br>
 <<else>>
 	<<if $exposed lte 1>>
-	<<link [[Back to the brothel (0:01)|Brothel]]>><<pass1>><</link>><br><br>
+	<<link [[Back to the brothel (0:01)|Brothel]]>><<pass 1>><</link>><br><br>
 	<<else>>
 	You can't go out like this!<br><br>
 	<</if>>
@@ -177,7 +177,7 @@ You are in the accessory shop. The interior is dark and crowded by tall shelves,
 
 <br><br>
 
-<<click [[Leave|Forest]]>><</click>><br>
+<<link [[Leave|Forest]]>><</link>><br>
 
 
 
@@ -2236,19 +2236,19 @@ $underbottom.name.
 	<<if $lowerclothes is "naked">>
 		<<if $underclothes is "naked">>
 		<span class="red">You are completely naked!</span>
-		<<endif>>
+		<</if>>
 		<<if $underclothes isnot "naked">>
 		<span class="pink">You are wearing nothing but a <<if $undertype isnot "chastity">>pair of <</if>><<underintegrity>> $undercolour $underclothes.</span>
-		<<endif>>
-	<<endif>>
+		<</if>>
+	<</if>>
 	<<if $lowerclothes isnot "naked">>
 		<<if $underclothes is "naked">>
 		<span class="pink">You are topless and wearing no underwear</span> but your lower half is covered by <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes.
-		<<endif>>
+		<</if>>
 		<<if $underclothes isnot "naked">>
 		<span class="pink">You are topless</span> with <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes and <<underword>> <<underintegrity>> $undercolour $underclothes.
-		<<endif>>
-	<<endif>>
+		<</if>>
+	<</if>>
 <<elseif $upperclothes isnot "naked">>
 	<<if $lowerclothes is "naked">>
 		<<if $underclothes is "naked">>
@@ -2257,29 +2257,29 @@ $underbottom.name.
 			<<else>>
 		<span class="red">Your bottom half is completely exposed!</span> You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes.
 			<</if>>
-		<<endif>>
+		<</if>>
 		<<if $underclothes isnot "naked">>
 			<<if $upperonepiece is 1 and $lowerset isnot $upperset>>
 			You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes that has been torn at the waist <span class="purple"> leaving your <<underword>> <<underintegrity>> $undercolour $underclothes exposed.</span>
 			<<else>>
 		You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes and <span class="purple">exposed <<underword>> <<underintegrity>> $undercolour $underclothes.</span>
 			<</if>>
-		<<endif>>
-	<<endif>>
+		<</if>>
+	<</if>>
 	<<if $lowerclothes isnot "naked">>
 		<<if $underclothes is "naked">>
 		You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes
 		<<if $loweronepiece isnot 1>>and <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes
 		<</if>>
 		<span class="purple"><<if $lowertype is "swim">>and<<else>>but<</if>> you are not wearing underwear.</span>
-		<<endif>>
-		<<if $underclothes isnot "naked">><<nobr>>
+		<</if>>
+		<<if $underclothes isnot "naked">>
 		You are wearing <<upperword>> <<upperintegrity>> $uppercolour $upperclothes 
 		<<if $loweronepiece isnot 1>>with <<lowerword>> <<lowerintegrity>> $lowercolour $lowerclothes 
 		<</if>>and <<underword>> <<underintegrity>> $undercolour $underclothes.
-		<<endnobr>><<endif>>
-	<<endif>>
-<<endif>>
+		<</if>>
+	<</if>>
+<</if>>
 
 <</nobr>><</widget>>
 
