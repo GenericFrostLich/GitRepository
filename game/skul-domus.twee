@@ -1282,7 +1282,7 @@ Once the living room is cleaned, you report to the <<person>> for payment. "Good
 <<set $sexstart to 0>>
 <<consensual>>
 <<set $consensual to 1>>
-<<neutral1>>
+<<neutral 1>>
 <<set $event to "molestationhome">>
 <<man1init>>
 <<set $enemytrust to $enemytrust + 100>>
@@ -1295,7 +1295,7 @@ You follow the <<person>> into the house. The door is barely shut before <<hes>>
 <<if $molestationstart is 1>>
 <<set $molestationstart to 0>>
 <<set $consensual to 0>>
-<<neutral1>>
+<<neutral 1>>
 <<set $event to "molestationhome">>
 <<controlloss>>
 <<molested>>

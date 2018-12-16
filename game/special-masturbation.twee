@@ -3023,7 +3023,7 @@ One of the boys glances in your direction. You back away from the door, your hea
 You hear a thud from behind. A <<person>> stands gaping at you, <<his>> bag on the floor beside <<himstop>> <<He>> blinks free of <<his>> shock and grins."Guys!" <<he>> shouts. "You have an audience."  The changing room falls silent.<br><br>
 
 	<<if $exhibitionism gte 75>>
-	<<link [[Enter|School Boy's Exhibitionism]]>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+	<<link [[Enter|School Boy's Exhibitionism]]>><<delinquency 3>><</link>><<gdelinquency>><<exhibitionist5>><br>
 	<</if>>
 <<link [[Run|School Boy's Run]]>><</link>><br>
 
@@ -3110,7 +3110,7 @@ One of the girls glances in your direction. You back away from the door, your he
 You hear a thud from behind. A <<person>> stands gaping at you, <<his>> bag on the floor beside <<himstop>> <<He>> blinks free of <<his>> shock and grins."Girls!" <<he>> shouts. "You have an audience."  The changing room falls silent.<br><br>
 
 	<<if $exhibitionism gte 75>>
-	<<link [[Enter|School Girl's Exhibitionism]]>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+	<<link [[Enter|School Girl's Exhibitionism]]>><<delinquency 3>><</link>><<gdelinquency>><<exhibitionist5>><br>
 	<</if>>
 <<link [[Run|School Girl's Run]]>><</link>><br>
 

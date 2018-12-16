@@ -3967,7 +3967,7 @@ You are in the boy's changing room.
 				<<link [[Masturbate (0:01)|School Boy's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
 				<</if>>
 				<<if $exhibitionism gte 75>>
-				<<link [[Enter (0:05)|School Boy's Exhibitionism]]>><<generatesm1>><<pass 5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+				<<link [[Enter (0:05)|School Boy's Exhibitionism]]>><<generatesm1>><<pass 5>><<delinquency 3>><</link>><<gdelinquency>><<exhibitionist5>><br>
 				<</if>>
 			<<link [[Leave|School Pool Entrance]]>><</link>><br>
 
@@ -4103,7 +4103,7 @@ You are in the boy's changing room.
 				<<link [[Masturbate (0:01)|School Boy's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
 				<</if>>
 				<<if $exhibitionism gte 75>>
-				<<link [[Enter (0:05)|School Boy's Exhibitionism]]>><<generatesm1>><<pass 5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+				<<link [[Enter (0:05)|School Boy's Exhibitionism]]>><<generatesm1>><<pass 5>><<delinquency 3>><</link>><<gdelinquency>><<exhibitionist5>><br>
 				<</if>>
 			<<link [[Leave|School Pool Entrance]]>><</link>><br>
 
@@ -4282,7 +4282,7 @@ You are in the girl's changing room.
 				<<link [[Masturbate (0:01)|School Girl's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
 				<</if>>
 				<<if $exhibitionism gte 75>>
-				<<link [[Enter (0:05)|School Girl's Exhibitionism]]>><<generatesf1>><<pass 5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+				<<link [[Enter (0:05)|School Girl's Exhibitionism]]>><<generatesf1>><<pass 5>><<delinquency 3>><</link>><<gdelinquency>><<exhibitionist5>><br>
 				<</if>>
 			<<link [[Leave|School Pool Entrance]]>><</link>><br>
 
@@ -4392,7 +4392,7 @@ You are in the girl's changing room.
 				<<link [[Masturbate (0:01)|School Girl's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
 				<</if>>
 				<<if $exhibitionism gte 75>>
-				<<link [[Enter (0:05)|School Girl's Exhibitionism]]>><<generatesf1>><<pass 5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+				<<link [[Enter (0:05)|School Girl's Exhibitionism]]>><<generatesf1>><<pass 5>><<delinquency 3>><</link>><<gdelinquency>><<exhibitionist5>><br>
 				<</if>>
 			<<link [[Leave|School Pool Entrance]]>><</link>><br>
 
@@ -5336,7 +5336,7 @@ You continue teasing them. The boys become more noisy, and daring. Until Mason s
 <<set $sexstart to 0>>
 <<consensual>>
 <<set $consensual to 1>>
-<<neutral1>>
+<<neutral 1>>
 <<set $event to "molestationhome">>
 <<man1init>>
 <<set $audienceforceboy to 1>>
@@ -6034,7 +6034,7 @@ You continue teasing them. The girls become more noisy, and daring. Until Mason 
 <<set $sexstart to 0>>
 <<consensual>>
 <<set $consensual to 1>>
-<<neutral1>>
+<<neutral 1>>
 <<set $event to "molestationhome">>
 <<man1init>>
 <<set $audienceforcegirl to 1>>

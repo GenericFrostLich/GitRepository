@@ -7813,15 +7813,15 @@ You stop covering you anus with your right hand.<<set $rightarm to 0>>
 <<if $mouthaction is "mock">><<set $mouthaction to 0>><<set $mouthactiondefault to "mock">>
 <<actionsmock>><<set $speechdemand to 1>>
 	<<if $englishtrait is 4>>
-	<<brat 5>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission5>><<else>><<combatcontrol 5>><</if>><</if>>
+	<<brat 5>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission 5>><<else>><<combatcontrol 5>><</if>><</if>>
 	<<elseif $englishtrait is 3>>
-	<<brat 4>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission4>><<else>><<combatcontrol 4>><</if>><</if>>
+	<<brat 4>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission 4>><<else>><<combatcontrol 4>><</if>><</if>>
 	<<elseif $englishtrait is 2>>
-	<<brat 3>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission3>><<else>><<combatcontrol 3>><</if>><</if>>
+	<<brat 3>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission 3>><<else>><<combatcontrol 3>><</if>><</if>>
 	<<elseif $englishtrait is 1>>
-	<<brat 2>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission2>><<else>><<combatcontrol 2>><</if>><</if>>
+	<<brat 2>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission 2>><<else>><<combatcontrol 2>><</if>><</if>>
 	<<else>>
-	<<brat 1>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission1>><<else>><<combatcontrol 1>><</if>><</if>>
+	<<brat 1>><<if $mockaction is $insecurity1 or $mockaction is $insecurity2 or $mockaction is $insecurity3 or $mockaction is $insecurity4 or $mockaction is $insecurity5 or $mockaction is $insecurity6>><<if $consensual is 1>><<submission 1>><<else>><<combatcontrol 1>><</if>><</if>>
 	<</if>>
 <</if>>
 
@@ -61194,21 +61194,21 @@ You are entranced.<br>
 :: Widgets Effects Anus [widget]
 <<widget "effectsanustopenis">><<nobr>>
 
-<<if $anusaction is "anustopenis">><<set $anusaction to 0>><<submission10>><<analskilluse>><<set $anusactiondefault to "anustopenis">><<combatpromiscuity5>>
+<<if $anusaction is "anustopenis">><<set $anusaction to 0>><<submission 10>><<analskilluse>><<set $anusactiondefault to "anustopenis">><<combatpromiscuity5>>
 	<<if (1000 - ($rng * 10) - ($enemytrust * 10) - $analskill + $enemyanger) lte (($enemyarousalmax / ($enemyarousal + 1)) * 100)>>
 
 		<<if $penis is 0>>
-		<<submission2>><<set $anususe to "penis">><<set $penis to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person1>><<combatperson>> and press <<his1>> penis with your <<bottomstop>></span>
+		<<submission 2>><<set $anususe to "penis">><<set $penis to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person1>><<combatperson>> and press <<his1>> penis with your <<bottomstop>></span>
 		<<elseif $penis2 is 0>>
-		<<submission2>><<set $anususe to "penis">><<set $penis2 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person2>><<combatperson>> and press <<his2>> penis with your <<bottomstop>></span>
+		<<submission 2>><<set $anususe to "penis">><<set $penis2 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person2>><<combatperson>> and press <<his2>> penis with your <<bottomstop>></span>
 		<<elseif $penis3 is 0>>
-		<<submission2>><<set $anususe to "penis">><<set $penis3 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person3>><<combatperson>> and press <<his3>> penis with your <<bottomstop>></span>
+		<<submission 2>><<set $anususe to "penis">><<set $penis3 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person3>><<combatperson>> and press <<his3>> penis with your <<bottomstop>></span>
 		<<elseif $penis4 is 0>>
-		<<submission2>><<set $anususe to "penis">><<set $penis4 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person4>><<combatperson>> and press <<his4>> penis with your <<bottomstop>></span>
+		<<submission 2>><<set $anususe to "penis">><<set $penis4 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person4>><<combatperson>> and press <<his4>> penis with your <<bottomstop>></span>
 		<<elseif $penis5 is 0>>
-		<<submission2>><<set $anususe to "penis">><<set $penis5 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person5>><<combatperson>> and press <<his5>> penis with your <<bottomstop>></span>
+		<<submission 2>><<set $anususe to "penis">><<set $penis5 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person5>><<combatperson>> and press <<his5>> penis with your <<bottomstop>></span>
 		<<elseif $penis6 is 0>>
-		<<submission2>><<set $anususe to "penis">><<set $penis6 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person6>><<combatperson>> and press <<his6>> penis with your <<bottomstop>></span>
+		<<submission 2>><<set $anususe to "penis">><<set $penis6 to "anusentrance">><<set $anusstate to "entrance">><span class="lblue">You straddle the <<person6>><<combatperson>> and press <<his6>> penis with your <<bottomstop>></span>
 		<</if>>
 	<<else>>
 		<<if $penis is 0>>
@@ -61239,7 +61239,7 @@ You are entranced.<br>
 
 <<widget "effectsanuspenisfuck">><<nobr>>
 
-<<if $anusaction is "anuspenisfuck">><<set $anusaction to 0>><<submission20>><<analskilluse>><<set $anusactiondefault to "anuspenisfuck">><<combatpromiscuity5>>
+<<if $anusaction is "anuspenisfuck">><<set $anusaction to 0>><<submission 20>><<analskilluse>><<set $anusactiondefault to "anuspenisfuck">><<combatpromiscuity5>>
 
 	<<if $analvirginity is 0>>
 		<<if $penis is "anusentrance" or $penis is "anusimminent">><<set $penis to "anus">>
@@ -61255,7 +61255,7 @@ You are entranced.<br>
 		<<elseif $penis6 is "anusentrance" or $penis6 is "anusimminent">><<set $penis6 to "anus">>
 		<span class="pink">You <<analtext>> push against the <<person6>><<combatpersons>> penis, taking it deep into your <<bottomstop>></span>
 		<</if>>
-	<<sex30>><<analstat>><<raped>><<anusraped>><<set $anusstate to "penetrated">><<set $speechanuspenetrated to 1>>
+	<<sex 30>><<analstat>><<raped>><<anusraped>><<set $anusstate to "penetrated">><<set $speechanuspenetrated to 1>>
 
 
 
@@ -61273,7 +61273,7 @@ You are entranced.<br>
 		<<elseif $penis6 is "anusentrance" or $penis6 is "anusimminent">><<set $penis6 to "anus">>
 		<span class="pink">You <<analtext>> push against the <<person6>><<combatpersons>> penis, taking it deep into</span> <span class="red">your virgin <<bottomstop>></span>
 		<</if>>
-	<<sex100>><<set $analvirginity to 0>><<anusbruise>><<analstat>><<violence30>><<raped>><<anusraped>><<set $anusstate to "penetrated">><<set $speechanusvirgin to 1>>
+	<<sex 100>><<set $analvirginity to 0>><<anusbruise>><<analstat>><<violence 30>><<raped>><<anusraped>><<set $anusstate to "penetrated">><<set $speechanusvirgin to 1>>
 	<<endif>>
 
 <</if>>
