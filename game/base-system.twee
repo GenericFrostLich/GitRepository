@@ -2718,7 +2718,7 @@ Passed out: $passoutstat<br>
 <<else>>
 	<<if $swimmingmissedtext is 1>><<set $swimmingmissedtext to 0>>
 		<<if $swimmingmissed gte 10>>
-		<span class="red">You've missed so many swimming lessons that the police have been informed.</span><<crime 5>><br>
+		<span class="red">You've missed so many swimming lessons that the police have been informed.</span><<crimeup 5>><br>
 		<<else>>
 		<span class="pink">You missed yesterday's swimming lesson.</span><br>
 		<</if>>
@@ -2726,7 +2726,7 @@ Passed out: $passoutstat<br>
 	<</if>>
 	<<if $mathsmissedtext is 1>><<set $mathsmissedtext to 0>>
 		<<if $mathsmissed gte 10>>
-		<span class="red">You've missed so many maths lessons that the police have been informed.</span><<crime 5>><br>
+		<span class="red">You've missed so many maths lessons that the police have been informed.</span><<crimeup 5>><br>
 		<<else>>
 		<span class="pink">You missed yesterday's maths lesson!</span><br>
 		<</if>>
@@ -2734,7 +2734,7 @@ Passed out: $passoutstat<br>
 	<</if>>
 	<<if $sciencemissedtext is 1>><<set $sciencemissedtext to 0>>
 		<<if $sciencemissed gte 10>>
-		<span class="red">You've missed so many science lessons that the police have been informed.</span><<crime 5>><br>
+		<span class="red">You've missed so many science lessons that the police have been informed.</span><<crimeup 5>><br>
 		<<else>>
 		<span class="pink">You missed yesterday's science lesson!</span><br>
 		<</if>>
@@ -2742,7 +2742,7 @@ Passed out: $passoutstat<br>
 	<</if>>
 	<<if $englishmissedtext is 1>><<set $englishmissedtext to 0>>
 		<<if $englishmissed gte 10>>
-		<span class="red">You've missed so many english lessons that the police have been informed.</span><<crime 5>><br>
+		<span class="red">You've missed so many english lessons that the police have been informed.</span><<crimeup 5>><br>
 		<<else>>
 		<span class="pink">You missed yesterday's english lesson!</span><br>
 		<</if>>
@@ -2750,7 +2750,7 @@ Passed out: $passoutstat<br>
 	<</if>>
 	<<if $historymissedtext is 1>><<set $historymissedtext to 0>>
 		<<if $historymissed gte 10>>
-		<span class="red">You've missed so many history lessons that the police have been informed.</span><<crime 5>><br>
+		<span class="red">You've missed so many history lessons that the police have been informed.</span><<crimeup 5>><br>
 		<<else>>
 		<span class="pink">You missed yesterday's history lesson!</span><br>
 		<</if>>
@@ -3216,7 +3216,7 @@ __Colour Key__<br>
 
 
 
-<<widget "crime">><<nobr>>
+<<widget "crimeup">><<nobr>>
 <<if $args[0]>>
   <<set $crime += $args[0]>>
   <<set $crimehistory += $args[0]>>

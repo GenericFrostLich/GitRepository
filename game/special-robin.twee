@@ -1549,7 +1549,7 @@ As you leave the beach you see a shop selling large bottles of water. Robin was 
 <<link [[Buy water with your own money (£20)|Robin's Lemonade Buy]]>><<set $money -= 2000>><</link>><br>
 	<</if>>
 <<set $skulduggerydifficulty to 200>>
-<<link [[Steal the water|Robin's Lemonade Steal]]>><<crime 20>><</link>><<skulduggerydifficulty>><<crime>><br>
+<<link [[Steal the water|Robin's Lemonade Steal]]>><<crimeup 20>><</link>><<skulduggerydifficulty>><<crime>><br>
 <<if $promiscuity gte 15>>
 <<link [[Flirt for cheaper water|Robin's Lemonade Seduction]]>><</link>><<promiscuous2>><br>
 <</if>>
@@ -1995,7 +1995,7 @@ Robin bursts into tears and buries <<his>> head in your shoulder. "I-I," <<he>> 
 
 <<elseif $enemyhealth lte 0>>
 
-You knock the <<person1>><<person>> into the brake. The car starts to roll out into the road, and they both scramble to fix it. You seize the opportunity and escape.<<crime>><<crime 100>><br><br>
+You knock the <<person1>><<person>> into the brake. The car starts to roll out into the road, and they both scramble to fix it. You seize the opportunity and escape.<<crime>><<crimeup 100>><br><br>
 
 
 <</if>>

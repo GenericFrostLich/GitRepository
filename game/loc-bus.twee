@@ -767,7 +767,7 @@ You open the door and look out at the town racing by. Jumping would be dangerous
 
 <<link [[Jump|Bus Seat Rape Jump]]>><</link>><br>
 	<<if $submissive lte 500>>
-	<<link [[Punch the driver|Bus Seat Rape Punch]]>><<crime 100>><</link>><<crime>><br>
+	<<link [[Punch the driver|Bus Seat Rape Punch]]>><<crimeup 100>><</link>><<crime>><br>
 	<</if>>
 
 

@@ -369,49 +369,49 @@ You find a safe with a combination lock.<br><br>
 	
 	You don't find much, just some loose change worth £1.<br><br>
 	
-	<<link [[Take it|Domus Street]]>><<set $money += 100>><<crime 1>><</link>><<crime>><br>
+	<<link [[Take it|Domus Street]]>><<set $money += 100>><<crimeup 1>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>
 	
 	<<elseif $rng gte 81>>
 	
 	You don't find much, just some loose change worth £2.<br><br>
 	
-	<<link [[Take it|Domus Street]]>><<set $money += 200>><<crime 2>><</link>><<crime>><br>
+	<<link [[Take it|Domus Street]]>><<set $money += 200>><<crimeup 2>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>
 	
 	<<elseif $rng gte 71>>
 	
 	You find £5 hidden in a drawer.<br><br>
 	
-	<<link [[Take it|Domus Street]]>><<set $money += 500>><<crime 5>><</link>><<crime>><br>
+	<<link [[Take it|Domus Street]]>><<set $money += 500>><<crimeup 5>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>	
 	
 	<<elseif $rng gte 61>>
 	
 	You find a nice-looking brooch in a draw.<br><br>
 	
-	<<link [[Take it|Domus Street]]>><<set $blackmoney += 5>><<crime 5>><</link>><<crime>><br>
+	<<link [[Take it|Domus Street]]>><<set $blackmoney += 5>><<crimeup 5>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>	
 	
 	<<elseif $rng gte 51>>
 	
 	You find £10 under a cushion on the sofa.<br><br>
 	
-	<<link [[Take it|Domus Street]]>><<set $money += 1000>><<crime 10>><</link>><<crime>><br>
+	<<link [[Take it|Domus Street]]>><<set $money += 1000>><<crimeup 10>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>	
 	
 	<<elseif $rng gte 41>>
 	
 	You find a necklace on a stool beside the coat stand.<br><br>
 	
-	<<link [[Take it|Domus Street]]>><<set $blackmoney += 10>><<crime 10>><</link>><<crime>><br>
+	<<link [[Take it|Domus Street]]>><<set $blackmoney += 10>><<crimeup 10>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>		
 	
 	<<elseif $rng gte 31>>
 	
 	You find £15 lying on the kitchen worktop.<br><br>
 	
-	<<link [[Take it|Domus Street]]>><<set $money += 1500>><<crime 15>><</link>><<crime>><br>
+	<<link [[Take it|Domus Street]]>><<set $money += 1500>><<crimeup 15>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>		
 	
 	<<elseif $rng gte 21>>
@@ -419,7 +419,7 @@ You find a safe with a combination lock.<br><br>
 	You find a set of silverware.<br>
 
 	
-	<<link [[Take it|Domus Street]]>><<set $blackmoney += 15>><<crime 15>><</link>><<crime>><br>
+	<<link [[Take it|Domus Street]]>><<set $blackmoney += 15>><<crimeup 15>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>		
 	
 	<<elseif $rng gte 11>>
@@ -427,14 +427,14 @@ You find a safe with a combination lock.<br><br>
 	You find a pair of gold cufflinks in a coat pocket.<br><br>
 
 	
-	<<link [[Take them|Domus Street]]>><<set $blackmoney += 20>><<crime 20>><</link>><<crime>><br>
+	<<link [[Take them|Domus Street]]>><<set $blackmoney += 20>><<crimeup 20>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>		
 	
 	<<else>>
 	
 	You find £30 in a pot beside the front door.<br><br>
 	
-	<<link [[Take it|Domus Street]]>><<set $money += 3000>><<crime 30>><</link>><<crime>><br>
+	<<link [[Take it|Domus Street]]>><<set $money += 3000>><<crimeup 30>><</link>><<crime>><br>
 	<<link [[Leave|Domus Street]]>><</link>><br>	
 	
 	<</if>>
@@ -551,7 +551,7 @@ The beast barks happily and walks over to the window.
 The dog pacified, you notice its collar glinting. You look closer and see it's encrusted with jewels.<br><br>
 
 
-<<link [[Take It|Domus House Collar]]>><<crime 50>><</link>><<crime>><br>
+<<link [[Take It|Domus House Collar]]>><<crimeup 50>><</link>><<crime>><br>
 <<link [[Leave|Domus Street]]>><</link>><br>
 
 
@@ -573,7 +573,7 @@ The beast cowers and rolls over in submission.
 
 The dog pacified, you notice its collar glinting. You look closer and see it's encrusted with jewels.<br><br>
 
-<<link [[Take It|Domus House Collar]]>><<crime 50>><</link>><<crime>><br>
+<<link [[Take It|Domus House Collar]]>><<crimeup 50>><</link>><<crime>><br>
 <<link [[Leave|Domus Street]]>><</link>><br>
 
 
@@ -775,7 +775,7 @@ The safe doesn't look too fancy.<br><br>
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Break in (0:05)|Domus House Safe Open]]>><<pass 5>><<crime 1>><</link>><<crime>><br>
+	<<link [[Break in (0:05)|Domus House Safe Open]]>><<pass 5>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -800,14 +800,14 @@ The safe doesn't look too fancy.<br><br>
 
 You successfully open the safe, and find £30 inside.<br><br>
 
-<<link [[Take it|Domus Street]]>><<set $money += 3000>><<crime 30>><</link>><<crime>><br>
+<<link [[Take it|Domus Street]]>><<set $money += 3000>><<crimeup 30>><</link>><<crime>><br>
 <<link [[Leave|Domus Street]]>><</link>><br>
 
 	<<else>>
 	
 You successfully open the safe, and find an expensive-looking watch inside.<br><br>
 
-<<link [[Take it|Domus Street]]>><<set $blackmoney += 100>><<crime 100>><</link>><<crime>><br>
+<<link [[Take it|Domus Street]]>><<set $blackmoney += 100>><<crimeup 100>><</link>><<crime>><br>
 <<link [[Leave|Domus Street]]>><</link>><br>	
 	
 	<</if>>
@@ -820,7 +820,7 @@ You successfully open the safe, and find an expensive-looking watch inside.<br><
 
 You stay behind the curtain, remaining as still and quiet as possible. After thirty minutes, the <<person>> gets up, stretches, and walks to the kitchen. You start creeping out, but notice <<he>> left <<his>> phone lying on the sofa.<br><br>
 
-<<link [[Take it|Domus Street]]>><<crime 30>><<endevent>><<set $blackmoney += 30>><</link>><<crime>><br>
+<<link [[Take it|Domus Street]]>><<crimeup 30>><<endevent>><<set $blackmoney += 30>><</link>><<crime>><br>
 <<link [[Leave|Domus Street]]>><<endevent>><</link>><br>
 
 	<<else>>
@@ -871,7 +871,7 @@ The door is locked tight.<br><br>
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Break in (0:05)|Danube House Sneak]]>><<pass 5>><<crime 1>><</link>><<crime>><br>
+	<<link [[Break in (0:05)|Danube House Sneak]]>><<pass 5>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -2193,49 +2193,49 @@ You find a safe with a combination lock.<br><br>
 	
 	You don't find much, just some loose change worth £2.<br><br>
 	
-	<<link [[Take it|Danube Street]]>><<set $money += 200>><<crime 2>><</link>><<crime>><br>
+	<<link [[Take it|Danube Street]]>><<set $money += 200>><<crimeup 2>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>
 	
 	<<elseif $rng gte 81>>
 	
 	You don't find much, just some loose change worth £4.<br><br>
 	
-	<<link [[Take it|Danube Street]]>><<set $money += 400>><<crime 4>><</link>><<crime>><br>
+	<<link [[Take it|Danube Street]]>><<set $money += 400>><<crimeup 4>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>
 	
 	<<elseif $rng gte 71>>
 	
 	You find £10 hidden in a drawer.<br><br>
 	
-	<<link [[Take it|Danube Street]]>><<set $money += 1000>><<crime 10>><</link>><<crime>><br>
+	<<link [[Take it|Danube Street]]>><<set $money += 1000>><<crimeup 10>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>	
 	
 	<<elseif $rng gte 61>>
 	
 	You find a nice-looking brooch in a draw.<br><br>
 	
-	<<link [[Take it|Danube Street]]>><<set $blackmoney += 10>><<crime 10>><</link>><<crime>><br>
+	<<link [[Take it|Danube Street]]>><<set $blackmoney += 10>><<crimeup 10>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>	
 	
 	<<elseif $rng gte 51>>
 	
 	You find £20 beneath a cushion.<br><br>
 	
-	<<link [[Take it|Danube Street]]>><<set $money += 2000>><<crime 20>><</link>><<crime>><br>
+	<<link [[Take it|Danube Street]]>><<set $money += 2000>><<crimeup 20>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>	
 	
 	<<elseif $rng gte 41>>
 	
 	You find a necklace on a stool beside the coat stand.<br><br>
 	
-	<<link [[Take it|Danube Street]]>><<set $blackmoney += 20>><<crime 20>><</link>><<crime>><br>
+	<<link [[Take it|Danube Street]]>><<set $blackmoney += 20>><<crimeup 20>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>		
 	
 	<<elseif $rng gte 31>>
 	
 	You find £30 lying on the kitchen worktop.<br><br>
 	
-	<<link [[Take it|Danube Street]]>><<set $money += 3000>><<crime 30>><</link>><<crime>><br>
+	<<link [[Take it|Danube Street]]>><<set $money += 3000>><<crimeup 30>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>		
 	
 	<<elseif $rng gte 21>>
@@ -2243,7 +2243,7 @@ You find a safe with a combination lock.<br><br>
 	You find a set of silverware.<br>
 
 	
-	<<link [[Take it|Danube Street]]>><<set $blackmoney += 30>><<crime 30>><</link>><<crime>><br>
+	<<link [[Take it|Danube Street]]>><<set $blackmoney += 30>><<crimeup 30>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>		
 	
 	<<elseif $rng gte 11>>
@@ -2251,14 +2251,14 @@ You find a safe with a combination lock.<br><br>
 	You find a pair of gold cufflinks in a coat pocket.<br><br>
 
 	
-	<<link [[Take them|Danube Street]]>><<set $blackmoney += 40>><<crime 40>><</link>><<crime>><br>
+	<<link [[Take them|Danube Street]]>><<set $blackmoney += 40>><<crimeup 40>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>		
 	
 	<<else>>
 	
 	You find £60 in a pot beside the front door.<br><br>
 	
-	<<link [[Take it|Danube Street]]>><<set $money += 6000>><<crime 60>><</link>><<crime>><br>
+	<<link [[Take it|Danube Street]]>><<set $money += 6000>><<crimeup 60>><</link>><<crime>><br>
 	<<link [[Leave|Danube Street]]>><</link>><br>	
 	
 	<</if>>
@@ -2391,7 +2391,7 @@ The cat yawns in satisfaction and walks over to the window.
 The cat pacified, you notice its collar glinting. You look closer and see it's encrusted with jewels.<br><br>
 
 
-<<link [[Take It|Danube House Collar]]>><<crime 100>><</link>><<crime>><br>
+<<link [[Take It|Danube House Collar]]>><<crimeup 100>><</link>><<crime>><br>
 <<link [[Leave|Danube Street]]>><</link>><br>
 
 
@@ -2413,7 +2413,7 @@ The cat cowers and rolls over in submission.
 
 The cat pacified, you notice its collar glinting. You look closer and see it's encrusted with jewels.<br><br>
 
-<<link [[Take It|Danube House Collar]]>><<crime 100>><</link>><<crime>><br>
+<<link [[Take It|Danube House Collar]]>><<crimeup 100>><</link>><<crime>><br>
 <<link [[Leave|Danube Street]]>><</link>><br>
 
 
@@ -2630,7 +2630,7 @@ The safe looks expensive, like it might contain something important.<br><br>
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Break in (0:05)|Danube House Safe Open]]>><<pass 5>><<crime 1>><</link>><<crime>><br>
+	<<link [[Break in (0:05)|Danube House Safe Open]]>><<pass 5>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -2655,14 +2655,14 @@ The safe looks expensive, like it might contain something important.<br><br>
 
 You successfully open the safe, and find £60 inside.<br><br>
 
-<<link [[Take it|Danube Street]]>><<set $money += 6000>><<crime 60>><</link>><<crime>><br>
+<<link [[Take it|Danube Street]]>><<set $money += 6000>><<crimeup 60>><</link>><<crime>><br>
 <<link [[Leave|Danube Street]]>><</link>><br>
 
 	<<else>>
 	
 You successfully open the safe, and find an expensive-looking jewellery inside.<br><br>
 
-<<link [[Take it|Danube Street]]>><<set $blackmoney += 200>><<crime 200>><</link>><<crime>><br>
+<<link [[Take it|Danube Street]]>><<set $blackmoney += 200>><<crimeup 200>><</link>><<crime>><br>
 <<link [[Leave|Danube Street]]>><</link>><br>	
 	
 	<</if>>
@@ -2673,7 +2673,7 @@ You successfully open the safe, and find an expensive-looking jewellery inside.<
 
 
 	
-You burst from the water and gasp for air. The <<person>> runs and screams. "Help! Someone call the police!" You take that as your cue to leave.<<crime>><<crime 50>><br><br>
+You burst from the water and gasp for air. The <<person>> runs and screams. "Help! Someone call the police!" You take that as your cue to leave.<<crime>><<crimeup 50>><br><br>
 	
 <<link [[Next|Danube Street]]>><<endevent>><</link>><br>
 
@@ -2689,7 +2689,7 @@ You slip into the fountain and hide beneath the surface of the water. A <<person
 
 You <span class="green">succeed</span> in holding your breath. After a few minutes <<he>> leaves. You come up to the surface and gasp for air. <<He>> left an unopened bottle of wine on the side of the fountain. It looks fancy.<br><br>
 
-<<link [[Take it|Danube Street]]>><<set $blackmoney += 30>><<crime 30>><<endevent>><</link>><<crime>><br>
+<<link [[Take it|Danube Street]]>><<set $blackmoney += 30>><<crimeup 30>><<endevent>><</link>><<crime>><br>
 <<link [[Leave|Danube Street]]>><<endevent>><</link>><br>
 
 <<else>>
@@ -2725,7 +2725,7 @@ You stand your ground. A <<person>> walks in and freezes on the spot upon seeing
 	
 <br><br>
 
-"Do you think I was born yesterday?" <<he>> says, recovered from <<his>> initial shock. "Stay there, I'm calling the police." You take that as your cue to flee the scene. <<crime 50>><<crime>><br><br>
+"Do you think I was born yesterday?" <<he>> says, recovered from <<his>> initial shock. "Stay there, I'm calling the police." You take that as your cue to flee the scene. <<crimeup 50>><<crime>><br><br>
 
 <<skulduggeryskilluse>>
 

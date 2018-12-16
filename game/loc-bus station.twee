@@ -90,7 +90,7 @@ The main building is mostly empty, with the majority of vehicles in use.
 <<if $skulduggery gte $lock>>
 <span class="green">The lock looks easy to pick.</span><br><br>
 	
-<<link [[Pick it (0:10)|Harvest Street]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+<<link [[Pick it (0:10)|Harvest Street]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 <<else>>
 <span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 <</if>>
@@ -107,7 +107,7 @@ The main building is mostly empty, with the majority of vehicles in use.
 <<if $skulduggery gte $lock>>
 <span class="green">The lock looks easy to pick.</span><br><br>
 	
-<<link [[Pick it (0:10)|Industrial alleyways]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+<<link [[Pick it (0:10)|Industrial alleyways]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 <<else>>
 <span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 <</if>>
@@ -123,7 +123,7 @@ The main building is mostly empty, with the majority of vehicles in use.
 <<if $skulduggery gte $lock>>
 <span class="green">The lock looks easy to pick.</span><br><br>
 	
-<<link [[Pick it (0:10)|Bus Station]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+<<link [[Pick it (0:10)|Bus Station]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 <<else>>
 <span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 <</if>>
@@ -139,7 +139,7 @@ The main building is mostly empty, with the majority of vehicles in use.
 <<if $skulduggery gte $lock>>
 <span class="green">The lock looks easy to pick.</span><br><br>
 	
-<<link [[Pick it (0:10)|Bus Station]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+<<link [[Pick it (0:10)|Bus Station]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 <<else>>
 <span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 <</if>>

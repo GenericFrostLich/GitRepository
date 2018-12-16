@@ -4,7 +4,7 @@
 <<generate1>><<generate2>>Two police officers are sitting in the lobby. They stand when you approach. "You're under arrest. Please come quietly."<br><br>
 
 
-<<link [[Run|Hospital Arrest Run]]>><<crime 100>><</link>><<crime>><br>
+<<link [[Run|Hospital Arrest Run]]>><<crimeup 100>><</link>><<crime>><br>
 <<link [[Go quietly|Hospital Arrest Journey]]>><</link>><br>
 
 
@@ -353,7 +353,7 @@ Once seated, the <<person2>><<person>> continues. "You didn't think you'd get aw
 You have an opportunity to escape, but the <<person>> is aware of that, and keeps one hand gripping your arm. You'll have to fight to get away.<br><br>
 
 
-<<link [[Try to break free|Police Pillory Fight]]>><<set $fightstart to 1>><<crime 200>><</link>><<crime>><br>
+<<link [[Try to break free|Police Pillory Fight]]>><<set $fightstart to 1>><<crimeup 200>><</link>><<crime>><br>
 <<link [[Let yourself be fixed in place|Police Pillory Start 2]]>><</link>><br>
 
 

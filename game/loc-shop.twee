@@ -542,7 +542,7 @@ With your arms bound you can't even cover yourself.
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Pick it (0:10)|Clothing Shop]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+	<<link [[Pick it (0:10)|Clothing Shop]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -587,7 +587,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Outfit Shop]]>><<set $phase to 0>><<set $sundresscolourchoice to $colouraction>><<set $uppersundressnew to 1>><<set $uppersundressno to 1>><<set $lowersundressnew to 1>><<set $lowersundressno to 1>><<uppersundress>><<lowersundress>><<crime 15>><</link>><<crime>><br>
+<<link [[Steal it|Outfit Shop]]>><<set $phase to 0>><<set $sundresscolourchoice to $colouraction>><<set $uppersundressnew to 1>><<set $uppersundressno to 1>><<set $lowersundressnew to 1>><<set $lowersundressno to 1>><<uppersundress>><<lowersundress>><<crimeup 15>><</link>><<crime>><br>
 
 <<elseif $money gte 1500>>
 
@@ -622,7 +622,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Outfit Shop]]>><<set $phase to 0>><<set $schoolswimsuitcolourchoice to $colouraction>><<set $upperschoolswimsuitnew to 1>><<set $upperschoolswimsuitno to 1>><<set $lowerschoolswimsuitnew to 1>><<set $lowerschoolswimsuitno to 1>><<upperschoolswimsuit>><<lowerschoolswimsuit>><<crime 15>><</link>><<crime>><br>
+<<link [[Steal it|Outfit Shop]]>><<set $phase to 0>><<set $schoolswimsuitcolourchoice to $colouraction>><<set $upperschoolswimsuitnew to 1>><<set $upperschoolswimsuitno to 1>><<set $lowerschoolswimsuitnew to 1>><<set $lowerschoolswimsuitno to 1>><<upperschoolswimsuit>><<lowerschoolswimsuit>><<crimeup 15>><</link>><<crime>><br>
 
 <<elseif $money gte 1500>>
 
@@ -657,7 +657,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Outfit Shop]]>><<set $phase to 0>><<set $eveninggowncolourchoice to $colouraction>><<set $uppereveninggownnew to 1>><<set $uppereveninggownno to 1>><<set $lowereveninggownnew to 1>><<set $lowereveninggownno to 1>><<uppereveninggown>><<lowereveninggown>><<crime 100>><<crime 20>><</link>><<crime>><br>
+<<link [[Steal it|Outfit Shop]]>><<set $phase to 0>><<set $eveninggowncolourchoice to $colouraction>><<set $uppereveninggownnew to 1>><<set $uppereveninggownno to 1>><<set $lowereveninggownnew to 1>><<set $lowereveninggownno to 1>><<uppereveninggown>><<lowereveninggown>><<crimeup 100>><<crimeup 20>><</link>><<crime>><br>
 
 <<elseif $money gte 12000>>
 
@@ -717,7 +717,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $upperpjscolourchoice to $colouraction>><<set $upperpjsnew to 1>><<set $upperpjsno to 1>><<upperpjs>><<crime 10>><</link>><<crime>><br>
+<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $upperpjscolourchoice to $colouraction>><<set $upperpjsnew to 1>><<set $upperpjsno to 1>><<upperpjs>><<crimeup 10>><</link>><<crime>><br>
 
 <<elseif $money gte 1000>>
 <<link [[Buy and wear|Top Shop]]>><<set $phase to 0>><<set $money -= 1000>><<set $upperpjscolourchoice to $colouraction>><<set $upperpjsnew to 1>><<set $upperpjsno to 1>><<upperpjs>><</link>><br>
@@ -750,7 +750,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $upperbikinicolourchoice to $colouraction>><<set $upperbikininew to 1>><<set $upperbikinino to 1>><<upperbikini>><<crime 30>><</link>><<crime>><br>
+<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $upperbikinicolourchoice to $colouraction>><<set $upperbikininew to 1>><<set $upperbikinino to 1>><<upperbikini>><<crimeup 30>><</link>><<crime>><br>
 
 <<elseif $money gte 3000>>
 <<link [[Buy and wear|Top Shop]]>><<set $phase to 0>><<set $money -= 3000>><<set $upperbikinicolourchoice to $colouraction>><<set $upperbikininew to 1>><<set $upperbikinino to 1>><<upperbikini>><</link>><br>
@@ -782,7 +782,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $tshirtcolourchoice to $colouraction>><<set $tshirtnew to 1>><<set $tshirtno to 1>><<tshirt>><<crime 10>><</link>><<crime>><br>
+<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $tshirtcolourchoice to $colouraction>><<set $tshirtnew to 1>><<set $tshirtno to 1>><<tshirt>><<crimeup 10>><</link>><<crime>><br>
 
 <<elseif $money gte 1000>>
 <<link [[Buy and wear|Top Shop]]>><<set $phase to 0>><<set $money -= 1000>><<set $tshirtcolourchoice to $colouraction>><<set $tshirtnew to 1>><<set $tshirtno to 1>><<tshirt>><</link>><br>
@@ -814,7 +814,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $schoolshirtcolourchoice to $colouraction>><<set $schoolshirtnew to 1>><<set $schoolshirtno to 1>><<schoolshirt>><<crime 25>><</link>><<crime>><br>
+<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $schoolshirtcolourchoice to $colouraction>><<set $schoolshirtnew to 1>><<set $schoolshirtno to 1>><<schoolshirt>><<crimeup 25>><</link>><<crime>><br>
 
 <<elseif $money gte 2500>>
 <<link [[Buy and wear|Top Shop]]>><<set $phase to 0>><<set $money -= 2500>><<set $schoolshirtcolourchoice to $colouraction>><<set $schoolshirtnew to 1>><<set $schoolshirtno to 1>><<schoolshirt>><</link>><br>
@@ -856,7 +856,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $tanktopcolourchoice to $colouraction>><<set $tanktopnew to 1>><<set $tanktopno to 1>><<tanktop>><<crime 25>><</link>><<crime>><br>
+<<link [[Steal it|Top Shop]]>><<set $phase to 0>><<set $tanktopcolourchoice to $colouraction>><<set $tanktopnew to 1>><<set $tanktopno to 1>><<tanktop>><<crimeup 25>><</link>><<crime>><br>
 
 <<elseif $money gte 1000>>
 <<link [[Buy and wear|Top Shop]]>><<set $phase to 0>><<set $money -= 1000>><<set $tanktopcolourchoice to $colouraction>><<set $tanktopnew to 1>><<set $tanktopno to 1>><<tanktop>><</link>><br>
@@ -925,7 +925,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $lowerpjscolourchoice to $colouraction>><<set $lowerpjsnew to 1>><<set $lowerpjsno to 1>><<lowerpjs>><<crime 10>><</link>><<crime>><br>
+<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $lowerpjscolourchoice to $colouraction>><<set $lowerpjsnew to 1>><<set $lowerpjsno to 1>><<lowerpjs>><<crimeup 10>><</link>><<crime>><br>
 
 <<elseif $money gte 1000>>
 <<link [[Buy and wear|Bottom Shop]]>><<set $phase to 0>><<set $money -= 1000>><<set $lowerpjscolourchoice to $colouraction>><<set $lowerpjsnew to 1>><<set $lowerpjsno to 1>><<lowerpjs>><</link>><br>
@@ -958,7 +958,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $lowerbikinicolourchoice to $colouraction>><<set $lowerbikininew to 1>><<set $lowerbikinino to 1>><<lowerbikini>><<crime 30>><</link>><<crime>><br>
+<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $lowerbikinicolourchoice to $colouraction>><<set $lowerbikininew to 1>><<set $lowerbikinino to 1>><<lowerbikini>><<crimeup 30>><</link>><<crime>><br>
 
 <<elseif $money gte 3000>>
 <<link [[Buy and wear|Bottom Shop]]>><<set $phase to 0>><<set $money -= 3000>><<set $lowerbikinicolourchoice to $colouraction>><<set $lowerbikininew to 1>><<set $lowerbikinino to 1>><<lowerbikini>><</link>><br>
@@ -990,7 +990,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $shortscolourchoice to $colouraction>><<set $shortsnew to 1>><<set $shortsno to 1>><<shorts>><<crime 10>><</link>><<crime>><br>
+<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $shortscolourchoice to $colouraction>><<set $shortsnew to 1>><<set $shortsno to 1>><<shorts>><<crimeup 10>><</link>><<crime>><br>
 
 <<elseif $money gte 1000>>
 <<link [[Buy and wear|Bottom Shop]]>><<set $phase to 0>><<set $money -= 1000>><<set $shortscolourchoice to $colouraction>><<set $shortsnew to 1>><<set $shortsno to 1>><<shorts>><</link>><br>
@@ -1022,7 +1022,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $schoolshortscolourchoice to $colouraction>><<set $schoolshortsnew to 1>><<set $schoolshortsno to 1>><<schoolshorts>><<crime 20>><</link>><<crime>><br>
+<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $schoolshortscolourchoice to $colouraction>><<set $schoolshortsnew to 1>><<set $schoolshortsno to 1>><<schoolshorts>><<crimeup 20>><</link>><<crime>><br>
 
 <<elseif $money gte 2000>>
 <<link [[Buy and wear|Bottom Shop]]>><<set $phase to 0>><<set $money -= 2000>><<set $schoolshortscolourchoice to $colouraction>><<set $schoolshortsnew to 1>><<set $schoolshortsno to 1>><<schoolshorts>><</link>><br>
@@ -1054,7 +1054,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $schoolskirtcolourchoice to $colouraction>><<set $schoolskirtnew to 1>><<set $schoolskirtno to 1>><<schoolskirt>><<crime 20>><</link>><<crime>><br>
+<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $schoolskirtcolourchoice to $colouraction>><<set $schoolskirtnew to 1>><<set $schoolskirtno to 1>><<schoolskirt>><<crimeup 20>><</link>><<crime>><br>
 
 <<elseif $money gte 2000>>
 <<link [[Buy and wear|Bottom Shop]]>><<set $phase to 0>><<set $money -= 2000>><<set $schoolskirtcolourchoice to $colouraction>><<set $schoolskirtnew to 1>><<set $schoolskirtno to 1>><<schoolskirt>><</link>><br>
@@ -1086,7 +1086,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $schoolswimshortscolourchoice to $colouraction>><<set $schoolswimshortsnew to 1>><<set $schoolswimshortsno to 1>><<schoolswimshorts>><<crime 15>><</link>><<crime>><br>
+<<link [[Steal it|Bottom Shop]]>><<set $phase to 0>><<set $schoolswimshortscolourchoice to $colouraction>><<set $schoolswimshortsnew to 1>><<set $schoolswimshortsno to 1>><<schoolswimshorts>><<crimeup 15>><</link>><<crime>><br>
 
 <<elseif $money gte 1500>>
 <<link [[Buy and wear|Bottom Shop]]>><<set $phase to 0>><<set $money -= 1500>><<set $schoolswimshortscolourchoice to $colouraction>><<set $schoolswimshortsnew to 1>><<set $schoolswimshortsno to 1>><<schoolswimshorts>><</link>><br>
@@ -1138,7 +1138,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Underwear Shop]]>><<set $plainpantiescolourchoice to $colouraction>><<set $plainpantiesnew to 1>><<set $plainpantiesno to 1>><<plainpanties>><<crime 2>><</link>><<crime>><br>
+<<link [[Steal it|Underwear Shop]]>><<set $plainpantiescolourchoice to $colouraction>><<set $plainpantiesnew to 1>><<set $plainpantiesno to 1>><<plainpanties>><<crimeup 2>><</link>><<crime>><br>
 
 <<elseif $money gte 200>>
 <<link [[Buy and wear|Underwear Shop]]>><<set $phase to 0>><<set $money -= 200>><<set $plainpantiescolourchoice to $colouraction>><<set $plainpantiesnew to 1>><<set $plainpantiesno to 1>><<plainpanties>><</link>><br>
@@ -1171,7 +1171,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Underwear Shop]]>><<set $phase to 0>><<set $lacepantiescolourchoice to $colouraction>><<set $lacepantiesnew to 1>><<set $lacepantiesno to 1>><<lacepanties>><<crime 6>><</link>><<crime>><br>
+<<link [[Steal it|Underwear Shop]]>><<set $phase to 0>><<set $lacepantiescolourchoice to $colouraction>><<set $lacepantiesnew to 1>><<set $lacepantiesno to 1>><<lacepanties>><<crimeup 6>><</link>><<crime>><br>
 
 <<elseif $money gte 600>>
 <<link [[Buy and wear|Underwear Shop]]>><<set $phase to 0>><<set $money -= 600>><<set $lacepantiescolourchoice to $colouraction>><<set $lacepantiesnew to 1>><<set $lacepantiesno to 1>><<lacepanties>><</link>><br>
@@ -1203,7 +1203,7 @@ There's a range of colours to choose from:<br>
 |<label><span class="gold"> Yellow </span><<radiobutton "$colouraction" "yellow">></label><br><br>
 
 <<if $daystate is "night">>
-<<link [[Steal it|Underwear Shop]]>><<set $yfrontscolourchoice to $colouraction>><<set $yfrontsnew to 1>><<set $yfrontsno to 1>><<yfronts>><<crime 2>><</link>><<crime>><br>
+<<link [[Steal it|Underwear Shop]]>><<set $yfrontscolourchoice to $colouraction>><<set $yfrontsnew to 1>><<set $yfrontsno to 1>><<yfronts>><<crimeup 2>><</link>><<crime>><br>
 
 <<elseif $money gte 200>>
 <<link [[Buy and wear|Underwear Shop]]>><<set $phase to 0>><<set $money -= 200>><<set $yfrontscolourchoice to $colouraction>><<set $yfrontsnew to 1>><<set $yfrontsno to 1>><<yfronts>><</link>><br>
@@ -1230,7 +1230,7 @@ A pair of <<integrity4>>, <<reveal6>> tights. Sturdy, but don't conceal much. Co
 
 
 <<if $daystate is "night">>
-<<link [[Steal it|Underwear Shop]]>><<set $tightscolourchoice to $colouraction>><<set $tightsnew to 1>><<set $tightsno to 1>><<tights>><<crime 12>><</link>><<crime>><br>
+<<link [[Steal it|Underwear Shop]]>><<set $tightscolourchoice to $colouraction>><<set $tightsnew to 1>><<set $tightsno to 1>><<tights>><<crimeup 12>><</link>><<crime>><br>
 
 <<elseif $money gte 1200>>
 <<link [[Buy and wear|Underwear Shop]]>><<set $phase to 0>><<set $money -= 1200>><<set $tightscolourchoice to $colouraction>><<set $tightsnew to 1>><<set $tightsno to 1>><<tights>><</link>><br>
@@ -1261,7 +1261,7 @@ You don't have enough money.
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Pick it (0:10)|High Street]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+	<<link [[Pick it (0:10)|High Street]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -1288,7 +1288,7 @@ You find some towels. They make a poor substitute for actual clothing but it'll 
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Pick it (0:10)|Shopping Centre]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+	<<link [[Pick it (0:10)|Shopping Centre]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -1317,7 +1317,7 @@ You find some towels. They make a poor substitute for actual clothing but it'll 
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Pick it (0:10)|Hairdressers]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+	<<link [[Pick it (0:10)|Hairdressers]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>

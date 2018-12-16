@@ -717,7 +717,7 @@ The school gate is shut and sealed by a sturdy padlock.<br><br>
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Pick it (0:10)|School Front Playground]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+	<<link [[Pick it (0:10)|School Front Playground]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -11270,7 +11270,7 @@ The school gate is shut and sealed by a sturdy padlock.<br><br>
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Pick it (0:10)|Oxford Street]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+	<<link [[Pick it (0:10)|Oxford Street]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -11299,7 +11299,7 @@ The school lockers are notoriously easy to break into.<br><br>
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Break into them (0:30)|School Lockers Sneak]]>><<pass 30>><<crime 30>><</link>><<crime>><br>
+	<<link [[Break into them (0:30)|School Lockers Sneak]]>><<pass 30>><<crimeup 30>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -11328,7 +11328,7 @@ You successfully pick the locks.
 
 You find £6 worth of coins scattered around. Probably meant for bus fare.<br><br>
 
-<<link [[Take it|School Lockers]]>><<set $money += 600>><<crime 1>><</link>><<crime>><br>
+<<link [[Take it|School Lockers]]>><<set $money += 600>><<crimeup 1>><</link>><<crime>><br>
 <<link [[Leave|School Lockers]]>><</link>><br>
 
 
@@ -11371,7 +11371,7 @@ You successfully pick the locks.
 
 A bit of rummaging uncovers £30.<br><br>
 
-<<link [[Take it|School Lockers]]>><<set $money += 3000>><<crime 5>><</link>><<crime>><br>
+<<link [[Take it|School Lockers]]>><<set $money += 3000>><<crimeup 5>><</link>><<crime>><br>
 <<link [[Leave|School Lockers]]>><</link>><br>
 
 
@@ -11921,7 +11921,7 @@ You can't bring yourself to look <<him>> in the eye. "I-I've seen what you did t
 "I've been on your computer," you say. "I've seen what you did to that student. I made copies."
 <</if>>
 <br><br>
-<<crime 1000>>
+<<crimeup 1000>>
 <<He>> stares at you, not moving a muscle. Then <<he>> glances at the door, and sizes you up. <<He>> seems to think better of whatever <<he>> was planning however and sighs, "What do you want?"<br><br>
 <<set $leightondom -= 10>>
 <<set $leightonlove -= 10>>

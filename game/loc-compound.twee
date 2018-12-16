@@ -59,7 +59,7 @@ You are in the compound on Elk Street. Three red brick buildings stand surrounde
 		<<link [[Calm it|Elk Compound Bestiality]]>><<set $sexstart to 1>><</link>><<deviant2>><br>
 		<</if>>
 	<<link [[Fight|Elk Compound Bestiality]]>><<set $molestationstart to 1>><</link>><br>
-	<<link [[Escape the compound|Elk Compound Run]]>><<crime 30>><</link>><<crime>><br>
+	<<link [[Escape the compound|Elk Compound Run]]>><<crimeup 30>><</link>><<crime>><br>
 	<<else>>
 	A hand rests on your shoulder. <<generate1>><<person1>>"Alright <<girlcomma>> playtime's over," <<he>> waves <<his>> baton in front of your face. "I found <<phim>> outside," <<he>> says into <<his>> radio. "Alright, I'll keep <<phim>> here until then."<br><br>
 	
@@ -121,7 +121,7 @@ The door is locked tight.<br><br>
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Break in (0:05)|Elk Compound Interior]]>><<pass 5>><<crime 1>><</link>><<crime>><br>
+	<<link [[Break in (0:05)|Elk Compound Interior]]>><<pass 5>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -269,7 +269,7 @@ The beast whimpers and hides behind one of the buildings.<br><br>
 <<else>>
 
 The beast turns and darts away, barking.<<crime>><<set $compoundalarm += 1>>
-<<crime 50>><br><br>
+<<crimeup 50>><br><br>
 
 <<tearful>> you rise to your feet.<br><br>
 
@@ -567,7 +567,7 @@ The wires have pads on one end. <<He>> starts sticking them to your body. <<He>>
 	<<set $compoundpipes to 1>>
 	<<set $blackmoney += 50>>
 	<<set $compoundalarm += 1>>
-	<<crime 50>>
+	<<crimeup 50>>
 	<<link [[Next|Elk Compound]]>><</link>><br>
 	
 	<</if>>
@@ -578,7 +578,7 @@ The wires have pads on one end. <<He>> starts sticking them to your body. <<He>>
 	<<set $compoundpipes to 1>>
 	<<set $blackmoney += 50>>
 	<<set $compoundalarm += 1>>
-	<<crime 50>>
+	<<crimeup 50>>
 	<<link [[Next|Elk Compound]]>><</link>><br>
 
 <</if>>
@@ -625,7 +625,7 @@ The creature loses interest in you, and disappears into the pink liquid. <<tearf
 <<set $compoundpipes to 1>>
 <<set $blackmoney += 50>>
 <<set $compoundalarm += 1>>
-<<crime 50>>
+<<crimeup 50>>
 <<link [[Next|Elk Compound]]>><</link>>
 
 
@@ -648,7 +648,7 @@ You come to a plinth with a purple crystal sat atop it. It looks valuable.<br><b
 	<<set $compoundsmoke to 1>>
 	<<set $blackmoney += 50>>
 	<<set $compoundalarm += 1>>
-	<<crime 50>>
+	<<crimeup 50>>
 <<link [[Next|Elk Compound]]>><</link>><br>
 
 
@@ -847,7 +847,7 @@ You successfully pick the lock and enter the building.<<set $compoundcentre to 1
 
 The inside is dominated by a large lift. You see no way to operate it, but a laptop sits on a table in the corner.<br><br>
 
-<<link [[Take it and leave|Elk Compound]]>><<set $blackmoney += 100>><<crime 100>><</link>><<crime>><br>
+<<link [[Take it and leave|Elk Compound]]>><<set $blackmoney += 100>><<crimeup 100>><</link>><<crime>><br>
 <<link [[Leave|Elk Compound]]>><</link>><br>
 
 

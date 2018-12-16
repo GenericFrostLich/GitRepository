@@ -10,7 +10,7 @@ The door is locked tight.<br><br>
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Break in (0:05)|Domus House Sneak]]>><<pass 5>><<crime 1>><</link>><<crime>><br>
+	<<link [[Break in (0:05)|Domus House Sneak]]>><<pass 5>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>
@@ -364,7 +364,7 @@ The <<person>> hands you a brown envelope and gives you the address. "They'll pa
 Once you round a corner you look more closely at the envelope. It's unmarked, and you can't feel anything inside except maybe paper.<br><br>
 
 <<set $skulduggerydifficulty to 1>>
-<<link [[Open it|Domus Delivery2]]>><<set $phase to 2>><<crime 1>><</link>><<skulduggerydifficulty>><<crime>><br>
+<<link [[Open it|Domus Delivery2]]>><<set $phase to 2>><<crimeup 1>><</link>><<skulduggerydifficulty>><<crime>><br>
 <<link [[Don't open it|Domus Delivery3]]>><<set $phase to 1>><</link>><br>
 
 

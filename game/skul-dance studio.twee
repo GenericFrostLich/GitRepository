@@ -60,7 +60,7 @@ You are hiding in a cupboard to protect your dignity.<br><br>
 	<<if $skulduggery gte $lock>>
 	<span class="green">The lock looks easy to pick.</span><br><br>
 	
-	<<link [[Pick it (0:10)|Dance Studio]]>><<pass 10>><<crime 1>><</link>><<crime>><br>
+	<<link [[Pick it (0:10)|Dance Studio]]>><<pass 10>><<crimeup 1>><</link>><<crime>><br>
 	<<else>>
 	<span class="red">The lock looks beyond your ability to pick.</span><<skulduggeryrequired>><br><br>
 	<</if>>

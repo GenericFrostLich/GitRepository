@@ -2368,7 +2368,7 @@ You stroll down the beach, drawing eyes wherever you go. Each breeze caressing y
 <<He>> stops in front of you, but looks away. "I'm sorry, but I need to ask you to cover up. This isn't a nudist beach."<br><br>
 
 <<link [[Comply|Beach Strip Comply]]>><</link>><br>
-<<link [[Refuse (1:00)|Beach Strip Refuse]]>><<stress -12>><<trauma -6>><<crime 50>><<pass 1 hour>><</link>><<crime>><<ltrauma>><<lstress>><br>
+<<link [[Refuse (1:00)|Beach Strip Refuse]]>><<stress -12>><<trauma -6>><<crimeup 50>><<pass 1 hour>><</link>><<crime>><<ltrauma>><<lstress>><br>
 <<if $promiscuity gte 15>>
 <<link [[Seduce|Beach Strip Seduce]]>><</link>><<promiscuous2>><br>
 <</if>>
@@ -2430,7 +2430,7 @@ You walk closer to the <<personstop>> "I could get dressed," you say, leaning ag
 "I-I-No," <<he>> stammers and pulls away from you. "G-get dressed now, or I'll call the police!"<br><br>
 
 <<link [[Comply|Beach Strip Comply]]>><</link>><br>
-<<link [[Refuse (1:00)|Beach Strip Refuse]]>><<stress -12>><<trauma -6>><<crime 50>><<pass 1 hour>><</link>><<crime>><<ltrauma>><<lstress>><br>
+<<link [[Refuse (1:00)|Beach Strip Refuse]]>><<stress -12>><<trauma -6>><<crimeup 50>><<pass 1 hour>><</link>><<crime>><<ltrauma>><<lstress>><br>
 
 
 <</if>>

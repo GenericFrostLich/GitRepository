@@ -2256,11 +2256,11 @@ It's not worth the risk. You turn and run, the relieved wolves following close b
 They pull money out of pockets and take off their jewelry. They drop it all in a pile at their feet before being marched from the camp by the wolves nipping at their heels. The wolves rush to the deer carcass once they are out of earshot.<br><br>
 
 	<<if $rng gte 96>>
-	You find £200 in cash, as well as assorted baubles you think are very valuable.<<set $money += 20000>><<set $blackmoney += 800>><<crime 1000>>
+	You find £200 in cash, as well as assorted baubles you think are very valuable.<<set $money += 20000>><<set $blackmoney += 800>><<crimeup 1000>>
 	<<elseif $rng gte 51>>
-	You find £50 in cash, as well as assorted baubles you think are quite valuable.<<set $money += 5000>><<set $blackmoney += 50>><<crime 100>>
+	You find £50 in cash, as well as assorted baubles you think are quite valuable.<<set $money += 5000>><<set $blackmoney += 50>><<crimeup 100>>
 	<<else>>
-	You find £20 in cash, as well as assorted baubles you think are quite valuable.<<set $money += 2000>><<set $blackmoney += 30>><<crime 50>>
+	You find £20 in cash, as well as assorted baubles you think are quite valuable.<<set $money += 2000>><<set $blackmoney += 30>><<crimeup 50>>
 	<</if>>
 
 <<endevent>>

@@ -447,7 +447,7 @@ Places of interest<br>
 <span class="blue">People are leaving the club.</span> It must be closing time.<br>
 <</if>>
 <<if $skulduggeryDintro is 1 and $exposed lte 0>>
-<<link [[Look for a mark (0:20)|Connudatus Street Thievery]]>><<pass 20>><<crime 1>><</link>><<crime>><br>
+<<link [[Look for a mark (0:20)|Connudatus Street Thievery]]>><<pass 20>><<crimeup 1>><</link>><<crime>><br>
 <</if>>
 <br>
 
@@ -1019,7 +1019,7 @@ Places of interest<br>
 		<<if $compoundstate is 1>>
 		<span class="blue">The compound is prowled by guards.</span> They'll be less agitated tomorrow.<br>
 		<<elseif $compoundstate is 0>>
-		<<link [[Sneak into the compound|Elk Compound]]>><<crime 1>><</link>><<crime>><br>
+		<<link [[Sneak into the compound|Elk Compound]]>><<crimeup 1>><</link>><<crime>><br>
 		<</if>>
 
 <br>
@@ -2011,49 +2011,49 @@ You find a quiet place and open the <<walletstop>>
 	
 	You don't find much, just some loose change worth £2.<br><br>
 	
-	<<link [[Take it|Connudatus Street]]>><<set $money += 200>><<crime 2>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $money += 200>><<crimeup 2>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>
 	
 	<<elseif $rng gte 81>>
 	
 	You don't find much, just some loose change worth £3.<br><br>
 	
-	<<link [[Take it|Connudatus Street]]>><<set $money += 300>><<crime 3>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $money += 300>><<crimeup 3>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>
 	
 	<<elseif $rng gte 71>>
 	
 	You find £8 hidden in a secret compartment.<br><br>
 	
-	<<link [[Take it|Connudatus Street]]>><<set $money += 800>><<crime 8>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $money += 800>><<crimeup 8>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>	
 	
 	<<elseif $rng gte 61>>
 	
 	You find a black credit card.<br><br>
 	
-	<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 8>><<crime 8>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 8>><<crimeup 8>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>	
 	
 	<<elseif $rng gte 51>>
 	
 	You find £15 tucked away.<br><br>
 	
-	<<link [[Take it|Connudatus Street]]>><<set $money += 1500>><<crime 15>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $money += 1500>><<crimeup 15>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>	
 	
 	<<elseif $rng gte 41>>
 	
 	You find a silver credit card.<br><br>
 	
-	<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 15>><<crime 15>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 15>><<crimeup 15>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>		
 	
 	<<elseif $rng gte 31>>
 	
 	You find £25 tucked away.<br><br>
 	
-	<<link [[Take it|Connudatus Street]]>><<set $money += 2500>><<crime 25>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $money += 2500>><<crimeup 25>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>		
 	
 	<<elseif $rng gte 21>>
@@ -2061,7 +2061,7 @@ You find a quiet place and open the <<walletstop>>
 	You find a gold credit card.<br><br>
 
 	
-	<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 25>><<crime 25>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 25>><<crimeup 25>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>		
 	
 	<<elseif $rng gte 11>>
@@ -2069,14 +2069,14 @@ You find a quiet place and open the <<walletstop>>
 	You find a platinum credit card.<br><br>
 
 	
-	<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 50>><<crime 50>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $blackmoney += 50>><<crimeup 50>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>		
 	
 	<<else>>
 	
 	You find £50 tucked away.<br><br>
 	
-	<<link [[Take it|Connudatus Street]]>><<set $money += 5000>><<crime 50>><</link>><<crime>><br>
+	<<link [[Take it|Connudatus Street]]>><<set $money += 5000>><<crimeup 50>><</link>><<crime>><br>
 	<<link [[Leave it|Connudatus Street]]>><</link>><br>	
 	
 	<</if>>
@@ -3967,7 +3967,7 @@ You feel angry that <<he>> would ask such a thing. You don't know if the <<perso
 
 
 <<link [[Strip (0:10)|Street Follow Strip]]>><<trauma 6>><<stress 12>><<lowernaked>><</link>><<gtrauma>><<gstress>><br>
-<<link [[Snatch the phone (0:10)|Street Follow Snatch]]>><<crime 30>><<trauma -6>><</link>><<crime>><<ltrauma>><br>
+<<link [[Snatch the phone (0:10)|Street Follow Snatch]]>><<crimeup 30>><<trauma -6>><</link>><<crime>><<ltrauma>><br>
 
 
 <<else>>
