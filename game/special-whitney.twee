@@ -1432,7 +1432,7 @@ Whitney takes off your $underclothes and pockets them. "I'll be keeping an eye o
 <<understeal>>
 <<else>>
 Whitney and <<his>> friends tear your clothes off, then shove you to the ground. <<tearful>> you pick yourself back up.<br><br>
-<<uppernaked>><<lowernaked>>><<undernaked>>
+<<uppernaked>><<lowernaked>><<undernaked>>
 <<stealclothes>>
 <</if>>
 

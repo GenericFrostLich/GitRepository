@@ -863,11 +863,11 @@ The black wolf walks up to you and turns until its erect penis hovers inches awa
 <<elseif $hour is 5>>
 <<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>>
 <<elseif $hour is 4>>
-<<pass 1 hour>><<tiredness -12>><<pass 1 hour>>><<tiredness -12>><<pass 1 hour>><<tiredness -12>>
+<<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>>
 <<elseif $hour is 3>>
 <<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>>
 <<elseif $hour is 2>>
-<<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>>><<tiredness -12>><<pass 1 hour>><<tiredness -12>>
+<<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>>
 <<elseif $hour is 1>>
 <<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>><<pass 1 hour>><<tiredness -12>>
 <<elseif $hour is 0>>

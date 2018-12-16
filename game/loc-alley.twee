@@ -1317,7 +1317,7 @@ You take its penis in your hand. It starts humping against your fingers.<br><br>
 		<<if $drugged is 1>>Intoxicated as you are, you couldn't cry very convincingly.<</if>><br><br>
 			<<if $enemyarousal gte $enemyarousalmax>>
 			<span id="next"><<link [[Next->Residential Dog Ejaculation]]>><</link>></span><<nexttext>>
-			<elseif $enemyhealth lte 0>>
+			<<elseif $enemyhealth lte 0>>
 			<span id="next"><<link [[Next->Residential Dog Escape]]>><</link>></span><<nexttext>>
 			<<else>>
 			<span id="next"><<link [[Next->Residential Dog]]>><</link>></span><<nexttext>>

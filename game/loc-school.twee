@@ -10140,14 +10140,14 @@ You hide beneath a stairwell as a crowd descends. The steps above you vibrate as
 		<</if>>
 
 
-	<<link [[Let it happen|Bully Strip 2]]>><<uppernaked>><<lowernaked>>><<undernaked>><<gtrauma60>><<gstress60>><<set $submissive += 1>><<set $whitneydom += 1>><</link>><<gtrauma>><<gstress>><<garousal>><<gdom>><br>
+	<<link [[Let it happen|Bully Strip 2]]>><<uppernaked>><<lowernaked>><<undernaked>><<gtrauma60>><<gstress60>><<set $submissive += 1>><<set $whitneydom += 1>><</link>><<gtrauma>><<gstress>><<garousal>><<gdom>><br>
 		<<if $undertype is "naked" or $undertype is "chastity">>
 			<<if $exhibitionism gte 55>>
-			<<link [[Flaunt|Bully Strip Flaunt 2]]>><<uppernaked>><<lowernaked>>><<undernaked>><<set $whitneydom += 1>><<set $submissive += 1>><<set $whitneylove += 1>><</link>><<exhibitionist4>><<glove>><<gdom>><br>
+			<<link [[Flaunt|Bully Strip Flaunt 2]]>><<uppernaked>><<lowernaked>><<undernaked>><<set $whitneydom += 1>><<set $submissive += 1>><<set $whitneylove += 1>><</link>><<exhibitionist4>><<glove>><<gdom>><br>
 			<</if>>
 		<<else>>
 			<<if $exhibitionism gte 35>>
-			<<link [[Flaunt|Bully Strip Flaunt 2]]>><<uppernaked>><<lowernaked>>><<undernaked>><<set $whitneydom += 1>><<set $submissive += 1>><<set $whitneylove += 1>><</link>><<exhibitionist3>><<glove>><<gdom>><br>
+			<<link [[Flaunt|Bully Strip Flaunt 2]]>><<uppernaked>><<lowernaked>><<undernaked>><<set $whitneydom += 1>><<set $submissive += 1>><<set $whitneylove += 1>><</link>><<exhibitionist3>><<glove>><<gdom>><br>
 			<</if>>
 		<</if>>
 	<<link [[Fight|Bully Fight]]>><<set $fightstart to 1>><<set $submissive -= 1>><<set $whitneydom -= 1>><</link>><<ldom>><br>
