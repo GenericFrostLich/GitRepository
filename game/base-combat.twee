@@ -61623,21 +61623,25 @@ You are entranced.<br>
 
 
 :: Widgets Consensual Actions [widget]
+/*
 <<widget "consensualman">><<nobr>>
 
 
 
 <</nobr>><</widget>>
+*/
 
 
 
 
 :: Widgets Consensual Effects [widget]
+/*
 <<widget "consensualman">><<nobr>>
 
 
 
 <</nobr>><</widget>>
+*/
 
 
 

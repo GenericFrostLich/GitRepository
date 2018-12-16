@@ -48,7 +48,7 @@ Places of interest<br>
 	<<link [[Knock on one of the houses (0:02)|Domus House Knock]]>><<pass 2>><</link>><br>
 	<</if>>
 	<<if $exposed gte 2 and $daystate isnot "night" and $exhibitionism gte 75>>
-	<<link [[Beg for clothing (0:02)|Domus House Nude]]>><<pass2>><</link>><<exhibitionist5>><br>
+	<<link [[Beg for clothing (0:02)|Domus House Nude]]>><<pass 2>><</link>><<exhibitionist5>><br>
 	<</if>>
 <br>
 

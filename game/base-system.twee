@@ -3088,19 +3088,6 @@ __Colour Key__<br>
 <</nobr>><</widget>>
 
 
-<<widget "pass">><<nobr>><<set $pass to $args[0]>><<passwater>>
-<<if $control is 0 and $trauma gte 300>>
-<<set $stress to $stress + $args[0]>>
-<<elseif $control is 0 and $trauma gte 200>>
-<<else>>
-<<set $stress to $stress - $args[0]>>
-<</if>>
-<<set $time to $time + $args[0]>><<set $hunger to $hunger + $args[0]>><<set $thirst to $thirst + $args[0]>><<set $hygiene to $hygiene + $args[0]>><<set $tiredness to $tiredness + $args[0]>><<set $pain to $pain - $args[0]>>
-<<set $druggedtimer to $druggedtimer - $args[0]>><<set $minute to $minute + $args[0]>>
-<<set $arousal to $arousal - $args[0] * 10>>
-<<arousalpass>>
-<</nobr>><<endwidget>>
-
 <<widget "pass">><<nobr>>
 <<if $args[1]>>
   <<if $args[1].includes("h", 0)>> <<set $pass to ($args[0]*60)>>

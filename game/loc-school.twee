@@ -3961,13 +3961,13 @@ You are in the boy's changing room.
 			<<elseif $exposed gte 2 and $malechance isnot 0>>
 			You peek around the corner. You see boys in various states of undress. They'd spot you if you tried to enter.<br><br>
 
-			<<link [[Watch (0:05)|School Boy's Watch]]>><<pass5>><</link>><<promiscuous1>><br>
+			<<link [[Watch (0:05)|School Boy's Watch]]>><<pass 5>><</link>><<promiscuous1>><br>
 
 				<<if $exhibitionism gte 35>>
-				<<link [[Masturbate (0:01)|School Boy's Masturbation]]>><<pass1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
+				<<link [[Masturbate (0:01)|School Boy's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
 				<</if>>
 				<<if $exhibitionism gte 75>>
-				<<link [[Enter (0:05)|School Boy's Exhibitionism]]>><<generatesm1>><<pass5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+				<<link [[Enter (0:05)|School Boy's Exhibitionism]]>><<generatesm1>><<pass 5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
 				<</if>>
 			<<link [[Leave|School Pool Entrance]]>><</link>><br>
 
@@ -4097,13 +4097,13 @@ You are in the boy's changing room.
 			<<elseif $exposed gte 2 and $malechance isnot 0>>
 			You peek around the corner. You see boys in various states of undress. They'd spot you if you tried to enter.<br><br>
 
-			<<link [[Watch (0:05)|School Boy's Watch]]>><<pass5>><</link>><<promiscuous1>><br>
+			<<link [[Watch (0:05)|School Boy's Watch]]>><<pass 5>><</link>><<promiscuous1>><br>
 
 				<<if $exhibitionism gte 35>>
-				<<link [[Masturbate (0:01)|School Boy's Masturbation]]>><<pass1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
+				<<link [[Masturbate (0:01)|School Boy's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
 				<</if>>
 				<<if $exhibitionism gte 75>>
-				<<link [[Enter (0:05)|School Boy's Exhibitionism]]>><<generatesm1>><<pass5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+				<<link [[Enter (0:05)|School Boy's Exhibitionism]]>><<generatesm1>><<pass 5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
 				<</if>>
 			<<link [[Leave|School Pool Entrance]]>><</link>><br>
 
@@ -4276,13 +4276,13 @@ You are in the girl's changing room.
 			<<elseif $exposed gte 2 and $malechance isnot 100>>
 			You peek around the corner. You see girls in various states of undress. They'd spot you if you tried to enter.<br><br>
 
-			<<link [[Watch (0:05)|School Girl's Watch]]>><<pass5>><</link>><<promiscuous1>><br>
+			<<link [[Watch (0:05)|School Girl's Watch]]>><<pass 5>><</link>><<promiscuous1>><br>
 
 				<<if $exhibitionism gte 35>>
-				<<link [[Masturbate (0:01)|School Girl's Masturbation]]>><<pass1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
+				<<link [[Masturbate (0:01)|School Girl's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
 				<</if>>
 				<<if $exhibitionism gte 75>>
-				<<link [[Enter (0:05)|School Girl's Exhibitionism]]>><<generatesf1>><<pass5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+				<<link [[Enter (0:05)|School Girl's Exhibitionism]]>><<generatesf1>><<pass 5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
 				<</if>>
 			<<link [[Leave|School Pool Entrance]]>><</link>><br>
 
@@ -4386,13 +4386,13 @@ You are in the girl's changing room.
 			<<elseif $exposed gte 2 and $malechance isnot 100>>
 			You peek around the corner. You see girls in various states of undress. They'd spot you if you tried to enter.<br><br>
 
-			<<link [[Watch (0:05)|School Girl's Watch]]>><<pass5>><</link>><<promiscuous1>><br>
+			<<link [[Watch (0:05)|School Girl's Watch]]>><<pass 5>><</link>><<promiscuous1>><br>
 
 				<<if $exhibitionism gte 35>>
-				<<link [[Masturbate (0:01)|School Girl's Masturbation]]>><<pass1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
+				<<link [[Masturbate (0:01)|School Girl's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><<exhibitionist3>><br>
 				<</if>>
 				<<if $exhibitionism gte 75>>
-				<<link [[Enter (0:05)|School Girl's Exhibitionism]]>><<generatesf1>><<pass5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
+				<<link [[Enter (0:05)|School Girl's Exhibitionism]]>><<generatesf1>><<pass 5>><<detention30>><</link>><<gdelinquency>><<exhibitionist5>><br>
 				<</if>>
 			<<link [[Leave|School Pool Entrance]]>><</link>><br>
 
@@ -5296,7 +5296,7 @@ The boys enjoy a laugh at your expense. "We're not letting you in here dressed l
 You watch the boys dress, oblivious to your gaze. Your heart beats faster with the fear of being caught.<<promiscuity1>>
 
 <<if $exhibitionism gte 35>>
-<<link [[Masturbate (0:01)|School Boy's Masturbation]]>><<pass1>><<set $masturbationstart to 1>><</link>><br>
+<<link [[Masturbate (0:01)|School Boy's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><br>
 <</if>>
 <<link [[Stop|School Pool Entrance]]>><</link>>
 
@@ -5306,7 +5306,7 @@ You watch the boys dress, oblivious to your gaze. Your heart beats faster with t
 <<generatesm2>><<generatesm3>><<generatesm4>><<generatesm5>><<generatesm6>>
 You enter the changing room. The response to a naked girl arriving is mixed. Some grab whatever they can to cover with. Some freeze on the spot. Others cheer and whistle. All stare at you.<<exhibitionism5>>
 
-<<link [[Flaunt (0:05)|School Boy's Flaunt]]>><<pass5>><<status 1>><<garousal60>><</link>><<gcool>><<garousal>><br>
+<<link [[Flaunt (0:05)|School Boy's Flaunt]]>><<pass 5>><<status 1>><<garousal60>><</link>><<gcool>><<garousal>><br>
 <<if $promiscuity gte 75>>
 <<link [[Goad|School Boy's Goad]]>><<set $sexstart to 1>><</link>><<promiscuous5>><br>
 <</if>>
@@ -5425,7 +5425,7 @@ You knock the <<person>> against a locker. <<tearful>> you escape the room. You 
 <<set $outside to 0>><<schooleffects>><<effects>>
 
 You run past the laughing <<person>> and away from the changing rooms.<br><br>
-<<fameexhibitionism1>>
+<<fameexhibitionism 1>>
 <<endevent>>
 
 <<link [[Next|Hallways]]>><</link>><br>
@@ -5994,7 +5994,7 @@ The girls enjoy a laugh at your expense. "We're not letting you in here dressed 
 You watch the girls dress, oblivious to your gaze. Your heart beats faster with the fear of being caught.<<promiscuity1>>
 
 <<if $exhibitionism gte 35>>
-<<link [[Masturbate (0:01)|School Girl's Masturbation]]>><<pass1>><<set $masturbationstart to 1>><</link>><br>
+<<link [[Masturbate (0:01)|School Girl's Masturbation]]>><<pass 1>><<set $masturbationstart to 1>><</link>><br>
 <</if>>
 <<link [[Stop|School Pool Entrance]]>><</link>>
 
@@ -6004,7 +6004,7 @@ You watch the girls dress, oblivious to your gaze. Your heart beats faster with 
 <<generatesf2>><<generatesf3>><<generatesf4>><<generatesf5>><<generatesf6>>
 You enter the changing room. The response to a naked boy arriving is mixed. Some grab whatever they can to cover with. Some freeze on the spot. Others cheer and whistle. All stare at you.<<exhibitionism5>>
 
-<<link [[Flaunt (0:05)|School Girl's Flaunt]]>><<pass5>><<status 1>><<garousal60>><</link>><<gcool>><<garousal>><br>
+<<link [[Flaunt (0:05)|School Girl's Flaunt]]>><<pass 5>><<status 1>><<garousal60>><</link>><<gcool>><<garousal>><br>
 <<if $promiscuity gte 75>>
 <<link [[Goad|School Girl's Goad]]>><<set $sexstart to 1>><</link>><<promiscuous5>><br>
 <</if>>
@@ -6123,7 +6123,7 @@ You knock the <<person>> against a locker. <<tearful>> you escape the room. You 
 <<set $outside to 0>><<schooleffects>><<effects>>
 
 You run past the laughing <<person>> and away from the changing rooms.<br><br>
-<<fameexhibitionism1>>
+<<fameexhibitionism 1>>
 <<endevent>>
 
 <<link [[Next|Hallways]]>><</link>><br>
