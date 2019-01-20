@@ -1,0 +1,122 @@
+#ui-bar {
+    z-index: 300;
+}
+
+#ui-bar-toggle {
+    z-index: 500;
+}
+
+body {
+    &.has-images {
+        header {
+            &#title {
+                display: none;
+            }
+        }
+
+        #story-caption {
+            /* 256 px: images
+	        2.5 em: ui-bar-body margin-top */
+            margin-top: calc(256px - 2.5em);
+        }
+    }
+}
+
+.hide {
+    a {
+        color: $white;
+        text-decoration: none !important;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.general {
+    opacity: 0.99;
+}
+
+#statbar {
+    position: relative;
+    left: 0;
+    top: 9px;
+    z-index: 0;
+}
+
+#img {
+    height: 256px;
+    width: 256px;
+    overflow: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    & > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+#daystate {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+#weather {
+    position: fixed;
+    left: 0;
+    top: 64px;
+    z-index: 10;
+}
+
+#location {
+    position: fixed;
+    left: 0;
+    top: 128px;
+    z-index: 10;
+}
+
+#divmap {
+    position: relative;
+    display: inline-block;
+    height: 256px;
+    width: 256px;
+
+}
+
+#map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+#maparrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+}
+
+.meter {
+    position: relative;
+    height: 0.3em;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    z-index: -10;
+}
+
+@include make_meter('redbar', $red);
+@include make_meter('pinkbar', $pink);
+@include make_meter('purplebar', $purple);
+@include make_meter('bluebar', $blue);
+@include make_meter('lbluebar', $light-blue);
+@include make_meter('tealbar', $teal);
+@include make_meter('greenbar', $green);
+@include make_meter('goldbar', $gold);

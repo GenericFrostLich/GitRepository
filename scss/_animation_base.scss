@@ -1,0 +1,82 @@
+/*
+ * Animation-related classes. Work-in-progress
+ * Expected document structure:
+ * <div class="i256" -- should have the image size-related class
+ *					 (or have fixed size & overflow: hidden any other way)
+ *	<img class="anim-2s anim-2f" -- should have
+ *		   1) duration-related class like "anim-2s" (2 seconds)
+ *		   2) frame count-related class like "anim-2f" (2 frames)
+ *		OR
+ *	<img class="anim-doggy-4f-vfast"
+ *		   -- should have frame count & speed class
+ *			  like "anim-doggy-4f-vfast" (4 frames, very fast)
+ */
+
+.i256 {
+    width: 256px;
+    height: 256px;
+    overflow: hidden;
+
+    & > * {
+        position: absolute;
+    }
+}
+
+.i128 {
+    width: 128px;
+    height: 128px;
+    overflow: hidden;
+
+    & > * {
+        position: absolute;
+    }
+}
+
+.i64 {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+
+    & > * {
+        position: absolute;
+    }
+}
+
+.anim-1s, .anim-2s {
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: anim-default;
+    animation-iteration-count: infinite;
+    animation-name: anim-default;
+}
+
+/* duration related-classes.
+   When adding, don't forget to add it to rule above with animation-iteration-count */
+.anim-1s {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.anim-2s {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+/* frame-count related classes */
+.anim-2f {
+    -webkit-animation-timing-function: steps(2);
+    animation-timing-function: steps(2);
+}
+.anim-4f {
+    -webkit-animation-timing-function: steps(4);
+    animation-timing-function: steps(4);
+}
+
+@keyframes anim-default {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}

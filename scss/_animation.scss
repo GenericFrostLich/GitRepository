@@ -1,0 +1,42 @@
+@include make_animation('idle', 1, 2s, "", 2);
+@include make_animation('idle', 1, 2s, "slow", 2);
+
+@include make_animation('idle', 2, 2s);
+@include make_animation('idle', 2, 2s, "slow");
+
+@include make_animation('idle', 3, 3s);
+@include make_animation('idle', 3, 3s, "slow");
+
+@include make_animation('idle', 4, 1320ms, "mid");
+@include make_animation('idle', 4, 320ms, "fast");
+
+// sex animations, main slot
+@include make_animation('doggy', 4, 320ms, 'vfast');
+@include make_animation('doggy', 4, 440ms, 'fast');
+@include make_animation('doggy', 4, 680ms, 'mid');
+@include make_animation('doggy', 4, 1320ms, 'slow');
+
+@include make_animation('close', 3, 240ms, 'vfast');
+@include make_animation('close', 3, 330ms, 'fast');
+@include make_animation('close', 3, 510ms, 'mid');
+@include make_animation('close', 3, 990ms, 'slow');
+
+@include make_animation('close', 4, 320ms, 'vfast');
+@include make_animation('close', 4, 440ms, 'fast');
+@include make_animation('close', 4, 680ms, 'mid');
+@include make_animation('close', 4, 1320ms, 'slow');
+
+@include make_animation('close', 5, 400, 'vfast');
+@include make_animation('close', 5, 550ms, 'fast');
+@include make_animation('close', 5, 850ms, 'mid');
+@include make_animation('close', 5, 1650ms, 'slow');
+
+@include make_animation('close', 6, 480ms, 'vfast');
+@include make_animation('close', 6, 660ms, 'fast');
+@include make_animation('close', 6, 1020ms, 'mid');
+@include make_animation('close', 6, 1980ms, 'slow');
+
+@include make_animation('xray', 8, 320ms, 'vfast');
+@include make_animation('xray', 8, 480ms, 'fast');
+@include make_animation('xray', 8, 640ms, 'mid');
+@include make_animation('xray', 8, 1320ms, 'slow');

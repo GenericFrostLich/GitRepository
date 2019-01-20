@@ -1,0 +1,105 @@
+#divsex {
+    position: relative;
+    display: inline-block;
+    height: 256px;
+    width: 768px;
+
+    & > * {
+        position: absolute;
+        left: 256px;
+        top: 0;
+    }
+}
+
+#divandroidsex {
+    position: relative;
+    display: inline-block;
+    height: 256px;
+    width: 256px;
+    left: -256px;
+
+    & > * {
+        position: absolute;
+        left: 256px;
+        top: 0;
+    }
+}
+
+#closepenis {
+    &, #divsex & {
+        position: absolute;
+        left: 321px;
+        top: -30px;
+        z-index: 250;
+    }
+}
+
+#closeanus {
+    &, #divsex & {
+        position: absolute;
+        left: 451px;
+        top: -30px;
+        z-index: 250;
+    }
+}
+
+#closevagina {
+    &, #divsex & {
+        position: absolute;
+        left: 386px;
+        top: -30px;
+        z-index: 250;
+    }
+}
+
+#divandroidxray {
+    position: relative;
+    display: inline-block;
+    height: 256px;
+    width: 256px;
+}
+
+#xrayvaginal {
+    &, #divsex & {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 3;
+    }
+}
+
+#xrayvaginalcum {
+    &, #divsex & {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 4;
+    }
+}
+
+#xraypenile {
+    &, #divsex & {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+}
+
+#xrayanal {
+    &, #divsex & {
+        position: absolute;
+        left: 512px;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+#xrayandroidanal {
+    &, #divsex & {
+        position: relative;
+        left: 0;
+        top: -150px;
+        z-index: 1;
+    }
+}

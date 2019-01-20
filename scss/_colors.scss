@@ -1,0 +1,28 @@
+$color-list: (
+    'red': $red,
+    'pink': $pink,
+    'purple': $purple,
+    'blue': $blue,
+    'lblue': $light-blue,
+    'teal': $teal,
+    'green': $green,
+    'gold': $gold,
+    'orange': $orange,
+    'tangerine': $tangerine,
+    'black': $gray,
+    'brown': $brown,
+    'lightbrown': $light-brown,
+    'platinum': $platinum,
+    'strawberry': $strawberry,
+    'gray': $light-gray,
+    'brat': $action-brat,
+    'meek': $action-meek,
+    'def': $action-def,
+    'sub': $action-sub
+);
+
+@each $key, $value in $color-list {
+    .#{$key} {
+        color: $value;
+    }
+}

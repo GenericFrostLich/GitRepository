@@ -1,0 +1,101 @@
+.macro-numberslider {
+    display: inline-block;
+
+    input {
+        width: 3em;
+        text-align: center;
+
+        -webkit-appearance: none;
+        cursor: pointer;
+        height: 1.25em;
+        min-width: 20em;
+        vertical-align: middle;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::-webkit-slider-runnable-track, &::-moz-range-track {
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 0;
+            cursor: pointer;
+            height: 10px;
+            width: 100%;
+
+            &:focus {
+                background: #222;
+            }
+        }
+
+        &::-webkit-slider-thumb, &::-moz-range-thumb {
+            -webkit-appearance: none;
+            background: #35a;
+            border: 1px solid #57c;
+            border-radius: 0;
+            cursor: pointer;
+            height: 18px;
+            margin-top: -5px;
+            width: 33px;
+        }
+
+        &::-ms-track {
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+            cursor: pointer;
+            height: 10px;
+            width: 99%; /* fallback for MS browsers without support for calc() */
+            width: calc(100% - 1px);
+        }
+
+        &::-ms-thumb {
+            background: #35a;
+            border: 1px solid #57c;
+            border-radius: 0;
+            cursor: pointer;
+            height: 16px;
+            width: 33px;
+        }
+
+        &::-ms-fill-lower {
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 0;
+        }
+
+        &::-ms-fill-upper {
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 0;
+        }
+    }
+
+    button {
+        font-family: "tme-fa-icons";
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: normal;
+        speak: none;
+        padding: 0.4em 0.6em;
+
+        &[id^="numberbox-minus"] {
+            margin-right: 0.4em;
+        }
+
+        &[id^="numberbox-plus"] {
+            margin-left: 0.4em;
+        }
+    }
+
+    span {
+        display: inline-block;
+        /*font-size: 1.25em;*/
+        margin-left: 0.25em;
+        min-width: 3em;
+        text-align: center;
+        vertical-align: middle;
+    }
+}

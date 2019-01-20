@@ -1,0 +1,5 @@
+@each $key, $value in $layers {
+    .layer-#{$key} {
+        z-index: $value;
+    }
+}

@@ -1,0 +1,80 @@
+@mixin make_meter($selector, $color) {
+    .#{unquote($selector)} {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 0.3em;
+        background-color: $color;
+        z-index: -10;
+    }
+}
+
+@mixin make_hair($selector) {
+    .hair-#{unquote($selector)} {
+        .colour-hair {
+            @content;
+        }
+    }
+}
+
+@mixin make_eye($selector) {
+    .eye-#{unquote($selector)} {
+        .colour-eye {
+            @content;
+        }
+    }
+}
+
+@mixin make_clothing($selector) {
+    .upper-#{unquote($selector)} {
+        .colour-upper {
+            @content;
+        }
+    }
+
+    .lower-#{unquote($selector)} {
+        .colour-lower {
+            @content;
+        }
+    }
+
+    .under-#{unquote($selector)} {
+        .colour-under {
+            @content;
+        }
+    }
+}
+
+@mixin make_animation($identifier, $steps, $time, $pace: "", $overrideSteps: false) {
+    $class: unquote("anim-") + unquote($identifier) + "-" + $steps + unquote("f");
+
+    @if $pace != "" {
+        $class: $class + unquote("-") + unquote($pace);
+    }
+
+    @if $overrideSteps != false {
+        $steps: $overrideSteps;
+    }
+
+    .#{$class} {
+        -webkit-animation-duration: $time;
+        -moz-animation-duration: $time;
+        -o-animation-duration: $time;
+        animation-duration: $time;
+
+        -webkit-animation-timing-function: steps($steps);
+        -moz-animation-timing-function: steps($steps);
+        -o-animation-timing-function: steps($steps);
+        animation-timing-function: steps($steps);
+
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-name: anim-default;
+        -moz-animation-name: anim-default;
+        -o-animation-name: anim-default;
+        animation-name: anim-default;
+    }
+}

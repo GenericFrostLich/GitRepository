@@ -1,0 +1,46 @@
+/* Clothing: base is red */
+
+@include make_clothing('blue') {
+    -webkit-filter: hue-rotate(-120deg) saturate(100%) brightness(100%) contrast(100%);
+    filter: hue-rotate(-120deg) saturate(100%) brightness(100%) contrast(100%);
+}
+
+@include make_clothing('white') {
+    -webkit-filter: hue-rotate(0deg) saturate(0%) brightness(440%) contrast(140%);
+    filter: hue-rotate(0deg) saturate(0%) brightness(440%) contrast(140%);
+}
+
+@include make_clothing('red') {
+    -webkit-filter: hue-rotate(0deg) saturate(100%) brightness(100%) contrast(100%);
+    filter: hue-rotate(0deg) saturate(100%) brightness(100%) contrast(100%);
+}
+
+@include make_clothing('green') {
+    -webkit-filter: hue-rotate(120deg) saturate(100%) brightness(150%) contrast(100%);
+    filter: hue-rotate(120deg) saturate(100%) brightness(150%) contrast(100%);
+}
+
+@include make_clothing('black') {
+    -webkit-filter: hue-rotate(0deg) saturate(0%) brightness(110%) contrast(110%);
+    filter: hue-rotate(0deg) saturate(0%) brightness(110%) contrast(110%);
+}
+
+@include make_clothing('pink') {
+    -webkit-filter: hue-rotate(-30deg) saturate(50%) contrast(100%) brightness(160%);
+    filter: hue-rotate(-30deg) saturate(50%) contrast(100%) brightness(160%);
+}
+
+@include make_clothing('purple') {
+    -webkit-filter: hue-rotate(-90deg) saturate(100%) brightness(100%) contrast(100%);
+    filter: hue-rotate(-90deg) saturate(100%) brightness(100%) contrast(100%);
+}
+
+@include make_clothing('tangerine') {
+    -webkit-filter: hue-rotate(60deg) saturate(150%) brightness(200%) contrast(100%);
+    filter: hue-rotate(60deg) saturate(150%) brightness(200%) contrast(100%);
+}
+
+@include make_clothing('yellow') {
+    -webkit-filter: hue-rotate(65deg) saturate(100%) brightness(290%) contrast(300%) sepia(0.55);
+    filter: hue-rotate(65deg) saturate(100%) brightness(290%) contrast(300%) sepia(0.55);
+}
