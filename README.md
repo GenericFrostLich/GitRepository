@@ -11,4 +11,6 @@ All tools required are free but require a bit of time to set up (1-time process)
  
 ## Building
 
-// todo
+ * Navigate to /src in your terminal/IDE of choice and run "npm install"
+ * Next, in the same folder run "npm run build"
+ * That's it, a base.js file should appear in the /game folder now, ready for tweego compile
