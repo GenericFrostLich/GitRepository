@@ -1,0 +1,24 @@
+{
+  "name": "degrees_es6",
+  "version": "1.0.0",
+  "description": "App for degrees-of-lewdity",
+  "main": "index.js",
+  "scripts": {
+    "build (dev)": "webpack",
+    "build": "webpack --env.mode=production"
+  },
+  "keywords": [],
+  "private": true,
+  "author": "lymailmail@gmail.com",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
