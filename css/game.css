@@ -1490,4 +1490,10 @@ body.has-images #story-caption {
   animation-name: anim-default;
 }
 
+#map-display-container {
+  height: 300px;
+  width: 100%;
+  background: red;
+}
+
 /*# sourceMappingURL=file:///D:/Projects/degrees-of-lewdity/css/game.css.map */

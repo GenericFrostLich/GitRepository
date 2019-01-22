@@ -20975,7 +20975,7 @@ Naked exercise raises physique faster.
 <br><br>
 
 <!-- REMOVE LATER -->
-<<es6_test_macro>>
+<<display_map 'domus_street'>>
 
 <<if $dev is 1>>
 

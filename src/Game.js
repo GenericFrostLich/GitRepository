@@ -13,7 +13,7 @@ class Game {
     }
 
     initMacros() {
-        macroSetup('es6_test_macro', GameMap, true);
+        macroSetup('display_map', GameMap);
 
         macroSetup('underintegrity', underIntegrity, true, true);
         macroSetup('lowerintegrity', lowerIntegrity, true, true);
