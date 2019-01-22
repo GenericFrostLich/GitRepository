@@ -1,15 +1,23 @@
 import "./Macros/Misc";
-import "./Macros/Clothing";
 import "./Macros/Numberpool";
+import {upperIntegrity, lowerIntegrity, underIntegrity} from "./Macros/Clothing";
 import {macroSetup} from "./Utilities";
 import GameMap from "./GameMap";
 
 class Game {
     constructor() {
         this.initState();
+        this.initMacros();
 
         console.log("Degrees of Lewdity initialized.");
+    }
+
+    initMacros() {
         macroSetup('es6_test_macro', GameMap, true);
+
+        macroSetup('underintegrity', underIntegrity, true, true);
+        macroSetup('lowerintegrity', lowerIntegrity, true, true);
+        macroSetup('upperintegrity', upperIntegrity, true, true);
     }
 
     initState() {

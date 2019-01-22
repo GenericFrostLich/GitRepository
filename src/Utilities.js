@@ -1,11 +1,21 @@
-export function macroSetup(tag, target, isWidget = false) {
+export function macroSetup(tag, target, output = false, asFunction = false) {
     Macro.add(tag, {
-        isWidget: isWidget,
+        isWidget: false,
         handler: function() {
             const self = this;
 
-            let instance = new target(self);
-            return instance.run();
+            let returnValue = '';
+
+            if (asFunction) {
+                returnValue = target(self);
+            }
+            else {
+                let instance = new target(self);
+                returnValue = instance.run();
+            }
+
+            if (output)
+                $(self.output).wiki(returnValue);
         }
     });
 }
