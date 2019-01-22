@@ -20974,6 +20974,8 @@ Naked exercise raises physique faster.
 | <label>Female <<radiobutton "$playergender" "f" checked>></label>
 <br><br>
 
+<!-- REMOVE LATER -->
+<<es6_test_macro>>
 
 <<if $dev is 1>>
 

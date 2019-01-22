@@ -101,6 +101,7 @@ Macro.add("numberpool", {
         }), jQuery(document.createElement("div")).attr("id", this.name + "-" + varId + "-" + TempState[this.name][varId]++).addClass("macro-" + this.name).wiki(this.payload[0].contents.replace(/^\n/, "")).appendTo(this.output)
     }
 });
+
 Macro.add("numberslider", {
     handler: function() {
         function stepValidate(value) {

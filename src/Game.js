@@ -1,12 +1,15 @@
 import "./Macros/Misc";
 import "./Macros/Clothing";
 import "./Macros/Numberpool";
+import {macroSetup} from "./Utilities";
+import GameMap from "./GameMap";
 
 class Game {
     constructor() {
         this.initState();
 
         console.log("Degrees of Lewdity initialized.");
+        macroSetup('es6_test_macro', GameMap, true);
     }
 
     initState() {

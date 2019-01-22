@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build (dev)": "webpack",
-    "build": "webpack --env.mode=production"
+    "build": "webpack --env.mode=production",
+    "compile": "cd .. && compile.bat"
   },
   "keywords": [],
   "private": true,
