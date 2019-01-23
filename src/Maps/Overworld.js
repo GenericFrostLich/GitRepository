@@ -1,11 +1,14 @@
 export default {
-    background: '',
+    background: 'img/map_placeholders/map_placeholder.png',
     locations: [{
         id: 'domus_street',
+        x: 35,
+        y: 118,
         name: 'Domus',
         prefix: 'Street',
         suffix: '',
-        sprite: '',
+        sprite: 'img/map_placeholders/building_placeholder.png',
+        light: 'img/map_placeholders/placeholder_light.png',
         links: [
             'barb_street',
             'danube_street',
@@ -13,10 +16,14 @@ export default {
         ]
     }, {
         id: 'barb_street',
+        passage: 'Barb Street',
+        x: 135,
+        y: 30,
         name: 'Barb',
         prefix: 'Street',
         suffix: '',
-        sprite: '',
+        sprite: 'img/map_placeholders/building_placeholder.png',
+        light: 'img/map_placeholders/placeholder_light.png',
         links: [
             'domus_street',
             'connudatus_street',
@@ -24,9 +31,12 @@ export default {
         ]
     }, {
         id: 'residential_alleyways',
+        x: 115,
+        y: 110,
         name: 'Residential Alleyways',
         prefix: '',
-        suffix: '',
+        sprite: 'img/map_placeholders/building_placeholder.png',
+        light: 'img/map_placeholders/placeholder_light.png',
         links: [
             'domus_street',
             'barb_street',
@@ -35,10 +45,13 @@ export default {
         ]
     }, {
         id: 'danube_street',
+        x: 137,
+        y: 207,
         name: 'Danube',
         prefix: 'Street',
         suffix: '',
-        sprite: '',
+        sprite: 'img/map_placeholders/building_placeholder.png',
+        light: 'img/map_placeholders/placeholder_light.png',
         links: [
             'domus_street',
             'connudatus_street',
@@ -46,10 +59,13 @@ export default {
         ]
     }, {
         id: 'connudatus_street',
+        x: 210,
+        y: 100,
         name: 'Connudatus',
         prefix: 'Street',
         suffix: '',
-        sprite: '',
+        sprite: 'img/map_placeholders/building_placeholder.png',
+        light: 'img/map_placeholders/placeholder_light.png',
         links: [
             'barb_street',
             'danube_street',

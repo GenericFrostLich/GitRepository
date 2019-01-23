@@ -1,5 +1,23 @@
 #map-display-container {
-    height: 300px;
     width: 100%;
-    background: red;
+    position: relative;
+
+    img {
+        display: block;
+    }
+
+    #background-layer {
+        z-index: -1;
+    }
+
+    .location-single {
+        position: absolute;
+
+
+        .location-light {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
 }

@@ -1,4 +1,6 @@
 import Maps from "./Maps/All";
+import {get} from "./Utilities";
+import _ from 'lodash';
 
 class GameMap {
     macro = null;
@@ -6,6 +8,8 @@ class GameMap {
     locationID = null;
 
     location = null;
+
+    renderedLocations = {};
 
     constructor(macro) {
         this.macro = macro;
@@ -53,12 +57,90 @@ class GameMap {
         return null;
     }
 
+    renderLocation(loc, map) {
+        const location = $('<div>').attr('id', 'location-' + loc.id).css({
+            left: loc.x,
+            top: loc.y
+        }).addClass('location-single');
+
+        $(location).append(
+            $('<img>').addClass('location-sprite').attr('src', get(loc.sprite))
+        );
+
+        if (typeof loc.light !== "undefined")
+            $(location).append(
+                $('<img>').addClass('location-light').attr('src', get(loc.light))
+            );
+
+        if (this.locationID === loc.id) {
+            $(location).addClass('location-current');
+        }
+
+        this.renderedLocations[loc.id] = location;
+
+        $(map).append(location);
+    }
+
+    attachLinks() {
+        let currentLocation = null;
+        for (let l of this.map.map.locations) {
+            if (this.locationID === l.id) {
+                currentLocation = l;
+                break;
+            }
+        }
+
+        let links = get(currentLocation.links);
+        let locations = _.keyBy(_.cloneDeep(this.map.map.locations), o => o.id);
+
+        for (let link of links) {
+            if (typeof this.renderedLocations[link] === "undefined") {
+                console.warn(`Unknown selected for the current location (${link})`);
+                continue;
+            }
+
+            $(this.renderedLocations[link]).addClass('link-active').on('click', () => {
+                const myLocation = _.keyBy(this.map.map.locations, o => o.id)[link];
+                if (typeof myLocation.passage === "undefined") {
+                    console.warn(`Passage for link ${link} is not defined.`);
+                    return;
+                }
+
+                const passage = get(myLocation.passage);
+                if (typeof passage !== "string") {
+                    console.error(`Passage returned for link ${link} is not a string.`);
+                    return;
+                }
+
+                Engine.play(passage);
+            });
+            delete locations[link];
+        }
+
+        for (let link in locations) {
+            if (link === this.locationID)
+                continue; // current location is in this list, no need to pollute it with the class
+
+            $(this.renderedLocations[link]).addClass('link-inactive');
+        }
+    }
+
+    renderMap() {
+        const container = $('<div>').attr('id', 'map-display-container').addClass('map-id-' + this.map.mapID);
+        $(container).append(
+            $('<img>').attr('id', 'background-layer').attr('src', get(this.map.map.background))
+        );
+
+        for (let l of this.map.map.locations)
+            this.renderLocation(l, container);
+
+        this.attachLinks();
+
+        return container;
+    }
+
     run() {
-
-
-        jQuery(this.macro.output).append(jQuery("<div>").attr('id', 'map-display-container'));
-
-        return 'this is really just a widget??????????';
+        jQuery(this.macro.output).append(this.renderMap());
     }
 }
 

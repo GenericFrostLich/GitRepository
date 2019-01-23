@@ -1,4 +1,5 @@
 const path = require('path');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 module.exports = (env) => {
     const webpackMode = (typeof env === "undefined" ? 'development' : (
@@ -25,12 +26,16 @@ module.exports = (env) => {
                         presets: ['@babel/preset-env'],
                         plugins: [
                             '@babel/plugin-proposal-object-rest-spread',
-                            '@babel/plugin-proposal-class-properties'
+                            '@babel/plugin-proposal-class-properties',
+                            'lodash'
                         ]
                     }
                 }
             }]
-        }
+        },
+        plugins: [
+            new LodashModuleReplacementPlugin()
+        ]
     };
 
     if (webpackMode === 'development')

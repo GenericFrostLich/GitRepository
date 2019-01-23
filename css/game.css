@@ -1491,9 +1491,22 @@ body.has-images #story-caption {
 }
 
 #map-display-container {
-  height: 300px;
   width: 100%;
-  background: red;
+  position: relative;
+}
+#map-display-container img {
+  display: block;
+}
+#map-display-container #background-layer {
+  z-index: -1;
+}
+#map-display-container .location-single {
+  position: absolute;
+}
+#map-display-container .location-single .location-light {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=file:///D:/Projects/degrees-of-lewdity/css/game.css.map */

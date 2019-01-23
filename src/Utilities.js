@@ -19,3 +19,10 @@ export function macroSetup(tag, target, output = false, asFunction = false) {
         }
     });
 }
+
+export function get(target) {
+    if (typeof target === "function")
+        return target();
+
+    return target;
+}
