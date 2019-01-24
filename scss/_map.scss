@@ -12,12 +12,27 @@
 
     .location-single {
         position: absolute;
-
+        transition: margin-top $mapLocTransition;
+        margin-top: 0;
 
         .location-light {
             position: absolute;
             top: 0;
             left: 0;
+        }
+
+        .location-active-trigger {
+            position: absolute;
+            z-index: 1;
+        }
+
+        &.link-active {
+            &.location-is-hovered {
+                margin-top: -10px;
+            }
+
+            // DEV
+            border: solid 3px blue;
         }
     }
 }

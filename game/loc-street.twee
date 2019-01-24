@@ -66,7 +66,8 @@ Alternate Routes<br>
 <<stormdrain>><br>
 <br>
 
-<div id="divmap"><<if $images gte 1>><img id="map" src="img/misc/map.png"><img id="maparrow" src="img/misc/maparrowdomus.png"><<else>><<textmap>><</if>></div>
+<!-- LY CHANGE! -->
+<<display_map 'domus_street'>>
 
 	<</if>>
 <</if>>
@@ -341,7 +342,8 @@ Alternate Routes<br>
 <<stormdrain>><br>
 <br>
 
-<div id="divmap"><<if $images gte 1>><img id="map" src="img/misc/map.png"><img id="maparrow" src="img/misc/maparrowbarb.png"><<else>><<textmap>><</if>></div>
+<!-- LY CHANGE! -->
+<<display_map 'barb_street'>>
 
 
 	<</if>>
@@ -417,7 +419,8 @@ Alternate routes<br>
 <<stormdrain>><br>
 <br>
 
-<div id="divmap"><<if $images gte 1>><img id="map" src="img/misc/map.png"><img id="maparrow" src="img/misc/maparrowconnudatus.png"><<else>><<textmap>><</if>></div>
+<!-- LY CHANGE! -->
+<<display_map 'connudatus_street'>>
 
 	<</if>>
 <</if>>
@@ -742,7 +745,8 @@ Alternate routes<br>
 
 <br>
 
-<div id="divmap"><<if $images gte 1>><img id="map" src="img/misc/map.png"><img id="maparrow" src="img/misc/maparrowdanube.png"><<else>><<textmap>><</if>></div>
+<!-- LY CHANGE! -->
+<<display_map 'danube_street'>>
 
 
 	<</if>>

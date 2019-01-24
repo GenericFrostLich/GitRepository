@@ -3,6 +3,7 @@ import "./Macros/Numberpool";
 import {upperIntegrity, lowerIntegrity, underIntegrity} from "./Macros/Clothing";
 import {macroSetup} from "./Utilities";
 import GameMap from "./GameMap";
+import "./Numberify";
 
 class Game {
     constructor() {

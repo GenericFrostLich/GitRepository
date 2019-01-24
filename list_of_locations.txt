@@ -1,0 +1,20 @@
+Harvest Street
+Mer Street
+Starfish Street
+Cliff Street
+Barb Street
+Connudatus Street
+High Street
+Oxford Street
+Elk Street
+Wolf Street
+Danube Street
+Domus Street
+Nightingale Street
+
+Residential alleyways
+Commercial alleyways
+Park
+Industrial alleyways
+Beach
+Forest

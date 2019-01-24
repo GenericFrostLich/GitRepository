@@ -1,7 +1,11 @@
+import {checkForDaylightExposure} from "./MapUtilities";
+
 export default {
     background: 'img/map_placeholders/map_placeholder.png',
     locations: [{
         id: 'domus_street',
+        passage: 'Domus Street',
+        timePass: 5,
         x: 35,
         y: 118,
         name: 'Domus',
@@ -9,14 +13,22 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: [
-            'barb_street',
-            'danube_street',
-            'residential_alleyways'
-        ]
+        links: () => {
+            if (!checkForDaylightExposure())
+                return [
+                    'barb_street',
+                    'danube_street',
+                    'residential_alleyways'
+                ];
+            else
+                return [
+                    'residential_alleyways'
+                ];
+        }
     }, {
         id: 'barb_street',
         passage: 'Barb Street',
+        timePass: 5,
         x: 135,
         y: 30,
         name: 'Barb',
@@ -24,27 +36,49 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: [
-            'domus_street',
-            'connudatus_street',
-            'residential_alleyways'
-        ]
+        links: () => {
+            if (!checkForDaylightExposure())
+                return [
+                    'domus_street',
+                    'connudatus_street',
+                    'residential_alleyways'
+                ];
+            else
+                return [
+                    'residential_alleyways'
+                ]
+        },
+        active: {
+            x: 15,
+            y: 15,
+            width: 15,
+            height: 15
+        }
     }, {
         id: 'residential_alleyways',
+        passage: 'Residential alleyways',
+        timePass: 5,
         x: 115,
         y: 110,
         name: 'Residential Alleyways',
         prefix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: [
-            'domus_street',
-            'barb_street',
-            'danube_street',
-            'connudatus_street'
-        ]
+        links: () => {
+            if (!checkForDaylightExposure())
+                return [
+                    'domus_street',
+                    'barb_street',
+                    'danube_street',
+                    'connudatus_street'
+                ];
+            else
+                return [];
+        }
     }, {
         id: 'danube_street',
+        passage: 'Danube Street',
+        timePass: 5,
         x: 137,
         y: 207,
         name: 'Danube',
@@ -52,13 +86,22 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: [
-            'domus_street',
-            'connudatus_street',
-            'residential_alleyways'
-        ]
+        links: () => {
+            if (!checkForDaylightExposure())
+                return [
+                    'domus_street',
+                    'connudatus_street',
+                    'residential_alleyways'
+                ];
+            else
+                return [
+                    'residential_alleyways'
+                ];
+        }
     }, {
         id: 'connudatus_street',
+        passage: 'Connudatus Street',
+        timePass: 5,
         x: 210,
         y: 100,
         name: 'Connudatus',
@@ -66,10 +109,17 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: [
-            'barb_street',
-            'danube_street',
-            'residential_alleyways'
-        ]
+        links: () => {
+            if (!checkForDaylightExposure())
+                return [
+                    'barb_street',
+                    'danube_street',
+                    'residential_alleyways'
+                ];
+            else
+                return [
+                    'residential_alleyways'
+                ];
+        }
     }] /* First cluster of 5 */
 };

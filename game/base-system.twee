@@ -20974,9 +20974,6 @@ Naked exercise raises physique faster.
 | <label>Female <<radiobutton "$playergender" "f" checked>></label>
 <br><br>
 
-<!-- REMOVE LATER -->
-<<display_map 'domus_street'>>
-
 <<if $dev is 1>>
 
 

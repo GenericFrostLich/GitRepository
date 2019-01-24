@@ -1502,11 +1502,23 @@ body.has-images #story-caption {
 }
 #map-display-container .location-single {
   position: absolute;
+  transition: margin-top 0.3s;
+  margin-top: 0;
 }
 #map-display-container .location-single .location-light {
   position: absolute;
   top: 0;
   left: 0;
+}
+#map-display-container .location-single .location-active-trigger {
+  position: absolute;
+  z-index: 1;
+}
+#map-display-container .location-single.link-active {
+  border: solid 3px blue;
+}
+#map-display-container .location-single.link-active.location-is-hovered {
+  margin-top: -10px;
 }
 
 /*# sourceMappingURL=file:///D:/Projects/degrees-of-lewdity/css/game.css.map */

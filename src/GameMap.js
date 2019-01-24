@@ -1,5 +1,6 @@
 import Maps from "./Maps/All";
 import {get} from "./Utilities";
+import {checkForDaylightExposure} from "./Maps/MapUtilities";
 import _ from 'lodash';
 
 class GameMap {
@@ -72,6 +73,34 @@ class GameMap {
                 $('<img>').addClass('location-light').attr('src', get(loc.light))
             );
 
+        if (typeof loc.active === "undefined") {
+            $(location).append(
+                $('<div>').addClass('location-active-trigger').css({
+                    left: 0,
+                    top: 0,
+                    width: '100%',
+                    height: '100%'
+                })
+            );
+        }
+        else {
+            const active = get(loc.active);
+
+            const left = active.x;
+            const top = active.y;
+            const width = active.width;
+            const height = active.height;
+
+            $(location).append(
+                $('<div>').addClass('location-active-trigger').addClass('location-active-trigger-custom').css({
+                    left,
+                    top,
+                    width,
+                    height
+                })
+            );
+        }
+
         if (this.locationID === loc.id) {
             $(location).addClass('location-current');
         }
@@ -99,7 +128,12 @@ class GameMap {
                 continue;
             }
 
-            $(this.renderedLocations[link]).addClass('link-active').on('click', () => {
+            $(this.renderedLocations[link]).addClass('link-active');
+
+            const activeTrigger = $(this.renderedLocations[link]).find('.location-active-trigger');
+
+
+            $(activeTrigger).on('click', () => {
                 const myLocation = _.keyBy(this.map.map.locations, o => o.id)[link];
                 if (typeof myLocation.passage === "undefined") {
                     console.warn(`Passage for link ${link} is not defined.`);
@@ -112,7 +146,15 @@ class GameMap {
                     return;
                 }
 
+                const timePass = get(myLocation.timePass);
+                if (typeof timePass === "number")
+                    Wikifier.wikifyEval(`<<pass ${timePass}>>`);
+
                 Engine.play(passage);
+            }).on('mouseenter', (e) => {
+                $(e.currentTarget).closest('.location-single').addClass('location-is-hovered');
+            }).on('mouseleave', (e) => {
+                $(e.currentTarget).closest('.location-single').removeClass('location-is-hovered');
             });
             delete locations[link];
         }

@@ -49,7 +49,9 @@ Alternate routes<br>
 		<</if>>
 <<stormdrain>><br>
 <br>
-<div id="divmap"><<if $images gte 1>><img id="map" src="img/misc/map.png"><img id="maparrow" src="img/misc/maparrowresidential.png"><<else>><<textmap>><</if>></div>
+
+<!-- LY CHANGE! -->
+<<display_map 'residential_alleyways'>>
 
 
 	<</if>>
