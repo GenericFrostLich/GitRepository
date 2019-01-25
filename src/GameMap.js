@@ -1,6 +1,5 @@
 import Maps from "./Maps/All";
 import {get} from "./Utilities";
-import {checkForDaylightExposure} from "./Maps/MapUtilities";
 import _ from 'lodash';
 
 class GameMap {

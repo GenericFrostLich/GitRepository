@@ -1,4 +1,5 @@
-import "./Macros/Misc";
+import {checkForDaylightExposure} from "./Maps/MapUtilities";
+import {colourContainerClasses} from "./Macros/Misc";
 import "./Macros/Numberpool";
 import {upperIntegrity, lowerIntegrity, underIntegrity} from "./Macros/Clothing";
 import {macroSetup} from "./Utilities";
@@ -9,6 +10,7 @@ class Game {
     constructor() {
         this.initState();
         this.initMacros();
+        this.initTwineHelper();
 
         console.log("Degrees of Lewdity initialized.");
     }
@@ -40,6 +42,13 @@ class Game {
                     Alert.error('VersionUpdate', ex.message);
                 }
             }
+        };
+    }
+
+    initTwineHelper() {
+        window.DoL = {
+            colorContainerClasses: colourContainerClasses,
+            daylightExposure: checkForDaylightExposure
         };
     }
 }

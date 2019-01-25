@@ -2864,7 +2864,7 @@ You are conscious of your <<nuditystop>><br><br>
 :: Widgets Img [widget]
 <<widget "img">><<nobr>>
 
-<div id="img" @class="colourContainerClasses()">
+<div id="img" @class="DoL.colorContainerClasses()">
 
 <img class="layer-bg" src="img/topleftbg.png">
 
