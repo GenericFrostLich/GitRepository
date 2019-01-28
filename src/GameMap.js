@@ -127,6 +127,13 @@ class GameMap {
                 continue;
             }
 
+            if (typeof locations[link].canBeLink !== "undefined") {
+                if (!get(locations[link].canBeLink)) {
+                    delete locations[link];
+                    continue;
+                }
+            }
+
             $(this.renderedLocations[link]).addClass('link-active');
 
             const activeTrigger = $(this.renderedLocations[link]).find('.location-active-trigger');

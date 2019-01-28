@@ -13,18 +13,12 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: () => {
-            if (!checkForDaylightExposure())
-                return [
-                    'barb_street',
-                    'danube_street',
-                    'residential_alleyways'
-                ];
-            else
-                return [
-                    'residential_alleyways'
-                ];
-        }
+        canBeLink: () => !checkForDaylightExposure(),
+        links: [
+            'barb_street',
+            'danube_street',
+            'residential_alleyways'
+        ]
     }, {
         id: 'barb_street',
         passage: 'Barb Street',
@@ -36,18 +30,12 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: () => {
-            if (!checkForDaylightExposure())
-                return [
-                    'domus_street',
-                    'connudatus_street',
-                    'residential_alleyways'
-                ];
-            else
-                return [
-                    'residential_alleyways'
-                ]
-        },
+        canBeLink: () => !checkForDaylightExposure(),
+        links: [
+            'domus_street',
+            'connudatus_street',
+            'residential_alleyways'
+        ],
         active: {
             x: 15,
             y: 15,
@@ -64,17 +52,12 @@ export default {
         prefix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: () => {
-            if (!checkForDaylightExposure())
-                return [
-                    'domus_street',
-                    'barb_street',
-                    'danube_street',
-                    'connudatus_street'
-                ];
-            else
-                return [];
-        }
+        links: [
+            'domus_street',
+            'barb_street',
+            'danube_street',
+            'connudatus_street'
+        ]
     }, {
         id: 'danube_street',
         passage: 'Danube Street',
@@ -86,18 +69,12 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: () => {
-            if (!checkForDaylightExposure())
-                return [
-                    'domus_street',
-                    'connudatus_street',
-                    'residential_alleyways'
-                ];
-            else
-                return [
-                    'residential_alleyways'
-                ];
-        }
+        canBeLink: () => !checkForDaylightExposure(),
+        links: [
+            'domus_street',
+            'connudatus_street',
+            'residential_alleyways'
+        ]
     }, {
         id: 'connudatus_street',
         passage: 'Connudatus Street',
@@ -109,17 +86,11 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        links: () => {
-            if (!checkForDaylightExposure())
-                return [
-                    'barb_street',
-                    'danube_street',
-                    'residential_alleyways'
-                ];
-            else
-                return [
-                    'residential_alleyways'
-                ];
-        }
+        canBeLink: () => !checkForDaylightExposure(),
+        links: [
+            'barb_street',
+            'danube_street',
+            'residential_alleyways'
+        ]
     }] /* First cluster of 5 */
 };

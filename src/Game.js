@@ -10,6 +10,7 @@ class Game {
     constructor() {
         this.initState();
         this.initMacros();
+        this.updateGameVariables();
         this.initTwineHelper();
 
         console.log("Degrees of Lewdity initialized.");
@@ -42,6 +43,13 @@ class Game {
                     Alert.error('VersionUpdate', ex.message);
                 }
             }
+        };
+    }
+
+    updateGameVariables() {
+        Config.saves.onLoad = (save) => {
+            //console.log(save);
+            //save.state.history[save.state.history.length-1].variables.money = 6969;
         };
     }
 
