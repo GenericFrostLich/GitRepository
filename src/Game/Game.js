@@ -1,16 +1,16 @@
-import {checkForDaylightExposure} from "./Maps/MapUtilities";
-import {colourContainerClasses} from "./Macros/Misc";
-import "./Macros/Numberpool";
-import {upperIntegrity, lowerIntegrity, underIntegrity} from "./Macros/Clothing";
+import {checkForDaylightExposure} from "./PlayerStates";
+import {colourContainerClasses} from "../Macros/Misc";
+import "../Macros/Numberpool";
+import {upperIntegrity, lowerIntegrity, underIntegrity} from "../Macros/Clothing";
 import {macroSetup} from "./Utilities";
 import GameMap from "./GameMap";
 import "./Numberify";
+import "../Update/SaveUpdater";
 
 class Game {
     constructor() {
         this.initState();
         this.initMacros();
-        this.updateGameVariables();
         this.initTwineHelper();
 
         console.log("Degrees of Lewdity initialized.");
@@ -46,18 +46,15 @@ class Game {
         };
     }
 
-    updateGameVariables() {
-        Config.saves.onLoad = (save) => {
-            //console.log(save);
-            //save.state.history[save.state.history.length-1].variables.money = 6969;
-        };
-    }
-
     initTwineHelper() {
         window.DoL = {
             colorContainerClasses: colourContainerClasses,
             daylightExposure: checkForDaylightExposure
         };
+    }
+
+    static getGameVersion() {
+        return '1.25.0';
     }
 }
 

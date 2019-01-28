@@ -1,4 +1,4 @@
-import {checkForDaylightExposure} from "./MapUtilities";
+import {checkForDaylightExposure} from "../Game/PlayerStates";
 
 export default {
     background: 'img/map_placeholders/map_placeholder.png',
@@ -13,7 +13,7 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        canBeLink: () => !checkForDaylightExposure(),
+        canBeVisited: () => !checkForDaylightExposure(),
         links: [
             'barb_street',
             'danube_street',
@@ -30,7 +30,7 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        canBeLink: () => !checkForDaylightExposure(),
+        canBeVisited: () => !checkForDaylightExposure(),
         links: [
             'domus_street',
             'connudatus_street',
@@ -69,7 +69,7 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        canBeLink: () => !checkForDaylightExposure(),
+        canBeVisited: () => !checkForDaylightExposure(),
         links: [
             'domus_street',
             'connudatus_street',
@@ -86,7 +86,7 @@ export default {
         suffix: '',
         sprite: 'img/map_placeholders/building_placeholder.png',
         light: 'img/map_placeholders/placeholder_light.png',
-        canBeLink: () => !checkForDaylightExposure(),
+        canBeVisited: () => !checkForDaylightExposure(),
         links: [
             'barb_street',
             'danube_street',

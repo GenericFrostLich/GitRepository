@@ -1,4 +1,4 @@
-import Maps from "./Maps/All";
+import Maps from "../Maps/All";
 import {get} from "./Utilities";
 import _ from 'lodash';
 
@@ -127,8 +127,8 @@ class GameMap {
                 continue;
             }
 
-            if (typeof locations[link].canBeLink !== "undefined") {
-                if (!get(locations[link].canBeLink)) {
+            if (typeof locations[link].canBeVisited !== "undefined") {
+                if (!get(locations[link].canBeVisited)) {
                     delete locations[link];
                     continue;
                 }
