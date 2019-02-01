@@ -48,7 +48,7 @@ class Game {
 
     initTwineHelper() {
         window.DoL = {
-            colorContainerClasses: colourContainerClasses,
+            colourContainerClasses: colourContainerClasses,
             daylightExposure: checkForDaylightExposure
         };
     }
