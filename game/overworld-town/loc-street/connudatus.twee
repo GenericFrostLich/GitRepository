@@ -47,7 +47,7 @@ Places of interest<br>
 <</if>>
 <br>
 
-		<<if DoL.daylightExposure()>>
+		<<if $exposed gte 1 and $daystate isnot "night">>
 		<<else>>
 Travel<br>
 <<barb>><br>

@@ -2199,7 +2199,7 @@ she
 <</nobr>><</widget>>
 
 <<set $audienceselector to 0>>
-<<set $audiencecamera to 0>>
+<<set $audiencecamera to 52>>
 <<set $audiencecamera1 to 0>>
 <<set $audiencecamera2 to 0>>
 <<set $audiencecamera3 to 0>>

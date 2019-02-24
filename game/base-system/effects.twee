@@ -293,9 +293,9 @@
 
 <<if $crossdressing isnot 1>>
 <<if $underexposed gte 1 and $lowerexposed gte 2>>
-<<set $playergenderappearance to $playergender>>
+<<set $playergenderappearance to $player.data.gender>>
 <<elseif $lowervaginaexposed gte 1 and $undervaginaexposed gte 1>>
-<<set $playergenderappearance to $playergender>>
+<<set $playergenderappearance to $player.data.gender>>
 <<elseif $upperexposed gte 2 and $breastsize gte 3>>
 <<set $playergenderappearance to "f">><<set $breastindicator to 1>>
 <<elseif $lowergender isnot "n">>
@@ -307,7 +307,7 @@
 <<elseif $upperexposed gte 2 and $breastsize lte 2>>
 <<set $playergenderappearance to "m">>
 <<else>>
-<<set $playergenderappearance to $playergender>>
+<<set $playergenderappearance to $player.data.gender>>
 <</if>>
 <</if>>
 

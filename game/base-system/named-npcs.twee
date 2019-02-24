@@ -19,8 +19,16 @@
 <<if $npc is "Robin">><<set $npc to 0>><<robinend>><</if>>
 <<if $npc is "Avery">><<set $npc to 0>><<averyend>><</if>>
 <<if $npc is "Morgan">><<set $npc to 0>><<morganend>><</if>>
+<<if $npc is "Morgan">><<set $npc to 0>><<morganend>><</if>>
 <</nobr>><</widget>>
-
+                 
+/*F G I K N O P Q T U V X Y Z
+Ira
+Kelly
+Shay
+Tyne
+Yael
+*/
 
 <<widget "initnpcgender">><<nobr>>
 
@@ -1682,9 +1690,9 @@ Robin
 <<set $insecurity1 to "weak">>
 
 <<if $pronoun1 is "f">>
-<<set $npcdescription to "businesswoman">>
+<<set $npcdescription to "sewer dweller">>
 <<else>>
-<<set $npcdescription to "businessman">>
+<<set $npcdescription to "sewer dweller">>
 <</if>>
 <<set $npcadult1 to 0>>
 <<set $npcchild1 to 0>>

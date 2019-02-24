@@ -32,7 +32,7 @@ Places of interest<br>
 <<link [[Go home (0:02)->Garden]]>><<pass 2>><</link>><br>
 		<</if>>
 <br>
-		<<if DoL.daylightExposure()>>
+		<<if $exposed gte 1 and $daystate isnot "night">>
 		<<else>>
 Travel<br>
 <<domus>><br>
@@ -42,7 +42,7 @@ Travel<br>
 		<</if>>
 <br>
 Alternate routes<br>
-		<<if DoL.daylightExposure()>>
+		<<if $exposed gte 1 and $daystate isnot "night">>
 		<<else>>
 <<commercial>><br>
 		<</if>>

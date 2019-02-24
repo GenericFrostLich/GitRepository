@@ -24,13 +24,13 @@ Wolf <<girl>> - The spirit of the wild lives within you, making you more defiant
 
 <<if $demon gte 6>>
 	<<if $playergenderappearance is "m">>
-		<<if $playergender is "m">>
+		<<if $player.data.gender is "m">>
 		<span class="red">Incubus</span>
 		<<else>>
 		<span class="red">Incubus (female)</span>
 		<</if>>
 	<<else>>
-		<<if $playergender is "m">>
+		<<if $player.data.gender is "m">>
 		<span class="red">Succubus (male)</span>
 		<<else>>
 		<span class="red">Succubus</span>

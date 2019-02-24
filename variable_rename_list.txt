@@ -1,0 +1,70 @@
+// Settings
+$textonly $settings.text_only
+$images $settings.enable_images
+$debug $settings.debug
+$numberify_enable $settings.numberify
+$dev $settings.devmode
+$gamemode $settings.gamemode
+
+// Initial settings
+$intro $settings.intro
+$tutorial $settings.tutorial
+
+// Location / time
+$time $location.time
+$days $location.day
+$weekday $location.week_day
+$month $location.month
+$monthday $location.month_day
+$year $location.year
+
+// Player looks
+$hairlength $player.looks.hair.length
+$playergenderappearance $player.looks.gender_appearance
+$haircolor $player.looks.hair.color
+
+// Player information
+$playergender $player.data.gender
+$background $player.data.background
+$birthmonth $player.data.birth_month
+$birthday $player.data.birth_day
+$breastsize $player.data.breast_size
+
+// Stats
+$controlmax $player.stats.control.max
+$control $player.stats.control.current
+$traumamax $player.stats.trauma.max
+$trauma $player.stats.trauma.current
+$stressmax $player.stats.stress.max
+$stress $player.stats.stress.current
+$physiquemax $player.stats.physique.max
+$physique $player.stats.physique.current
+$pain $player.stats.pain.current
+$tirednessmax $player.stats.fatigue.max
+$tiredness $player.stats.fatigue.current
+$beautymax $player.stats.beauty.max
+$beauty $player.stats.beauty.current
+
+// Special stats
+$purity $player.special_stats.purity
+$submissive $player.special_stats.submissive
+$assertive $player.special_stats.assertive
+$assertiveaction $player.special_stats.assertive_action
+$awareness $player.special_stats.awareness.current
+$awarelevel $player.special_stats.awareness.level
+$fame $player.special_stats.fame
+$fameexhibitionism $player.special_stats.fame_exhibitionism
+$fameprostitution $player.special_stats.fame_prostitution
+$famebestiality $player.special_stats.fame_bestiality
+$famesex $player.special_stats.fame_sex
+$famerape $player.special_stats.fame_rape
+$famegood $player.special_stats.fame_good
+$famebusiness $player.special_stats.fame_business
+$famepark $player.special_stats.fame_park
+
+$oxygenmax $player.special_stats.oxygen.max
+$oxygen $player.special_stats.oxygen.current
+
+// Transformations
+$wolfbuild $player.special_stats.transformation.wolf.build
+$wolfgirl $player.special_stats.transformation.wolf.girl

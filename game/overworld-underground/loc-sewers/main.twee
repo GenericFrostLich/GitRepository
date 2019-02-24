@@ -23,7 +23,7 @@ You can access several parts of town from here.<br><br>
 <<commercialdrain>><br>
 <<drainexit>><br>
 <br>
-	<<if DoL.daylightExposure()>>
+	<<if $exposed gte 1 and $daystate isnot "night">>
 	<<else>>
 <<elk>><br>
 <<mer>><br>
@@ -65,7 +65,7 @@ You can access several parts of town from here.<br><br>
 <<residentialdrain>><br>
 <<industrialdrain>><br>
 <br>
-	<<if DoL.daylightExposure()>>
+	<<if $exposed gte 1 and $daystate isnot "night">>
 	<<else>>
 <<high>><br>
 <<connudatus>><br>
@@ -115,7 +115,7 @@ You can access several parts of town from here.<br><br>
 
 <<commercialdrain>><br>
 <br>
-	<<if DoL.daylightExposure()>>
+	<<if $exposed gte 1 and $daystate isnot "night">>
 	<<else>>
 <<domus>><br>
 <<barb>><br>

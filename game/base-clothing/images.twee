@@ -1,12 +1,28 @@
 :: Widgets Img [widget]
 <<widget "img">><<nobr>>
 
-<div id="img" @class="DoL.colourContainerClasses()">
+<div id="img" @class="colourContainerClasses()">
 
 <img class="layer-bg" src="img/topleftbg.png">
 
 
 <img class="layer-base anim-idle-2f" src="img/body/basenoarms.png">
+
+<<if $uppertype is "naked">>
+	<<if $breastsize gte 12>>
+	<img class="layer-breasts anim-idle-2f" src="img/body/breasts/breasts6.png">
+	<<elseif $breastsize gte 8>>
+	<img class="layer-breasts anim-idle-2f" src="img/body/breasts/breasts5.png">
+	<<elseif $breastsize gte 6>>
+	<img class="layer-breasts anim-idle-2f" src="img/body/breasts/breasts4.png">
+	<<elseif $breastsize gte 4>>
+	<img class="layer-breasts anim-idle-2f" src="img/body/breasts/breasts3.png">
+	<<elseif $breastsize gte 3>>
+	<img class="layer-breasts anim-idle-2f" src="img/body/breasts/breasts2.png">
+	<<elseif $breastsize gte 1>>
+	<img class="layer-breasts anim-idle-2f" src="img/body/breasts/breasts1.png">
+	<</if>>
+<</if>>
 
 <<if $leftarm isnot "bound">>
 	<<if $masturbationimages is 1>>
@@ -35,9 +51,9 @@
 		<<elseif $leftaction is "mvaginatease">>
 		<img class="layer-leftarm" src="img/body/masturbation/leftarmpussy.gif">
 		<</if>>
-	<<elseif $exhibitionism gte 95>>
+	<<elseif $exhibitionism gte 95 and $exhibitionismaction isnot "embarrassed">>
 	<img class="layer-base" src="img/body/leftarmidle.png">
-	<<elseif $exhibitionism gte 55 and $exposed lte 1>>
+	<<elseif $exhibitionism gte 55 and $exposed lte 1 and $exhibitionismaction isnot "embarrassed">>
 	<img class="layer-base" src="img/body/leftarmidle.png">
 	<<elseif $upperexposed gte 1 and $exposed gte 1>>
 	<img class="layer-leftarm anim-idle-2f" src="img/body/leftarm.png">
@@ -73,9 +89,9 @@
 		<<elseif $rightaction is "mvaginatease">>
 		<img class="layer-rightarm" src="img/body/masturbation/rightarmpussy.gif">
 		<</if>>
-	<<elseif $exhibitionism gte 95>>
+	<<elseif $exhibitionism gte 95 and $exhibitionismaction isnot "embarrassed">>
 	<img class="layer-base" src="img/body/rightarmidle.png">
-	<<elseif $exhibitionism gte 55 and $exposed lte 1>>
+	<<elseif $exhibitionism gte 55 and $exposed lte 1 and $exhibitionismaction isnot "embarrassed">>
 	<img class="layer-base" src="img/body/rightarmidle.png">
 	<<elseif $lowerexposed gte 1 and $exposed gte 1>>
 	<img class="layer-rightarm" src="img/body/rightarm.png">
@@ -228,19 +244,82 @@
 <</if>>
 
 <<if $hairlength gte 900>>
+	<<if $hairtype is "straight">>
+	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/hair/straight/feet.png">
+	<<else>>
 	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/red/hairfeetred.png">
+	<</if>>
+
 	<img class="layer-backhair colour-hair anim-idle-2f" src="img/hair/red/backhairfeetred.png">
 <<elseif $hairlength gte 700>>
+	<<if $hairtype is "straight">>
+	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/hair/straight/navel.png">
+	<<else>>
 	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/red/hairthighsred.png">
+	<</if>>
+	
 	<img class="layer-backhair colour-hair anim-idle-2f" src="img/hair/red/backhairthighsred.png">
 <<elseif $hairlength gte 600>>
+	<<if $hairtype is "straight">>
+	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/hair/straight/navel.png">
+	<<else>>
 	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/red/hairnavelred.png">
+	<</if>>
+
 <<elseif $hairlength gte 400>>
+	<<if $hairtype is "straight">>
+	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/hair/straight/chest.png">
+	<<else>>
 	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/red/hairchestred.png">
+	<</if>>
+
 <<elseif $hairlength gte 200>>
+	<<if $hairtype is "straight">>
+	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/hair/straight/shoulder.png">
+	<<else>>
 	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/red/hairshoulderred.png">
+	<</if>>
+
 <<else>>
+	<<if $hairtype is "straight">>
+	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/hair/straight/short.png">
+	<<else>>
 	<img class="layer-hair colour-hair anim-idle-2f" src="img/hair/red/hairshortred.png">
+	<</if>>
+	
+<</if>>
+
+
+<<if $fringelength gte 900>>
+	<<if $fringetype is "hime">>
+	<img class="layer-fronthair colour-hair anim-idle-2f" src="img/hair/fringe/hime/thighs.png">
+	<</if>>
+	
+<<elseif $fringelength gte 700>>
+	<<if $fringetype is "hime">>
+	<img class="layer-fronthair colour-hair anim-idle-2f" src="img/hair/fringe/hime/thighs.png">
+	<</if>>
+	
+<<elseif $fringelength gte 600>>
+	<<if $fringetype is "hime">>
+	<img class="layer-fronthair colour-hair anim-idle-2f" src="img/hair/fringe/hime/chest.png">
+	<</if>>
+	
+<<elseif $fringelength gte 400>>
+	<<if $fringetype is "hime">>
+	<img class="layer-fronthair colour-hair anim-idle-2f" src="img/hair/fringe/hime/chest.png">
+	<</if>>
+
+<<elseif $fringelength gte 200>>
+	<<if $fringetype is "hime">>
+	<img class="layer-fronthair colour-hair anim-idle-2f" src="img/hair/fringe/hime/shoulder.png">
+	<</if>>
+	
+<<else>>
+	<<if $fringetype is "hime">>
+	<img class="layer-fronthair colour-hair anim-idle-2f" src="img/hair/fringe/hime/short.png">
+	<</if>>
+	
 <</if>>
 
 <img class="layer-lashes colour-hair" src="img/hair/red/lashesred.png">

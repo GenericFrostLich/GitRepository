@@ -44,6 +44,28 @@
 
 <</nobr>><</widget>>
 
+<<widget "haircolourtext">><<nobr>>
+
+<<if $haircolour is "platinumblond">>
+platinum blond
+<<elseif $haircolour is "lightbrown">>
+light brown
+<<elseif $haircolour is "strawberryblond">>
+strawberry blond
+<<elseif $haircolour is "hotpink">>
+hot pink
+<<elseif $haircolour is "softpink">>
+soft pink
+<<elseif $haircolour is "snowwhite">>
+snow white
+<<elseif $haircolour is "deepblue">>
+deep blue
+<<else>>
+$haircolour
+<</if>>
+
+<</nobr>><</widget>>
+
 <<widget "charles">><<nobr>>
 <<if $playergenderappearance is "m">>
 Charles
@@ -621,7 +643,7 @@ girl.
 
 <<widget "breasts">><<nobr>>
 <<if $breastcup is "none">>
-	<<if $playergender is "f">>
+	<<if $player.data.gender is "f">>
 		<<if $dev is 1>>
 		<<print "undeveloped breasts">>
 		<<else>>
@@ -675,7 +697,7 @@ girl.
 
 <<widget "breastsstop">><<nobr>>
 <<if $breastcup is "none">>
-	<<if $playergender is "f">>
+	<<if $player.data.gender is "f">>
 		<<if $dev is 1>>
 		<<print "undeveloped breasts.">>
 		<<else>>
@@ -729,7 +751,7 @@ girl.
 
 <<widget "breastscomma">><<nobr>>
 <<if $breastcup is "none">>
-	<<if $playergender is "f">>
+	<<if $player.data.gender is "f">>
 		<<if $dev is 1>>
 		<<print "undeveloped breasts,">>
 		<<else>>
@@ -1492,25 +1514,25 @@ lad.
 <</nobr>><</widget>>
 
 <<widget "genderstop">><<nobr>>
-<<if $playergender is "f">>
+<<if $player.data.gender is "f">>
 girl.
-<<elseif $playergender is "m">>
+<<elseif $player.data.gender is "m">>
 boy.
 <</if>>
 <</nobr>><</widget>>
 
 <<widget "gendercomma">><<nobr>>
-<<if $playergender is "f">>
+<<if $player.data.gender is "f">>
 girl,
-<<elseif $playergender is "m">>
+<<elseif $player.data.gender is "m">>
 boy,
 <</if>>
 <</nobr>><</widget>>
 
 <<widget "gender">><<nobr>>
-<<if $playergender is "f">>
+<<if $player.data.gender is "f">>
 girl
-<<elseif $playergender is "m">>
+<<elseif $player.data.gender is "m">>
 boy
 <</if>>
 <</nobr>><</widget>>
@@ -1931,12 +1953,14 @@ and
 <span class="teal">- Lust </span>
 <</nobr>><</widget>>
 
-<<widget "gdom">><<nobr>> |
+<<widget "gdom">><<nobr>><<if $npc isnot "Robin">> |
 <span class="purple">+ NPC Dominance</span>
+<</if>>
 <</nobr>><</widget>>
 
-<<widget "ldom">><<nobr>> |
+<<widget "ldom">><<nobr>><<if $rng isnot "Robin">> |
 <span class="lblue">- NPC Dominance</span>
+<</if>>
 <</nobr>><</widget>>
 
 <<widget "gsuspicion">><<nobr>> |
@@ -2331,13 +2355,13 @@ $upperclothes and $lowerclothes,<<set $stripset to 0>>
 	<<else>>
 	<span class="lewd">exposed </span>
 		<<if $breastsize gte 3>>
-			<<if $playergender is "m">>
+			<<if $player.data.gender is "m">>
 			<span class="lewd"><<genitals>> and <<breastsstop>></span>
 			<<else>>
 			<span class="lewd"><<genitals>> and <<breastsstop>></span>
 			<</if>>
 		<<else>>
-			<<if $playergender is "m">>
+			<<if $player.data.gender is "m">>
 				<<if $playergenderappearance is "f">>
 				<span class="lewd"><<genitals>> and <<breastscomma>> made salacious by your feminine demeanor.</span>
 				<<else>>
@@ -2631,19 +2655,19 @@ miss,
 <<elseif $underexposed lte 0 and $lowerexposed gte 2 and $upperexposed lte 1>>
 <span class="lewd">exposed $underclothes</span>
 
-<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $playergender is "m">>
+<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $player.data.gender is "m">>
 <span class="lewd">lewdness</span>
 
 <<elseif $upperexposed gte 2 and $lowerexposed lte 1>>
 <span class="lewd">exposed <<breasts>></span>
 
-<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $playergender is "m">>
+<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $player.data.gender is "m">>
 <span class="lewd">exposed $underclothes</span>
 
 <<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0>>
 <span class="lewd">exposed <<breasts>> and $underclothes</span>
 
-<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $playergender is "m">>
+<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $player.data.gender is "m">>
 <span class="lewd">exposed <<genitals>></span>
 
 <<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed gte 1>>
@@ -2664,19 +2688,19 @@ miss,
 <<elseif $underexposed lte 0 and $lowerexposed gte 2 and $upperexposed lte 1>>
 <span class="lewd">exposed $underclothes.</span>
 
-<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $playergender is "m">>
+<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $player.data.gender is "m">>
 <span class="lewd">lewdness.</span>
 
 <<elseif $upperexposed gte 2 and $lowerexposed lte 1>>
 <span class="lewd">exposed <<breastsstop>></span>
 
-<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $playergender is "m">>
+<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $player.data.gender is "m">>
 <span class="lewd">exposed $underclothes.</span>
 
 <<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0>>
 <span class="lewd">exposed <<breasts>> and $underclothes.</span>
 
-<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $playergender is "m">>
+<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $player.data.gender is "m">>
 <span class="lewd">exposed <<genitalsstop>></span>
 
 <<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed gte 1>>
@@ -2689,10 +2713,43 @@ miss,
 
 <</nobr>><</widget>>
 
+<<widget "lewdnesscomma">><<nobr>>
+<<exposure>>
+<<if $underexposed gte 1 and $lowerexposed gte 2 and $upperexposed lte 1>>
+<span class="lewd">exposed <<genitalscomma>></span>
+
+<<elseif $underexposed lte 0 and $lowerexposed gte 2 and $upperexposed lte 1>>
+<span class="lewd">exposed $underclothes,</span>
+
+<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $player.data.gender is "m">>
+<span class="lewd">lewdness,</span>
+
+<<elseif $upperexposed gte 2 and $lowerexposed lte 1>>
+<span class="lewd">exposed <<breastscomma>></span>
+
+<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $player.data.gender is "m">>
+<span class="lewd">exposed $underclothes,</span>
+
+<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0>>
+<span class="lewd">exposed <<breasts>> and $underclothes,</span>
+
+<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $player.data.gender is "m">>
+<span class="lewd">exposed <<genitalscomma>></span>
+
+<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed gte 1>>
+<span class="lewd">exposed <<breasts>> and <<genitalscomma>></span>
+
+<<else>>
+<span class="lewd">lewdness,</span>
+
+<</if>>
+
+<</nobr>><</widget>>
+
 <<widget "covered">><<nobr>>
 <<exposure>>
 <<if $leftarm is "bound" and $rightarm is "bound" and $exposed gte 1>>
-	<<if $exposed gte 2 and $exhibitionism lt 95>>
+	<<if $exposed gte 2 and $exhibitionism lt 95 or $exposed gte 2 and $exhibitionismaction is "embarrassed">>
 With your arms bound, you can do nothing to shield your <<lewdness>> from prying eyes.
 
 	<<elseif $exposed gte 2>>
@@ -2700,31 +2757,34 @@ With your arms bound, you can do nothing to shield your <<lewdness>> from prying
 
 	<<elseif $exhibitionism lt 55>>
 	With your arms bound, you can do nothing to shield your <<lewdness>> from prying eyes.
-
+	
+	<<elseif $exhibitionismaction is "embarrassed">>
+	With your arms bound, you can do nothing to shield your <<lewdness>> from prying eyes.
+	
 	<<else>>
 	With your arms bound, you can do nothing to shield your <<lewdness>> from prying eyes. You quiver with excitement.
 
 	<</if>>
 
-<<elseif $exposed gte 2 and $exhibitionism lt 95>>
+<<elseif $exposed gte 2 and $exhibitionism lt 95 or $exposed gte 2 and $exhibitionismaction is "embarrassed">>
 	<<if $underexposed gte 1 and $lowerexposed gte 2 and $upperexposed lte 1>>
 	You cover your <span class="lewd">exposed <<genitals>></span> with your hands.
 	<<elseif $underexposed lte 0 and $lowerexposed gte 2 and $upperexposed lte 1>>
 	You cover your <span class="lewd">exposed $underclothes</span> with your hands.
 
-	<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	You cover your chest with your hands.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed lte 1>>
 	You cover your <span class="lewd">exposed <<breasts>></span> with your hands.
 
-	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	You cover your <span class="lewd">exposed $underclothes</span> with your hands.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0>>
 	You cover your <span class="lewd">exposed <<breasts>> and $underclothes</span> with your hands.
 
-	<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	You cover your <span class="lewd">exposed <<genitals>></span> with your hands.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed gte 1>>
@@ -2741,19 +2801,19 @@ With your arms bound, you can do nothing to shield your <<lewdness>> from prying
 	<<elseif $underexposed lte 0 and $lowerexposed gte 2 and $upperexposed lte 1>>
 	Your <span class="lewd">exposed $underclothes</span> <<if $underplural is 1>>make<<else>>makes<</if>> you quiver with excitement.
 
-	<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	Your exposed chest makes you quiver with excitement.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed lte 1>>
 	Your <span class="lewd">exposed <<breasts>></span> <<if $breastcup is "none">>makes<<else>>make<</if>> you quiver with excitement.
 
-	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	Your <span class="lewd">exposed $underclothes</span> <<if $underplural is 1>>make<<else>>makes<</if>> you quiver with excitement.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0>>
 	Your <span class="lewd">exposed <<breasts>> and $underclothes</span> make you quiver with excitement.
 
-	<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	Your <span class="lewd">exposed <<genitals>></span> makes you quiver with excitement.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed gte 1>>
@@ -2764,25 +2824,25 @@ With your arms bound, you can do nothing to shield your <<lewdness>> from prying
 
 	<</if>>
 
-<<elseif $exposed gte 1 and $exhibitionism lt 55>>
+<<elseif $exposed gte 1 and $exhibitionism lt 55 or $exposed gte 1 and $exhibitionismaction is "embarrassed">>
 	<<if $underexposed gte 1 and $lowerexposed gte 2 and $upperexposed lte 1>>
 	You cover your <span class="lewd">exposed <<genitals>></span> with your hands.
 	<<elseif $underexposed lte 0 and $lowerexposed gte 2 and $upperexposed lte 1>>
 	You cover your <span class="lewd">exposed $underclothes</span> with your hands.
 
-	<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	You cover your chest with your hands.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed lte 1>>
 	You cover your <span class="lewd">exposed <<breasts>></span> with your hands.
 
-	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	You cover your <span class="lewd">exposed $underclothes</span> with your hands.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0>>
 	You cover your <span class="lewd">exposed <<breasts>> and $underclothes</span> with your hands.
 
-	<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	You cover your <span class="lewd">exposed <<genitals>></span> with your hands.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed gte 1>>
@@ -2794,25 +2854,26 @@ With your arms bound, you can do nothing to shield your <<lewdness>> from prying
 	<</if>>
 
 
+
 <<elseif $exposed gte 1>>
 	<<if $underexposed gte 1 and $lowerexposed gte 2 and $upperexposed lte 1>>
 	Your <span class="lewd">exposed <<genitals>></span> makes you quiver with excitement.
 	<<elseif $underexposed lte 0 and $lowerexposed gte 2 and $upperexposed lte 1>>
 	Your <span class="lewd">exposed $underclothes</span> <<if $underplural is 1>>make<<else>>makes<</if>> you quiver with excitement.
 
-	<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $upperexposed gte 2 and $lowerexposed lte 1 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	Your exposed chest makes you quiver with excitement.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed lte 1>>
 	Your <span class="lewd">exposed <<breasts>></span> <<if $breastcup is "none">>makes<<else>>make<</if>> you quiver with excitement.
 
-	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	Your <span class="lewd">exposed $underclothes</span> <<if $underplural is 1>>make<<else>>makes<</if>> you quiver with excitement.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed lte 0>>
 	Your <span class="lewd">exposed <<breasts>> and $underclothes</span> make you quiver with excitement.
 
-	<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $playergender is "m">>
+	<<elseif $underexposed gte 1 and $lowerexposed gte 2 and $playergenderappearance is "m" and $player.data.gender is "m">>
 	Your <span class="lewd">exposed <<genitals>></span> makes you quiver with excitement.
 
 	<<elseif $upperexposed gte 2 and $lowerexposed gte 2 and $underexposed gte 1>>
@@ -3357,7 +3418,7 @@ nuns
 <<widget "vaginalvirginitywarning">><<nobr>>
 
 <<if $vaginalvirginity is 1>>
-<span class="red"> This action will deflower you.</span>
+<span class="red"> This action will deflower you</span>
 <</if>>
 
 <</nobr>><</widget>>
@@ -3365,7 +3426,7 @@ nuns
 <<widget "penilevirginitywarning">><<nobr>>
 
 <<if $penilevirginity is 1>>
-<span class="red"> This action will deflower you.</span>
+<span class="red"> This action will deflower you</span>
 <</if>>
 
 <</nobr>><</widget>>
@@ -3374,7 +3435,15 @@ nuns
 <<widget "analvirginitywarning">><<nobr>>
 
 <<if $analvirginity is 1>>
-<span class="red"> This action will take your anal virginity.</span>
+<span class="red"> This action will take your anal virginity</span>
+<</if>>
+
+<</nobr>><</widget>>
+
+<<widget "oralvirginitywarning">><<nobr>>
+
+<<if $oralvirginity is 1>>
+<span class="red"> This action will take your oral virginity</span>
 <</if>>
 
 <</nobr>><</widget>>

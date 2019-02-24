@@ -5,6 +5,7 @@ import {upperIntegrity, lowerIntegrity, underIntegrity} from "../Macros/Clothing
 import {macroSetup} from "./Utilities";
 import GameMap from "./GameMap";
 import "./Numberify";
+import {ImportDefaultGameState, GetNpc} from "../Macros/GameState";
 import "../Update/SaveUpdater";
 
 class Game {
@@ -22,6 +23,7 @@ class Game {
         macroSetup('underintegrity', underIntegrity, true, true);
         macroSetup('lowerintegrity', lowerIntegrity, true, true);
         macroSetup('upperintegrity', upperIntegrity, true, true);
+        macroSetup('init_game_state', ImportDefaultGameState, false, true);
     }
 
     initState() {
@@ -30,20 +32,9 @@ class Game {
 
         State.initPRNG();
 
-        jQuery(document).ready(() => {
-            jQuery('#sidetooltip').appendTo('body');
+        $(document).ready(() => {
+            $('#sidetooltip').appendTo('body');
         });
-
-        prehistory['version-update'] = () => {
-            if (Story.has('VersionUpdate')) {
-                try {
-                    Wikifier.wikifyEval(Story.get('VersionUpdate').text);
-                }
-                catch (ex) {
-                    Alert.error('VersionUpdate', ex.message);
-                }
-            }
-        };
     }
 
     initTwineHelper() {

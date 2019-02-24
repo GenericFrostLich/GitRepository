@@ -4,7 +4,7 @@ import Game from "../Game/Game";
 Config.saves.onLoad = (save) => {
     let saveGameVersion = save.state.history[save.state.history.length-1].variables._gameVersion;
     if (typeof saveGameVersion === "undefined")
-        saveGameVersion = '1.24.0'; // any saves before this need to be handled via the old game version
+        saveGameVersion = '1.26.1'; // any saves before this need to be handled via the old game version
 
     if (saveGameVersion !== Game.getGameVersion()) {
         console.log(`Trying to update game save from ${saveGameVersion} to ${Game.getGameVersion()}`);

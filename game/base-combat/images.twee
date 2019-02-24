@@ -12,7 +12,7 @@
 <</if>>
 
 <<if window.document.body.clientWidth lt 650>>
-<div id="divandroidsex" @class="DoL.colourContainerClasses()"><<doggyimg>></div>
+<div id="divandroidsex" @class="colourContainerClasses()"><<doggyimg>></div>
 	<<if $ejaculating is 1>>
 <div id="divandroidxray"><<ejacimg>></div>
 	<<elseif $vaginastate is "penetrated" or $anusstate is "penetrated" or $penisstate is "penetrated" or $vaginastate is "tentacle" or $vaginastate is "tentacledeep" or $anusstate is "tentacle" or $anusstate is "tentacledeep" or $penisstate is "tentacle" or $penisstate is "tentacledeep">>
@@ -20,7 +20,7 @@
 	<</if>>
 
 <<else>>
-<div id="divsex"  @class="DoL.colourContainerClasses()">
+<div id="divsex"  @class="colourContainerClasses()">
 <<doggyimg>>
 	<<if $ejaculating is 1>>
 <<ejacimg>>

@@ -37,7 +37,7 @@ Places of interest<br>
 <<link [[Forest (0:10)|Forest]]>><<set $eventskip to 1>><<pass 10>><<set $forest to 0>><</link>><br>
 <br>
 
-		<<if DoL.daylightExposure()>>
+		<<if $exposed gte 1 and $daystate isnot "night">>
 		<<else>>
 Travel<br>
 <<wolf>><br>

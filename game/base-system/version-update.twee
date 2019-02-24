@@ -1,5 +1,5 @@
 :: VersionUpdate
-<<if $playergender isnot undefined>>
+<<if $player.data.gender isnot undefined>>
 
 <<if $numberify_enabled is undefined>>
 <<set $numberify_enabled to 1>>
@@ -128,8 +128,59 @@
 <<set $robindebtknown to 1>>
 <</if>>
 
-<<if $initnpccompatibility isnot 1>><<set $initnpccompatibility to 1>>
-<<initnpcgender>>
+<<if $averygender is undefined>>
+	<<if $malechance lt random(1, 100)>>
+	<<set $averygender to "f">>
+	<<else>>
+	<<set $averygender to "m">>
+	<</if>>
+<</if>>
+<<if $averygenitals is undefined>>
+	<<if $averygender is "m">>
+		<<if random(0, 99) gte $cbchance>>
+		<<set $averygenitals to "penis">>
+		<<else>>
+		<<set $averygenitals to "vagina">>
+		<</if>>
+	<<elseif $averygender is "f">>
+		<<if random(0, 99) gte $dgchance>>
+		<<set $averygenitals to "vagina">>
+		<<else>>
+		<<set $averygenitals to "penis">>
+		<</if>>
+	<</if>>
+<</if>>
+
+<<if $morgangender is undefined>>
+	<<if $malechance lt random(1, 100)>>
+	<<set $morgangender to "f">>
+	<<else>>
+	<<set $morgangender to "m">>
+	<</if>>
+<</if>>
+<<if $morgangenitals is undefined>>
+	<<if $morgangender is "m">>
+		<<if random(0, 99) gte $cbchance>>
+		<<set $morgangenitals to "penis">>
+		<<else>>
+		<<set $morgangenitals to "vagina">>
+		<</if>>
+	<<elseif $morgangender is "f">>
+		<<if random(0, 99) gte $dgchance>>
+		<<set $morgangenitals to "vagina">>
+		<<else>>
+		<<set $morgangenitals to "penis">>
+		<</if>>
+	<</if>>
+<</if>>
+
+<<if $blackwolfgender is undefined>>
+	<<set $rng to random(1, 100)>>
+	<<if $beastmalechance lt $rng>>
+	<<set $blackwolfgender to "f">>
+	<<else>>
+	<<set $blackwolfgender to "m">>
+	<</if>>
 <</if>>
 
 <<if $genderknown is undefined>>
@@ -173,7 +224,7 @@
 <</if>>
 
 <<if $upperoutfitcasual is undefined>>
-	<<if $playergender is "m">>
+	<<if $player.data.gender is "m">>
 
 <<set $upperoutfitcasual to "t-shirt">>
 <<set $loweroutfitcasual to "shorts">>
@@ -304,8 +355,8 @@
 <<set $sciencephallusclit to 0>>
 <</if>>
 
-<<if $background is undefined>>
-<<set $background to "waif">>
+<<if $player.data.background is undefined>>
+<<set $player.data.background to "waif">>
 <</if>>
 
 <<if $fallenangel is 2>>
@@ -367,7 +418,7 @@
 	<</if>>
 <</if>>
 
-<<if $beastgenderoverride is "undefined">>
+<<if $beastgenderoverride is undefined>>
 <<set $beastgenderoverride to 0>>
 <</if>>
 
@@ -393,6 +444,29 @@
 	<<if $antiqueivorynecklace is "museum">>
 	<<set $museumno += 1>>
 	<</if>>
+<</if>>
+
+<<if $exhibitionismaction is undefined>>
+<<set $exhibitionismaction to "embarrassed">>
+<</if>>
+
+<<if $real_gender isnot undefined>>
+<<set $player.data.gender to $real_gender>>
+<<unset $real_gender>>
+<</if>>
+
+<<if $physiquesize is undefined>>
+<<set $physiquesize to (1000 * $devlevel)>>
+	<<if $physique gte 1>>
+	<<else>>
+	<<set $physique to $physiquemax>>
+	<</if>>
+<</if>>
+
+<<if $fringelength is undefined>>
+<<set $fringelength to 200>>
+<<set $hairtype to "default">>
+<<set $fringetype to "default">>
 <</if>>
 
 <</if>>

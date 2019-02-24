@@ -52,7 +52,7 @@ Places of interest<br>
 		<<link [[Go for a run (0:30)|Park Run]]>><<pass 30>><<tiredness 3>><<stress -3>><</link>><<gtiredness>><<lstress>><br>
 		<</if>>
 <br>
-		<<if DoL.daylightExposure()>>
+		<<if $exposed gte 1 and $daystate isnot "night">>
 		<<link [[Hide in a Crate (0:10)|Crate Ex]]>><<pass 10>><</link>><br>
 		<<else>>
 Travel<br>
@@ -63,7 +63,7 @@ Travel<br>
 		<</if>>
 <br>
 Alternate routes<br>
-		<<if DoL.daylightExposure()>>
+		<<if $exposed gte 1 and $daystate isnot "night">>
 		<<else>>
 <<commercial>><br>
 <<industrial>><br>
